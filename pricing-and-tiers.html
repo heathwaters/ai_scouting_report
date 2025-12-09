@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Tennis - Pricing & AI Features</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            padding: 60px 20px;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.05),
+                0 20px 60px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #4a5568;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin: 60px 0 40px 0;
+        }
+
+        .section-header h2 {
+            font-size: 2em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-header p {
+            color: #718096;
+            font-size: 1.05em;
+        }
+
+        /* Pricing Tiers Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 32px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(44, 82, 130, 0.15);
+            border-color: #2c5282;
+        }
+
+        .pricing-card.featured {
+            border-color: #2c5282;
+            box-shadow: 0 8px 24px rgba(44, 82, 130, 0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2c5282;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 6px;
+            font-size: 0.75em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+        }
+
+        .tier-name {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tier-price {
+            font-size: 2.5em;
+            font-weight: 800;
+            color: #2c5282;
+            margin-bottom: 8px;
+        }
+
+        .tier-price .period {
+            font-size: 0.4em;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .tier-annual {
+            color: #718096;
+            font-size: 0.95em;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .tier-annual .savings {
+            color: #276749;
+            font-weight: 600;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin: 24px 0;
+            padding: 24px 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .tier-features li {
+            padding: 10px 0;
+            color: #4a5568;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95em;
+        }
+
+        .tier-features li::before {
+            content: '✓';
+            color: #276749;
+            font-weight: bold;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .tier-features li.locked::before {
+            content: '✗';
+            color: #cbd5e0;
+        }
+
+        .tier-features li.locked {
+            color: #a0aec0;
+            text-decoration: line-through;
+        }
+
+        .tier-highlight {
+            background: #ebf8ff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid #2c5282;
+            margin: 16px 0;
+            font-size: 0.9em;
+            color: #2c5282;
+            font-weight: 600;
+        }
+
+        .tier-target {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .tier-target-title {
+            font-size: 0.85em;
+            font-weight: 700;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .tier-target-list {
+            list-style: none;
+        }
+
+        .tier-target-list li {
+            padding: 6px 0;
+            color: #4a5568;
+            font-size: 0.9em;
+        }
+
+        .tier-target-list li::before {
+            content: '•';
+            color: #2c5282;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        /* AI Features Section */
+        .features-section {
+            margin-top: 80px;
+        }
+
+        .tier-comparison {
+            background: #f7fafc;
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .tier-comparison-header {
+            background: #2c5282;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .tier-comparison-header h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+        }
+
+        .tier-comparison-header .credit-info {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-top: 4px;
+        }
+
+        .feature-item {
+            background: white;
+            padding: 24px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #cbd5e0;
+        }
+
+        .feature-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .feature-name {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #1a365d;
+        }
+
+        .feature-cost {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .credit-badge {
+            background: #2c5282;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .usage-badge {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .feature-description {
+            color: #718096;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .feature-description ul {
+            list-style: none;
+            margin-top: 8px;
+        }
+
+        .feature-description li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+        }
+
+        .feature-description li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #2c5282;
+        }
+
+        .credit-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            margin-top: 12px;
+            overflow: hidden;
+        }
+
+        .credit-bar-fill {
+            height: 100%;
+            background: #2c5282;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        /* Discount Badge */
+        .discount-badge {
+            background: #276749;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8em;
+            font-weight: 700;
+            margin-left: 8px;
+        }
+
+        /* Top-up Section */
+        .topup-section {
+            background: #ebf8ff;
+            padding: 32px;
+            border-radius: 12px;
+            margin-top: 40px;
+            border: 2px solid #2c5282;
+        }
+
+        .topup-section h3 {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .topup-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        .topup-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e0;
+            text-align: center;
+        }
+
+        .topup-tier {
+            font-size: 0.85em;
+            font-weight: 700;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .topup-price {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 8px;
+        }
+
+        .topup-credits {
+            color: #4a5568;
+            font-weight: 600;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            margin-top: 60px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #2c5282;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        th.table-tier {
+            color: #ffffff;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+
+        tr:hover {
+            background: #f7fafc;
+        }
+
+        .table-tier {
+            text-align: center;
+            font-weight: 700;
+            color: #1a365d;
+        }
+        
+        td.table-tier {
+            color: #1a365d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 24px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .feature-cost {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Match Tennis Pricing & AI Features</h1>
+            <div class="subtitle">Comprehensive Pricing Structure and Feature Comparison</div>
+        </div>
+
+        <!-- Section 1: Pricing Tiers -->
+        <div class="section-header">
+            <h2>Subscription Tiers</h2>
+            <p>Choose the plan that fits your competitive needs</p>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Free Tier -->
+            <div class="pricing-card">
+                <div class="tier-name">Free</div>
+                <div class="tier-price">$0<span class="period">/month</span></div>
+                <div class="tier-annual">No commitment required</div>
+
+                <ul class="tier-features">
+                    <li class="locked">AI Features (Locked)</li>
+                    <li>Basic Profile</li>
+                    <li>Rankings Tracking</li>
+                    <li>Match History</li>
+                    <li>Tournament Information</li>
+                </ul>
+
+                <div class="tier-target">
+                    <div class="tier-target-title">Target Users</div>
+                    <ul class="tier-target-list">
+                        <li>Casual players</li>
+                        <li>Trial users</li>
+                        <li>Browsing features</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pro Tier -->
+            <div class="pricing-card featured">
+                <div class="tier-name">Pro Tier</div>
+                <div class="tier-price">$12.99<span class="period">/month</span></div>
+                <div class="tier-annual">$139/year <span class="savings">(Save 11%)</span></div>
+
+                <div class="tier-highlight">
+                    100 Credits per Month + 1 Free Scout Report Weekly
+                </div>
+
+                <ul class="tier-features">
+                    <li>AI Scouting Reports (5 per month)</li>
+                    <li>Win Predictor (20 uses per month)</li>
+                    <li>UTR Forecast (12 uses per month)</li>
+                    <li>Weekly Performance Summary</li>
+                    <li>In-App Purchases Available ($0.99 for extra scouts)</li>
+                </ul>
+
+                <div class="tier-target">
+                    <div class="tier-target-title">Target Users</div>
+                    <ul class="tier-target-list">
+                        <li>Serious junior players</li>
+                        <li>Weekly competitors</li>
+                        <li>Regional tournament players</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Elite Tier -->
+            <div class="pricing-card">
+                <div class="tier-name">Elite Tier</div>
+                <div class="tier-price">$29.99<span class="period">/month</span></div>
+                <div class="tier-annual">$299/year <span class="savings">(Save 17%)</span></div>
+
+                <div class="tier-highlight">
+                    500 Credits per Month + 20 Free Scout Reports Monthly
+                </div>
+
+                <ul class="tier-features">
+                    <li>All Pro Tier Features</li>
+                    <li>College Recruiting Reports</li>
+                    <li>AI Chat (500 questions per month)</li>
+                    <li>Daily Performance Dashboard</li>
+                    <li>25% Credit Rollover to Next Month</li>
+                    <li>Discounted AI Feature Pricing</li>
+                </ul>
+
+                <div class="tier-target">
+                    <div class="tier-target-title">Target Users</div>
+                    <ul class="tier-target-list">
+                        <li>Competitive recruits</li>
+                        <li>National-level players</li>
+                        <li>College prospects</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: AI Feature Credit Costs -->
+        <div class="features-section">
+            <div class="section-header">
+                <h2>AI Feature Credit Pricing</h2>
+                <p>Detailed breakdown of credit costs and usage limits</p>
+            </div>
+
+            <!-- Pro Tier Features -->
+            <div class="tier-comparison">
+                <div class="tier-comparison-header">
+                    <h3>PRO TIER</h3>
+                    <div class="credit-info">100 Credits per Month</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">AI Scouting Report</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">20 Credits</span>
+                            <span class="usage-badge">5 reports/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Deep opponent analysis</li>
+                            <li>Strategic game plan</li>
+                            <li>Win probability forecast</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Match Win Probability</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">5 Credits</span>
+                            <span class="usage-badge">20 predictions/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Pre-match confidence calculation</li>
+                            <li>Real-time probability updates</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 25%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">UTR Trajectory Forecast</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">8 Credits</span>
+                            <span class="usage-badge">12 forecasts/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>3/6/12 month projections</li>
+                            <li>Goal tracking and milestones</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Tournament Difficulty Rating</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">4 Credits</span>
+                            <span class="usage-badge">25 ratings/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Field strength analysis</li>
+                            <li>"Should I enter?" advisor</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 20%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Weekly Performance Summary</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">3 Credits</span>
+                            <span class="usage-badge">Unlimited (Auto-weekly)</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Automated insight emails</li>
+                            <li>Progress tracking</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 15%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elite Tier Features -->
+            <div class="tier-comparison">
+                <div class="tier-comparison-header">
+                    <h3>ELITE TIER</h3>
+                    <div class="credit-info">500 Credits per Month</div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">20 Free Scout Reports</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">0 Credits</span>
+                            <span class="usage-badge">Monthly Allowance</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        Included with Elite subscription at no additional credit cost
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Additional Scout Reports</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">15 Credits</span>
+                            <span class="discount-badge">25% Discount</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        After free allowance is used, discounted rate applies
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Match Win Probability</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">3 Credits</span>
+                            <span class="discount-badge">40% Discount</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        Premium discount on all predictions
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 60%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Opponent Tendency Analysis</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">10 Credits</span>
+                            <span class="usage-badge">50 analyses/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Playing style breakdown</li>
+                            <li>Surface preferences analysis</li>
+                            <li>Tiebreak performance metrics</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 50%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">College Recruiting Report</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">15 Credits</span>
+                            <span class="usage-badge">33 reports/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Scholarship probability assessment</li>
+                            <li>Target school matching algorithm</li>
+                            <li>Recruitment timeline projection</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 75%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Training Focus Recommendations</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">8 Credits</span>
+                            <span class="usage-badge">62 recommendations/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Weakness identification analysis</li>
+                            <li>Personalized drill recommendations</li>
+                            <li>Performance optimization tracking</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 40%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">"Ask AI Anything" Chat</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">1 Credit</span>
+                            <span class="usage-badge">500 questions/month</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        <ul>
+                            <li>Conversational AI interface</li>
+                            <li>Follow-up question support</li>
+                            <li>Context-aware responses</li>
+                        </ul>
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 10%;"></div>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-header">
+                        <div class="feature-name">Daily Performance Dashboard</div>
+                        <div class="feature-cost">
+                            <span class="credit-badge">2 Credits</span>
+                            <span class="usage-badge">Auto-daily updates</span>
+                        </div>
+                    </div>
+                    <div class="feature-description">
+                        Automated daily insights delivered to your dashboard
+                    </div>
+                    <div class="credit-bar">
+                        <div class="credit-bar-fill" style="width: 20%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Credit Top-Up Section -->
+            <div class="topup-section">
+                <h3>Credit Top-Up Packs</h3>
+                <div class="topup-options">
+                    <div class="topup-card">
+                        <div class="topup-tier">Pro Tier</div>
+                        <div class="topup-price">$4.99</div>
+                        <div class="topup-credits">50 Credits</div>
+                    </div>
+                    <div class="topup-card">
+                        <div class="topup-tier">Elite Tier</div>
+                        <div class="topup-price">$9.99</div>
+                        <div class="topup-credits">150 Credits</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="comparison-table">
+            <div class="section-header">
+                <h2>Feature Comparison Summary</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="table-tier">Free</th>
+                        <th class="table-tier">Pro</th>
+                        <th class="table-tier">Elite</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Monthly Credits</strong></td>
+                        <td class="table-tier">0</td>
+                        <td class="table-tier">100</td>
+                        <td class="table-tier">500</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Free Scout Reports</strong></td>
+                        <td class="table-tier">None</td>
+                        <td class="table-tier">1 per week</td>
+                        <td class="table-tier">20 per month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Scouting Reports</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">20 credits each</td>
+                        <td class="table-tier">15 credits each</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Win Probability</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">5 credits each</td>
+                        <td class="table-tier">3 credits each</td>
+                    </tr>
+                    <tr>
+                        <td><strong>College Recruiting Reports</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">15 credits each</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI Chat</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">1 credit per question</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Credit Rollover</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">25% to next month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance Summary</strong></td>
+                        <td class="table-tier">—</td>
+                        <td class="table-tier">Weekly</td>
+                        <td class="table-tier">Daily</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

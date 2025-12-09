@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Animation</title>
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px;
+    overflow: auto;
+}
+
+.flow-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 20px 15px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.box.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.connector {
+    position: absolute;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.connector.visible {
+    opacity: 1;
+}
+
+.h-line {
+    width: 0;
+    height: 3px;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.h-line.visible {
+    width: 100px;
+    animation: expandHorizontal 0.4s ease forwards;
+}
+
+.v-line {
+    display: none; /* Hide default vertical lines, we'll use SVG curves */
+}
+
+@keyframes expandHorizontal {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+
+/* SVG Curved connectors */
+.curved-connector {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.curved-connector path {
+    fill: none;
+    stroke: #667eea;
+    stroke-width: 3;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: stroke-dashoffset 0.6s ease;
+}
+
+.curved-connector.visible path {
+    stroke-dashoffset: 0;
+}
+
+/* Layout positioning - Snake Pattern (2 per row) */
+.flow-container {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(5, auto);
+    gap: 80px 100px;
+    position: relative;
+}
+
+/* Row 1: Items 1-2 going RIGHT */
+#item-1 { grid-column: 1; grid-row: 1; }
+#item-2 { grid-column: 2; grid-row: 1; }
+
+/* Row 2: Items 3-4 going LEFT */
+#item-3 { grid-column: 2; grid-row: 2; }
+#item-4 { grid-column: 1; grid-row: 2; }
+
+/* Row 3: Items 5-6 going RIGHT */
+#item-5 { grid-column: 1; grid-row: 3; }
+#item-6 { grid-column: 2; grid-row: 3; }
+
+/* Row 4: Items 7-8 going LEFT */
+#item-7 { grid-column: 2; grid-row: 4; }
+#item-8 { grid-column: 1; grid-row: 4; }
+
+/* Row 5: Items 9-10 going RIGHT */
+#item-9 { grid-column: 1; grid-row: 5; }
+#item-10 { grid-column: 2; grid-row: 5; }
+
+/* Connector line adjustments for LEFT direction (Items 3, 7) */
+#item-3 .h-line,
+#item-7 .h-line {
+    left: auto;
+    right: 100%;
+}
+
+#item-3 .h-line.visible,
+#item-7 .h-line.visible {
+    animation: expandHorizontalLeft 0.4s ease forwards;
+}
+
+@keyframes expandHorizontalLeft {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="flow-container">
+<!-- Row 1: Going RIGHT -->
+<!-- 1. Engine -->
+<div id="item-1" class="box">
+    1. Engine
+    <div class="connector h-line"></div>
+</div>
+
+<!-- 2. Tires (Down to row 2) -->
+<div id="item-2" class="box">
+    2. Tires
+    <div class="connector v-line"></div>
+</div>
+
+<!-- Row 2: Going LEFT -->
+<!-- 3. Steering Wheel -->
+<div id="item-3" class="box">
+    3. Steering Wheel
+    <div class="connector h-line"></div>
+</div>
+
+<!-- 4. Transmission (Down to row 3) -->
+<div id="item-4" class="box">
+    4. Transmission
+    <div class="connector v-line"></div>
+</div>
+
+<!-- Row 3: Going RIGHT -->
+<!-- 5. Brakes -->
+<div id="item-5" class="box">
+    5. Brakes
+    <div class="connector h-line"></div>
+</div>
+
+<!-- 6. Fuel (Down to row 4) -->
+<div id="item-6" class="box">
+    6. Fuel
+    <div class="connector v-line"></div>
+</div>
+
+<!-- Row 4: Going LEFT -->
+<!-- 7. Dashboard -->
+<div id="item-7" class="box">
+    7. Dashboard
+    <div class="connector h-line"></div>
+</div>
+
+<!-- 8. Headlights (Down to row 5) -->
+<div id="item-8" class="box">
+    8. Headlights
+    <div class="connector v-line"></div>
+</div>
+
+<!-- Row 5: Going RIGHT -->
+<!-- 9. Seatbelts -->
+<div id="item-9" class="box">
+    9. Seatbelts
+    <div class="connector h-line"></div>
+</div>
+
+<!-- 10. License Plate (Last item, no connector) -->
+<div id="item-10" class="box">
+    10. License Plate
+</div>
+
+<!-- SVG Curved Connectors -->
+<!-- Item 2 to Item 3: Down from center, curve RIGHT to right side of Item 3 -->
+<svg class="curved-connector" id="curve-2-3" width="150" height="120" style="position: absolute;">
+    <path d="M 0 0 L 0 40 Q 0 60, 20 60 L 130 60 Q 150 60, 150 80 L 150 100" stroke="#667eea" />
+</svg>
+
+<!-- Item 4 to Item 5: Down from center, curve LEFT to left side of Item 5 -->
+<svg class="curved-connector" id="curve-4-5" width="150" height="120" style="position: absolute;">
+    <path d="M 0 0 L 0 40 Q 0 60, -20 60 L -130 60 Q -150 60, -150 80 L -150 100" stroke="#667eea" />
+</svg>
+
+<!-- Item 6 to Item 7: Down from center, curve RIGHT to right side of Item 7 -->
+<svg class="curved-connector" id="curve-6-7" width="150" height="120" style="position: absolute;">
+    <path d="M 0 0 L 0 40 Q 0 60, 20 60 L 130 60 Q 150 60, 150 80 L 150 100" stroke="#667eea" />
+</svg>
+
+<!-- Item 8 to Item 9: Down from center, curve LEFT to left side of Item 9 -->
+<svg class="curved-connector" id="curve-8-9" width="150" height="120" style="position: absolute;">
+    <path d="M 0 0 L 0 40 Q 0 60, -20 60 L -130 60 Q -150 60, -150 80 L -150 100" stroke="#667eea" />
+</svg>
+
+</div>
+<script>
+// Animation Logic - Snake Pattern (2 per row with curved connectors)
+const boxes = document.querySelectorAll('.box');
+const boxFadeTime = 500; // Time for box to fade in
+const connectorGrowTime = 600; // Time for connector line to grow
+
+// Curved connector mappings (which boxes have curved connectors)
+const curvedConnectors = {
+    2: 'curve-2-3',  // Item 2 to Item 3
+    4: 'curve-4-5',  // Item 4 to Item 5
+    6: 'curve-6-7',  // Item 6 to Item 7
+    8: 'curve-8-9'   // Item 8 to Item 9
+};
+
+function positionCurvedConnectors() {
+    // Position each curved SVG based on box positions
+    const container = document.querySelector('.flow-container');
+    const containerRect = container.getBoundingClientRect();
+    
+    // Item 2 to Item 3 (Right to Right - curve LEFT)
+    const box2 = document.getElementById('item-2');
+    if (box2) {
+        const rect2 = box2.getBoundingClientRect();
+        const svg = document.getElementById('curve-2-3');
+        // Start from center bottom of Item 2
+        svg.style.left = (rect2.left - containerRect.left + rect2.width / 2) + 'px';
+        svg.style.top = (rect2.bottom - containerRect.top) + 'px';
+    }
+    
+    // Item 4 to Item 5 (Left to Left - curve RIGHT)
+    const box4 = document.getElementById('item-4');
+    if (box4) {
+        const rect4 = box4.getBoundingClientRect();
+        const svg = document.getElementById('curve-4-5');
+        // Start from center bottom of Item 4
+        svg.style.left = (rect4.left - containerRect.left + rect4.width / 2) + 'px';
+        svg.style.top = (rect4.bottom - containerRect.top) + 'px';
+    }
+    
+    // Item 6 to Item 7 (Right to Right - curve LEFT)
+    const box6 = document.getElementById('item-6');
+    if (box6) {
+        const rect6 = box6.getBoundingClientRect();
+        const svg = document.getElementById('curve-6-7');
+        // Start from center bottom of Item 6
+        svg.style.left = (rect6.left - containerRect.left + rect6.width / 2) + 'px';
+        svg.style.top = (rect6.bottom - containerRect.top) + 'px';
+    }
+    
+    // Item 8 to Item 9 (Left to Left - curve RIGHT)
+    const box8 = document.getElementById('item-8');
+    if (box8) {
+        const rect8 = box8.getBoundingClientRect();
+        const svg = document.getElementById('curve-8-9');
+        // Start from center bottom of Item 8
+        svg.style.left = (rect8.left - containerRect.left + rect8.width / 2) + 'px';
+        svg.style.top = (rect8.bottom - containerRect.top) + 'px';
+    }
+}
+
+function animateFlow() {
+    let currentDelay = 0;
+    
+    boxes.forEach((box, index) => {
+        const boxNumber = index + 1;
+        const hConnector = box.querySelector('.h-line');
+        const curvedSvgId = curvedConnectors[boxNumber];
+        
+        // Step 1: Show current box
+        setTimeout(() => {
+            box.classList.add('visible');
+            
+            // Step 2: After box fades in, grow the connector FROM this box
+            setTimeout(() => {
+                if (hConnector && !curvedSvgId) {
+                    // Horizontal straight connector
+                    hConnector.classList.add('visible');
+                } else if (curvedSvgId) {
+                    // Curved connector
+                    const svg = document.getElementById(curvedSvgId);
+                    if (svg) {
+                        svg.classList.add('visible');
+                    }
+                }
+            }, boxFadeTime);
+        }, currentDelay);
+        
+        // Step 3: Calculate delay for next box
+        if (hConnector || curvedSvgId) {
+            currentDelay += boxFadeTime + connectorGrowTime;
+        } else {
+            currentDelay += boxFadeTime;
+        }
+    });
+}
+
+// Start animation on load
+window.onload = () => {
+    positionCurvedConnectors();
+    animateFlow();
+};
+
+// Reposition on resize
+window.onresize = positionCurvedConnectors;
+</script>
+</body>
+</html>

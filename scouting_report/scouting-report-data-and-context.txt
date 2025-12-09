@@ -1,0 +1,1583 @@
+### 1. USTA Player Record
+
+![image.png](attachment:38727bb4-e08f-402d-83b7-92199d8281ce:image.png)
+
+**Includes the Following:**
+
+- Wins and losses
+- Opponent National ranking
+- Opponent UTR Rating
+- Opponent WTN Rating
+- Round reached
+- Tournament Level
+- Tournament Surface
+- Bonus Points earned
+- Event Points earned
+- Combined Points Earned (List Points)
+- Age division
+- Tournament Date
+
+### 2. Ranking Snapshot
+
+![image.png](attachment:2530793c-bdf9-45a5-a957-1e4195767551:image.png)
+
+**OVERVIEW OF THE NATIONAL JUNIOR RANKING SYSTEM**
+
+### USTA National Junior Ranking System Overview
+
+### System Description
+
+The USTA uses a Points Per Round Combined Ranking System (PPR) to annually rank junior players and publish weekly National Standings Lists. Ranking Points are earned by winning singles and doubles matches at various types of USTA national tournaments, sectional tournaments, and designated ITF tournaments. Extra Ranking Points are earned for winning singles matches over highly ranked players. Ranking Points earned in singles and doubles are combined, with greater weight placed on singles results.
+
+### Key Definitions
+
+**National Ranking Tournaments:** All tournaments on the National Junior Tournament Schedule (NJTS), designated as Level 1, Level 2, and Level 3 Open tournaments.
+
+**Sectional Ranking Tournaments:** Consists of Level 3 Closed, Level 4, Level 5, Level 6, and Level 7 tournaments.
+
+**Points Per Round:** Ranking Points assigned to winning singles and doubles matches at National and Sectional Ranking Tournaments.
+
+**Bonus Points:** Ranking Points assigned to winning singles matches over top-500 players. Bonus Points are not earned for doubles matches. Bonus Points earned at National Ranking Tournaments are "attached" to the event where they are earned; if a tournament is not among a player's best 6 singles tournaments, the Bonus Points for that tournament will not be part of the PPR Calculation.
+
+**Ranking Points:** Used in two ways: (1) Generally refers to both Points Per Round and Bonus Points, and (2) refers to the total Ranking Points a player has based on the PPR Calculation.
+
+**PPR Calculation:** The mathematical calculation of Ranking Points used to determine a player's Standing or Ranking.
+
+**Ranking Levels:** Every National Ranking and Sectional Ranking Tournament is assigned a ranking level. The Level of a tournament determines the number of Points Per Round earned by winning matches at that tournament.
+
+**Point Tables:** Show the Points Per Round assigned to each National Ranking Level. Different tables exist for different draw and consolation types (e.g., Feed-In Championship Draw vs. Compass Draw).
+
+**National Standings Lists (NSLs):** Lists published weekly by the USTA that order players based on their Ranking Point total. NSLs are used for player selection at most tournaments.
+
+**National Ranking Lists (Year End Rank Lists):** Published shortly after the end of a year; these are the official national rankings for a calendar year. Used to determine Sectional Quota—the number of players each Sectional Association is entitled to have in designated USTA National Championships.
+
+**Seeding Lists:** The USTA publishes Singles Seeding Lists for seeding junior singles events and Individual Doubles Seeding Lists for team selection and seeding in doubles and mixed doubles tournaments. These lists use the same criteria as NSLs, except only the 6 best singles results are used for Singles Seeding Lists, and only the best 6 doubles and/or mixed doubles results are used for Individual Doubles Seeding Lists.
+
+**Best 6:** Refers to the number of singles tournaments and doubles tournaments that count for standing and ranking (effectively 12 total tournaments). A player may have more than 6 singles and 6 doubles tournaments on their player record, but only the results from the best 6 of each will be used in the PPR Calculation.
+
+**Player Record:** Each time the USTA publishes a National Standings List, new Player Records are published for each player. A Player Record shows all results and Ranking Points earned from the previous 12-month period and indicates which are a player's Best 6.
+
+### Standings vs. Rankings
+
+The term "ranking" is generally used to refer to a player's position on any published ranking or standing list; however, "standing" and "ranking" actually refer to two different things. All PPR Calculations are based on Ranking Points earned in the previous 12-month period, but:
+
+- **Standings:** Based on Ranking Points earned during the previous rolling 12-month period. They include Ranking Points earned by a player in their division and any older division, as well as 20% of the points earned in the next-younger division.
+- **Rankings:** Based on Ranking Points earned in one division during a January to December calendar year.
+
+### Player Match Statistics
+
+### How Player Match Statistics Enable AI Scouting Reports
+
+The detailed match statistics captured in the system provide rich, structured data that AI can analyze to generate comprehensive scouting reports. Here's how each statistical category contributes to intelligent player analysis:
+
+### Serve Analysis & Patterns
+
+- **Predictive Serve Patterns:** AI can analyze 1st/2nd serve percentages, ace rates, and double fault frequencies across multiple matches to identify serving tendencies, preferred placements, and pressure situations where serve quality degrades.
+- **Situational Performance:** By tracking serve statistics in break points vs. regular points, AI can identify mental vulnerabilities and clutch performance indicators.
+- **Surface-Specific Adjustments:** Comparing serve metrics across different surfaces reveals how players adapt their service games to court conditions.
+
+### Shot Selection & Stroke Production
+
+- **Wing Dominance Identification:** FH/BH winner and error ratios reveal which wing is the weapon and which is the liability, informing tactical approach strategies.
+- **Risk-Reward Profiles:** Winner-to-error ratios across different shot types (groundstrokes, volleys, returns) indicate aggression levels and shot tolerance.
+- **Net Game Effectiveness:** Net winner/error statistics show comfort level at net and vulnerability to passing shots or lobs.
+
+### Break Point & Pressure Performance
+
+- **Mental Toughness Metrics:** Break point conversion rates (both winning and saving) provide quantifiable measures of clutch performance under pressure.
+- **Momentum Shift Indicators:** Tracking performance before/after break point situations reveals how players respond to adversity or capitalize on opportunities.
+- **Strategic Vulnerability Mapping:** Patterns in break point loss can indicate specific tactical weaknesses exploitable in crucial moments.
+
+### Return Game Intelligence
+
+- **Return Aggression Analysis:** Return winner/error rates indicate whether a player chips conservatively or attacks aggressively, informing serve placement strategies.
+- **Wing-Specific Return Tendencies:** FH/BH return statistics reveal which side to target with serves and which returns to expect.
+- **Neutralization vs. Attack:** Low return error rates with few winners suggest defensive return strategies, while high winner counts indicate aggressive return positions.
+
+### Game-by-Game Progression Analysis
+
+- **Momentum Tracking:** Game-by-game statistics reveal how players perform when ahead vs. behind, identifying front-runners vs. fighters.
+- **Fatigue Patterns:** Declining serve percentages or increasing error rates in later games can indicate conditioning issues or mental fatigue.
+- **Tactical Adjustment Detection:** Changes in shot selection or serve patterns across games show adaptability and in-match problem-solving.
+
+### Aggregated Pattern Recognition
+
+- **Cross-Match Consistency:** AI can compare statistics across multiple opponents to identify consistent patterns vs. matchup-specific anomalies.
+- **Temporal Trend Analysis:** Tracking stat evolution over time reveals improving strengths, emerging weaknesses, or aging-related declines.
+- **Predictive Modeling:** Historical statistical patterns enable AI to predict likely performance in future matchups based on opponent characteristics.
+
+### Integration with Black Book Qualitative Data
+
+- **Validation of Observations:** Quantitative statistics confirm or challenge qualitative scouting notes, providing data-backed insights.
+- **Gap Identification:** Stats reveal patterns that human observers might miss, prompting deeper qualitative investigation.
+- **Comprehensive Player Profiles:** Combining match statistics with Black Book notes creates holistic player profiles covering both measurable performance and tactical/mental tendencies.
+
+### AI-Generated Strategic Recommendations
+
+By processing all these statistical dimensions, AI can generate actionable scouting reports that include:
+
+- Optimal serve placement strategies based on opponent return statistics
+- Rally pattern recommendations that exploit statistical weaknesses
+- Pressure point tactics leveraging break point performance data
+- Shot selection guidance based on winner/error ratios for different stroke types
+- Match management strategies informed by game-progression patterns
+- Surface-specific tactical adjustments based on statistical performance variations
+
+The granular match statistics transform subjective observations into quantifiable intelligence, enabling AI to identify subtle patterns, predict opponent behaviors, and generate data-driven competitive strategies that give players a decisive edge before stepping on court.
+
+### Match Statistics Sample
+
+Below are the detailed statistics for an example match that can be used as template: 
+
+### START MATCH TELEMETRY
+
+Match Statistics
+
+Match Totals
+M.Freedman
+F.Padilla
+Winners & Errors
+Winners:
+39
+9
+Errors:
+16
+15
+Serves
+Aces:
+7
+0
+Double Faults:
+0
+1
+1st Serves:
+15
+13
+2nd Serves:
+22
+25
+1st Serve %:
+40.5%
+34.2%
+2nd Serve %:
+59.5%
+65.8%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+2
+1
+Break Points Saved:
+2
+1
+Break Points Faced:
+4
+2
+Returns
+Return Winners:
+12
+2
+Return Errors:
+3
+4
+FH Return Winners:
+6
+0
+FH Return Errors:
+2
+3
+BH Return Winners:
+6
+2
+BH Return Errors:
+1
+1
+Shot Breakdown
+FH Winners:
+15
+5
+FH Errors:
+5
+1
+BH Winners:
+2
+2
+BH Errors:
+8
+6
+Net Winners:
+3
+0
+Net Errors:
+0
+3
+Sets Totals
+Set 1 (5-1)
+M.Freedman
+F.Padilla
+Winners & Errors
+Winners:
+17
+4
+Errors:
+4
+9
+Serves
+Aces:
+3
+0
+Double Faults:
+0
+0
+1st Serves:
+10
+6
+2nd Serves:
+9
+9
+1st Serve %:
+52.6%
+40.0%
+2nd Serve %:
+47.4%
+60.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+1
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+1
+0
+Shot Breakdown
+FH Winners:
+6
+3
+FH Errors:
+1
+1
+BH Winners:
+1
+1
+BH Errors:
+3
+3
+Net Winners:
+1
+0
+Net Errors:
+0
+2
+Returns
+Return Winners:
+6
+0
+Return Errors:
+0
+3
+FH Return Winners:
+3
+0
+FH Return Errors:
+0
+2
+BH Return Winners:
+3
+0
+BH Return Errors:
+0
+1
+Set 2 (6-1, 6-2)
+M.Freedman
+F.Padilla
+Winners & Errors
+Winners:
+22
+5
+Errors:
+12
+6
+Serves
+Aces:
+4
+0
+Double Faults:
+0
+1
+1st Serves:
+5
+7
+2nd Serves:
+13
+16
+1st Serve %:
+27.8%
+30.4%
+2nd Serve %:
+72.2%
+69.6%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+1
+1
+Break Points Saved:
+2
+1
+Break Points Faced:
+3
+2
+Shot Breakdown
+FH Winners:
+9
+2
+FH Errors:
+4
+0
+BH Winners:
+1
+1
+BH Errors:
+5
+3
+Net Winners:
+2
+0
+Net Errors:
+0
+1
+Returns
+Return Winners:
+6
+2
+Return Errors:
+3
+1
+FH Return Winners:
+3
+0
+FH Return Errors:
+2
+1
+BH Return Winners:
+3
+2
+BH Return Errors:
+1
+0
+Game 1 - Winner: F.Padilla
+Set Score: 0-1
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+1
+1
+FH Errors:
+0
+0
+BH Winners:
+0
+1
+BH Errors:
+3
+1
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+1
+0
+Double Faults:
+0
+0
+1st Serves:
+3
+0
+2nd Serves:
+4
+0
+1st Serve %:
+42.9%
+0.0%
+2nd Serve %:
+57.1%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+1
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+1
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 2 - Winner: M.Freedman
+Set Score: 1-1
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+0
+1
+FH Errors:
+0
+1
+BH Winners:
+0
+0
+BH Errors:
+0
+1
+Net Winners:
+0
+0
+Net Errors:
+0
+1
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+2
+2nd Serves:
+0
+3
+1st Serve %:
+0.0%
+40.0%
+2nd Serve %:
+0.0%
+60.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+1
+0
+Return Errors:
+0
+0
+FH Return Winners:
+1
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 3 - Winner: M.Freedman
+Set Score: 2-1
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+0
+0
+BH Winners:
+1
+0
+BH Errors:
+0
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+3
+0
+2nd Serves:
+1
+0
+1st Serve %:
+75.0%
+0.0%
+2nd Serve %:
+25.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+2
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+1
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+1
+Game 4 - Winner: M.Freedman
+Set Score: 3-1
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+1
+1
+FH Errors:
+1
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+2
+2nd Serves:
+0
+4
+1st Serve %:
+0.0%
+33.3%
+2nd Serve %:
+0.0%
+66.7%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+3
+0
+Return Errors:
+0
+0
+FH Return Winners:
+1
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+2
+0
+BH Return Errors:
+0
+0
+Game 5 - Winner: M.Freedman
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+0
+0
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+0
+Net Winners:
+1
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+2
+0
+Double Faults:
+0
+0
+1st Serves:
+2
+0
+2nd Serves:
+2
+0
+1st Serve %:
+50.0%
+0.0%
+2nd Serve %:
+50.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+1
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+1
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 6 - Winner: M.Freedman
+Set Score: 5-1
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+1
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+2
+2nd Serves:
+0
+2
+1st Serve %:
+0.0%
+50.0%
+2nd Serve %:
+0.0%
+50.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+2
+0
+Return Errors:
+0
+0
+FH Return Winners:
+1
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+1
+0
+BH Return Errors:
+0
+0
+Game 7
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+2
+0
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+1
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+2
+0
+2nd Serves:
+2
+0
+1st Serve %:
+50.0%
+0.0%
+2nd Serve %:
+50.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 1 - Winner: M.Freedman
+Set Score: 6-1, 1-0
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+1
+0
+BH Winners:
+0
+1
+BH Errors:
+0
+0
+Net Winners:
+1
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+1
+1st Serves:
+0
+2
+2nd Serves:
+0
+4
+1st Serve %:
+0.0%
+33.3%
+2nd Serve %:
+0.0%
+66.7%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+1
+0
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+1
+0
+BH Return Errors:
+0
+0
+Game 2 - Winner: M.Freedman
+Set Score: 6-1, 2-0
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+1
+Serves
+Aces:
+2
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+0
+2nd Serves:
+3
+0
+1st Serve %:
+0.0%
+0.0%
+2nd Serve %:
+100.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+0
+1
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+1
+BH Return Errors:
+0
+0
+Game 3 - Winner: M.Freedman
+Set Score: 6-1, 3-0
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+2
+1
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+3
+2nd Serves:
+0
+5
+1st Serve %:
+0.0%
+37.5%
+2nd Serve %:
+0.0%
+62.5%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+1
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+1
+Returns
+Return Winners:
+3
+0
+Return Errors:
+2
+0
+FH Return Winners:
+2
+0
+FH Return Errors:
+1
+0
+BH Return Winners:
+1
+0
+BH Return Errors:
+1
+0
+Game 4 - Winner: F.Padilla
+Set Score: 6-1, 3-1
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+0
+1
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+2
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+0
+2nd Serves:
+4
+0
+1st Serve %:
+0.0%
+0.0%
+2nd Serve %:
+100.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+1
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+1
+0
+Returns
+Return Winners:
+0
+1
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+1
+BH Return Errors:
+0
+0
+Game 5 - Winner: F.Padilla
+Set Score: 6-1, 3-2
+M.Freedman
+receiver
+F.Padilla
+server
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+1
+0
+BH Winners:
+0
+0
+BH Errors:
+2
+0
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+2
+2nd Serves:
+0
+3
+1st Serve %:
+0.0%
+40.0%
+2nd Serve %:
+0.0%
+60.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+1
+Break Points Faced:
+0
+1
+Returns
+Return Winners:
+0
+0
+Return Errors:
+1
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+1
+0
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 6 - Winner: M.Freedman
+Set Score: 6-1, 4-2
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+0
+0
+BH Winners:
+1
+0
+BH Errors:
+0
+0
+Net Winners:
+1
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+1
+0
+Double Faults:
+0
+0
+1st Serves:
+3
+0
+2nd Serves:
+1
+0
+1st Serve %:
+75.0%
+0.0%
+2nd Serve %:
+25.0%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+0
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+Game 7 - Winner: M.Freedman
+Set Score: 6-1, 5-2
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+1
+0
+FH Errors:
+0
+0
+BH Winners:
+0
+0
+BH Errors:
+0
+2
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+0
+0
+Double Faults:
+0
+0
+1st Serves:
+0
+0
+2nd Serves:
+0
+4
+1st Serve %:
+0.0%
+0.0%
+2nd Serve %:
+0.0%
+100.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+0
+0
+Break Points Faced:
+0
+0
+Returns
+Return Winners:
+2
+0
+Return Errors:
+0
+0
+FH Return Winners:
+1
+0
+FH Return Errors:
+0
+0
+BH Return Winners:
+1
+0
+BH Return Errors:
+0
+0
+Game 8 - Winner: M.Freedman
+Set Score: 6-1, 6-2
+M.Freedman
+server
+F.Padilla
+receiver
+Shot Breakdown
+FH Winners:
+2
+0
+FH Errors:
+2
+0
+BH Winners:
+0
+0
+BH Errors:
+1
+1
+Net Winners:
+0
+0
+Net Errors:
+0
+0
+Serves
+Aces:
+1
+0
+Double Faults:
+0
+0
+1st Serves:
+2
+0
+2nd Serves:
+5
+0
+1st Serve %:
+28.6%
+0.0%
+2nd Serve %:
+71.4%
+0.0%
+Break Points
+Break Points Won:
+0
+0
+Break Points Lost:
+0
+0
+Break Points Saved:
+2
+0
+Break Points Faced:
+2
+0
+Returns
+Return Winners:
+0
+0
+Return Errors:
+0
+1
+FH Return Winners:
+0
+0
+FH Return Errors:
+0
+1
+BH Return Winners:
+0
+0
+BH Return Errors:
+0
+0
+
+### END MATCH TELEMETRY
+
+### Player Black Book Notes
+
+These notes will be taken by user and saved or tagged to any player that they scout. These notes are aimed at aggregating data on how to optimally play against this player. The notes can be anything the user so desires but the user will be provided a template that covers the following questions to answer when viewing a player’s match: 
+
+https://docs.google.com/spreadsheets/d/18EaD8DINRuBVg0WwkFLJ09Kv3X-m-j4a/edit?gid=1723245138#gid=1723245138
+
+### Black Book Template - Match Scouting Questions
+
+This template provides a structured approach to scouting opponents during matches. Users can document observations across multiple categories to ***build a comprehensive profile of how to compete against each player***.
+
+### Serve & Return
+
+- What is their preferred serve (1st and 2nd)? Placement, spin, patterns?
+- Where are they most vulnerable on serve? Which side can you attack?
+- How do they handle pressure serving? (Break points, game points, etc.)
+- What is their return position and strategy? Do they chip, drive, or block?
+- Can you identify return patterns or tendencies?
+
+### Groundstrokes & Rally Patterns
+
+- What is their dominant wing (forehand or backhand)?
+- Which side breaks down first under pressure?
+- Do they prefer crosscourt or down-the-line patterns?
+- How do they handle short balls? Do they attack or reset?
+- What is their rally tolerance? Do they go for winners early or grind?
+
+### Net Game & Transition
+
+- Are they comfortable at net? Do they approach voluntarily?
+- What are their volleying strengths and weaknesses?
+- How do they handle passing shots? Low, high, body shots?
+- Do they transition well from defense to offense?
+
+### Movement & Court Coverage
+
+- What is their movement quality? Speed, anticipation, recovery?
+- Where are the gaps in their court coverage?
+- How do they handle being pulled wide or short?
+- Do they move better side-to-side or forward-backward?
+
+### Mental & Tactical Tendencies
+
+- How do they respond to adversity? (Going down a break, losing first set, etc.)
+- Do they have visible tells or patterns when frustrated/confident?
+- What is their pace of play preference? Do they rush or slow down points?
+- Do they adapt their tactics mid-match or stick to their game?
+- Are they vulnerable in specific game situations? (Tiebreaks, serving to stay in set, etc.)
+
+### Physical & Conditioning
+
+- How is their stamina in long matches or hot conditions?
+- Do they show physical limitations? (Mobility, injuries, fatigue patterns)
+- How do they perform in third sets or extended rallies?
+
+### Strategic Recommendations
+
+- What is the optimal game plan against this player?
+- Which patterns should you employ? (Serve patterns, rally construction, etc.)
+- What should you avoid doing? (Playing into their strengths)
+- Key tactical adjustments for different match situations?
+
+### Additional Notes
+
+- Any unique quirks, habits, or patterns observed?
+- Environmental factors that affected their play? (Surface, conditions, etc.)
+- Match context and specific observations from this viewing?

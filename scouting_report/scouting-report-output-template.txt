@@ -1,0 +1,141 @@
+### Comprehensive Analysis Types from USTA Player Record Data
+
+### 1. Performance Analytics
+
+- **Win/Loss Ratio Analysis:** Overall record, winning percentage, recent form trends
+- **Match Outcome Patterns:** Close matches vs blowouts, comeback ability, consistency
+- **Score Line Analysis:** Typical score margins, ability to close out matches, performance in decisive sets
+- **Tiebreak Performance:** Win rate in tiebreaks, clutch performance indicators
+- **Set Win Percentage:** First set win rate, ability to win from behind, three-set record
+
+### 2. Competition Level Analysis
+
+- **Tournament Level Performance:** Win rates by tournament tier (J60, J100, L1-L7, Nationals, Sectionals)
+- **Round Performance:** Success rate by round (R32, R16, QF, SF, F), ability to advance deep
+- **Opponent Quality Analysis:** Record vs top-ranked opponents, performance against higher/lower UTR
+- **Age Division Performance:** Results within age group vs competing up/down
+- **Big Match Performance:** Record in finals, semifinals, and high-stakes matches
+
+### 3. Rating & Ranking Analytics
+
+- **UTR Trajectory:** Rating trends over time, stability vs volatility, momentum analysis
+- **WTN Analysis:** World Tennis Number trends and comparative performance
+- **National Ranking Progression:** Ranking movement, rate of improvement/decline
+- **Rating vs Performance Gap:** Over/under-performing relative to rating
+- **Opponent Rating Analysis:** Average UTR of opponents faced, strength of schedule
+
+### 4. Surface Performance
+
+- **Surface-Specific Records:** Win percentage on hard court, clay, grass, indoor
+- **Surface Preferences:** Best and worst surfaces, surface specialization
+- **Top 6 Results by Surface:** Where key points were earned
+- **Surface Adaptability:** Consistency across different surfaces
+
+### 5. Point Defense & Pressure Analysis
+
+- **Top 6 Points Breakdown:** Event distribution, concentration of points
+- **Points Expiration Timeline:** When points drop off (30, 14, 7 days out)
+- **Point Defense Pressure:** Total points at risk, percentage of ranking at stake
+- **Bonus Points Performance:** Ability to earn bonus points vs standard points
+- **Points per Tournament:** Efficiency in point accumulation
+
+### 6. Temporal & Scheduling Analytics
+
+- **Activity Level:** Match frequency, tournament frequency, rest periods
+- **Recent Form:** Last 5, 10, 20 matches performance
+- **Seasonal Performance:** Performance by time of year, month-by-month trends
+- **Tournament Date Patterns:** Peak performance periods, consistency throughout year
+- **Match Load Analysis:** Performance with high vs low match volume
+
+### 7. Strategic Pattern Recognition
+
+- **Tournament Selection Strategy:** Mix of tournament levels chosen
+- **Risk Tolerance:** Willingness to compete up in level/age division
+- **Point Optimization:** Strategic tournament choices for ranking gains
+- **Consistency Patterns:** Reliable performer vs streaky
+
+### 8. Head-to-Head & Competitive Context
+
+- **Direct H2H Record:** If users have faced each other previously
+- **Common Opponent Analysis:** Shared opponents and comparative results
+- **Peer Group Performance:** Results vs similarly-ranked players
+- **Upset Frequency:** Record as favorite vs underdog
+
+### 9. Momentum & Confidence Indicators
+
+- **Winning/Losing Streaks:** Current form trajectory
+- **Breakthrough Performance:** Significant recent wins or achievements
+- **Slump Identification:** Extended poor performance periods
+- **Recovery Analysis:** Ability to bounce back from losses
+
+### 10. Predictive & Confidence Metrics
+
+- **Match Count Reliability:** Data sample size for confidence scoring
+- **Recency Weighting:** How current the data is
+- **Performance Consistency:** Predictability of results
+- **Expected Outcome Probability:** Win likelihood based on historical patterns
+- **Upset Risk Assessment:** Likelihood of unexpected results
+
+### 11. Comparative Analytics
+
+- **Percentile Rankings:** Performance vs peer group in various categories
+- **Strength of Schedule:** Difficulty rating of opponents faced
+- **Points Efficiency:** Points earned relative to matches played
+- **Ranking Efficiency:** National ranking relative to UTR/WTN
+
+### 12. Weakness & Vulnerability Identification
+
+- **Performance Gaps:** Situations where win rate drops significantly
+- **Level Ceiling:** Highest level where player remains competitive
+- **Pressure Performance:** Results in high-stakes situations
+- **Inconsistency Patterns:** When player is most vulnerable to upsets
+    
+    ## Additional Meaningful Data Points & Pattern Analysis
+    
+    After analyzing the existing scouting report structure and available data sources, here are additional meaningful insights that can be extracted:
+    
+    ### Ranking Inflation/Deflation Analysis
+    
+    - **National Ranking vs. UTR/WTN Discrepancy Index:** Calculate variance between national ranking percentile and UTR/WTN percentile to identify players who may be over/underrated in specific systems. A player ranked 500th nationally but with a UTR in the 300th percentile range indicates potential ranking inflation through selective play.
+    - **Opponent Quality Score:** Aggregate the average UTR/WTN of all opponents faced vs. their national rankings to determine if a player is strategically playing up or down in competition level.
+    - **Rating Velocity Discrepancy:** Compare the rate of change in national ranking vs. UTR/WTN over time periods. Divergent trajectories may indicate gaming of one system or tournament selection strategy.
+    
+    ### Competition Selection & Strategic Play Patterns
+    
+    - **Tournament Tier Distribution:** Analyze what percentage of matches are played at International, National, Regional, Local, or Sectional levels to understand competitive ambition and strategic tournament selection.
+    - **Geographic Competition Radius:** Map where opponents are from to identify if player stays local (potentially avoiding tougher competition) or travels widely (seeking stronger competition).
+    - **Draw Position Advantage Rate:** Track if player consistently draws lower-seeded opponents in early rounds, which could indicate strategic entry timing or point manipulation.
+    - **Bye & Walkover Rate:** High rates may indicate point accumulation without actual competitive play.
+    
+    ### Advanced Performance Metrics
+    
+    - **Close Match Performance Index:** Win/loss record in matches decided by tiebreaks or third sets to measure clutch performance ability.
+    - **Upset Rate (Both Directions):** Frequency of beating higher-rated players vs. losing to lower-rated players to assess consistency and ceiling.
+    - **Surface Transition Adaptability:** Performance variance when switching between surfaces within short time periods.
+    - **Competition Density Impact:** Performance correlation with number of matches played in consecutive days/weeks (fatigue factor).
+    - **Serve Hold Rate by Set Position:** Serving performance in first set vs. second set vs. third set to identify physical/mental patterns.
+    - **Return Game Aggression Index:** Break point conversion rate and return game winners-to-errors ratio.
+    
+    ### Temporal & Situational Intelligence
+    
+    - **Time-of-Day Performance Variance:** If match times are available, identify morning vs. afternoon vs. evening performance patterns.
+    - **Weather Impact Correlation:** If weather data is available, correlate temperature, humidity, and wind with performance metrics.
+    - **Rest Days Optimal Window:** Identify if player performs better with 1, 2, 3+ days of rest between matches.
+    - **Tournament Week Position Performance:** Does player start strong and fade, or start slow and improve as tournament progresses?
+    - **Match Duration Tolerance:** Win rate in matches
+    
+    ### Opponent Quality & Performance Level Analysis
+    
+    - **Average Win Threshold Metrics:** Calculate the average national ranking, UTR, and WTN of opponents this player defeats to establish their typical "win ceiling." This reveals the competitive level at which they consistently succeed.
+    - **Average Loss Threshold Metrics:** Calculate the average national ranking, UTR, and WTN of opponents this player loses to, establishing their "loss floor." This identifies the competitive level where they struggle.
+    - **Competitive Range Index:** The gap between win threshold and loss threshold metrics indicates consistency. A narrow gap suggests predictable performance; a wide gap indicates inconsistency or match-up dependency.
+    - **Rating System Performance Comparison:** Compare win/loss thresholds across all three rating systems (national ranking, UTR, WTN) to identify if player performs differently against opponents rated highly in one system vs. another.
+    - **Opponent Quality Trend Analysis:** Track whether the average rating of opponents beaten/lost to is increasing or decreasing over time, indicating competitive trajectory and ambition level.
+    
+    ### Consolation Draw (FIC) Performance Analysis
+    
+    - **Main Draw vs. Consolation Draw Win Rate Differential:** Compare win percentage in main draws vs. consolation (FIC) draws to measure mental resilience and fight after adversity.
+    - **Consolation Draw Commitment Score:** Track completion rate of consolation draws (do they withdraw or play through) and average performance quality to assess competitiveness after losing.
+    - **Bounce-Back Performance Index:** Measure performance in first consolation match immediately following main draw loss to gauge mental recovery speed.
+    - **Consolation Draw Opponent Quality:** Analyze if player's performance in consolation differs when facing higher vs. lower rated opponents, revealing if they "mail it in" or use it as development opportunity.
+    - **Point Recovery Strategy via Consolation:** Calculate average points gained through consolation play to identify players who strategically use back draws for ranking maintenance vs. those who skip them.

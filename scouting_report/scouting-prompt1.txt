@@ -1,0 +1,244 @@
+### Part 1: The "Hard Logic" (Node.js Pre-Processing)
+
+The AI should not calculate dates or averages. This code runs *before* the prompt is sent. It ingests raw USTA/UTR data and outputs a clean `context` object for the LLM.
+
+```jsx
+// scouting-logic.js
+
+/**
+ * 1. POINT DEFENSE PRESSURE CALCULATOR
+ * Determines if player is defending major points in the next 30 days.
+ */
+function analyzePointPressure(rankingSnapshot, upcomingMatchDate = new Date()) {
+  const pressures = [];
+  const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+  let totalPointsDefending = 0;
+
+  rankingSnapshot.forEach(event => {
+    const eventDate = new Date([event.date](http://event.date));
+    const diffTime = Math.abs(upcomingMatchDate - eventDate);
+    
+    // Check if event is ~1 year old (within 30 day window of falling off)
+    // Logic: Events expire after 52 weeks. We check if we are approaching that anniversary.
+    const anniversaryDate = new Date(eventDate);
+    anniversaryDate.setFullYear(anniversaryDate.getFullYear() + 1);
+    
+    const timeToExpiry = anniversaryDate - upcomingMatchDate;
+    const daysToExpiry = Math.ceil(timeToExpiry / (1000 * 60 * 60 * 24));
+
+    if (daysToExpiry > 0 && daysToExpiry <= 30) {
+      totalPointsDefending += event.points;
+      pressures.push({
+        event: [event.name](http://event.name),
+        points: event.points,
+        days_to_expiry: daysToExpiry,
+        pressure_level: event.points > 300 ? "CRITICAL" : "MODERATE" 
+      });
+    }
+  });
+
+  return {
+    is_under_pressure: pressures.length > 0,
+    total_points_at_risk: totalPointsDefending,
+    expiring_events: pressures
+  };
+}
+
+/**
+ * 2. TREND & MOMENTUM ANALYZER
+ * Calculates slope of UTR/Ranking and identifies streaks.
+ */
+function analyzeMomentum(matchHistory, currentUTR) {
+  const recentMatches = matchHistory.slice(0, 10); // Last 10 matches
+  const wins = recentMatches.filter(m => m.result === 'W').length;
+  
+  // Calculate Streak
+  let currentStreak = 0;
+  let streakType = ''; // 'W' or 'L'
+  if (recentMatches.length > 0) {
+    streakType = recentMatches[0].result;
+    for (const match of recentMatches) {
+      if (match.result === streakType) currentStreak++;
+      else break;
+    }
+  }
+
+  // UTR Trend (Mock logic - requires historical UTR snapshots)
+  // Ideally you pass in { utr_3_months_ago: 11.5, current: 11.2 }
+  const trendDirection = "stable"; // logic to compare current vs 3-mo avg
+
+  return {
+    form_last_10: `${wins}-${10-wins}`,
+    current_streak: `${currentStreak} ${streakType}`,
+    momentum_score: (wins / 10) * (streakType === 'W' ? 1.2 : 0.8), // Simple weighted score
+    trend_direction: trendDirection
+  };
+}
+
+/**
+ * 3. SURFACE & LEVEL PERFORMANCE
+ * Aggregates win % by tag.
+ */
+function analyzePerformanceSplits(matchHistory) {
+  const surfaces = { hard: {w:0, l:0}, clay: {w:0, l:0}, grass: {w:0, l:0} };
+  const levels = { L1: {w:0, l:0}, L2: {w:0, l:0}, L3: {w:0, l:0}, L4: {w:0, l:0} };
+  const tiebreaks = { w: 0, l: 0 };
+
+  matchHistory.forEach(m => {
+    // Surface
+    if (surfaces[m.surface]) {
+      m.result === 'W' ? surfaces[m.surface].w++ : surfaces[m.surface].l++;
+    }
+    // Level
+    if (levels[m.level]) {
+      m.result === 'W' ? levels[m.level].w++ : levels[m.level].l++;
+    }
+    // Tiebreaks (Check score string for "7-6" or "1-0")
+    if (m.score.includes('7-6') || m.score.includes('1-0(')) {
+       // Basic logic: if player won match and score shows TB, assume won TB (needs granular score parsing)
+       // This is a placeholder for detailed score parsing logic
+       m.result === 'W' ? tiebreaks.w++ : tiebreaks.l++; 
+    }
+  });
+
+  return { surfaces, levels, tiebreaks };
+}
+
+/**
+ * MAIN AGGREGATOR
+ * Generates the JSON payload to send to the AI.
+ */
+function buildAIContext(playerData, opponentData, matchHistory, rankingSnapshot) {
+  const pressure = analyzePointPressure(rankingSnapshot);
+  const momentum = analyzeMomentum(matchHistory, opponentData.utr);
+  const splits = analyzePerformanceSplits(matchHistory);
+
+  return {
+    opponent_profile: {
+      name: [opponentData.name](http://opponentData.name),
+      utr: opponentData.utr,
+      wtn: opponentData.wtn,
+      ranking: opponentData.national_rank
+    },
+    computed_metrics: {
+      pressure_analysis: pressure,
+      momentum_analysis: momentum,
+      surface_affinity: splits.surfaces,
+      level_competence: splits.levels,
+      clutch_factor: {
+        tiebreak_record: splits.tiebreaks,
+        tiebreak_win_rate: splits.tiebreaks.w / (splits.tiebreaks.w + splits.tiebreaks.l || 1)
+      }
+    },
+    raw_history: matchHistory.slice(0, 20).map(m => ({
+      date: [m.date](http://m.date),
+      opponent_utr: m.opponent_utr,
+      score: m.score,
+      result: m.result,
+      surface: m.surface,
+      level: m.level
+    })),
+    match_book_notes: opponentData.user_notes || []
+  };
+}
+
+module.exports = { buildAIContext };
+```
+
+---
+
+### Part 2: The Output Schema (JSON)
+
+This ensures the AI output is always perfectly structured for your UI.
+
+```json
+{
+  "type": "object",
+  "properties": {
+    "meta": {
+      "win_probability": { "type": "number", "description": "0.00 to 1.00" },
+      "confidence_score": { "type": "number", "description": "0.00 to 1.00 based on data density" },
+      "predicted_score": { "type": "string", "description": "e.g. '6-4, 4-6, 6-3'" }
+    },
+    "psychological_profile": {
+      "current_mindset": { "type": "string", "enum": ["CONFIDENT", "DESPERATE", "FRAGILE", "COMFORTABLE"] },
+      "pressure_analysis": { "type": "string", "description": "Narrative on point defense/ranking pressure" },
+      "vulnerability_trigger": { "type": "string", "description": "What specifically triggers a mental collapse?" }
+    },
+    "tactical_blueprint": {
+      "primary_strategy": { "type": "string", "description": "The 'One Big Thing' to do" },
+      "serve_strategy": { "type": "string" },
+      "return_strategy": { "type": "string" },
+      "rally_patterns": { "type": "string" }
+    },
+    "key_insights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string", "enum": ["PHYSICAL", "TECHNICAL", "MENTAL", "PATTERN"] },
+          "insight": { "type": "string" },
+          "evidence": { "type": "string", "description": "Data point backing this claim" },
+          "impact_level": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] }
+        }
+      }
+    },
+    "red_flags": {
+      "type": "array",
+      "items": { "type": "string", "description": "Warnings like 'Quits in 3rd sets' or 'Injured recently'" }
+    }
+  },
+  "required": ["meta", "psychological_profile", "tactical_blueprint", "key_insights"]
+}
+```
+
+---
+
+### Part 3: The System Prompt
+
+This is the "brain." It takes the `computed_metrics` from Part 1 and generates the insights for Part 2.
+
+**Role:** You are the world's most advanced Tennis Tactical Analyst AI. You do not just summarize stats; you diagnose the "soul" of the player's game using data as evidence.
+
+**Task:** Analyze the provided JSON context about an opponent and generate a `ScoutingReport` JSON object.
+
+**Analysis Framework (The "Lens" you must use):**
+
+1. **The Pressure Cooker (Point Defense):**
+    - Look at `computed_metrics.pressure_analysis`.
+    - *Logic:* If `pressure_level` is "CRITICAL" (defending major points in <14 days) AND `momentum_score` is low, the opponent is likely "FRAGILE" or "DESPERATE." They may play tight (double faults) or over-hit (panic).
+    - *Logic:* If they are safe on points and on a win streak, they are "CONFIDENT" or "Dangerous."
+2. **The "Quitter" Algorithm (Physical/Mental):**
+    - Scan `raw_history` for retirements ("Ret"), "Walkovers", or "6-0" final sets in losses.
+    - *Logic:* If they lose 3rd sets often (e.g. 1-6), tag them as having "Low Physical Stamina" or "Mental Checking Out."
+3. **Level Competence (The Ceiling):**
+    - Look at `level_competence`.
+    - *Logic:* If they dominate L4/L5 but go 0-5 in L3, they are a "Level Capper." The user should not be intimidated; their rating is inflated by weak wins.
+4. **Surface Specialist:**
+    - Compare `surface_affinity`.
+    - *Logic:* If Hard Court Win% > Clay Win% by 15%+, they are a "Hard Court Specialist." Advise the user to exploit surface-specific weaknesses (e.g., movement on clay).
+
+**Input Context:**
+
+You will receive a JSON object containing:
+
+- `computed_metrics`: Pre-calculated trends, pressure, and splits.
+- `raw_history`: Last 20 matches.
+- `match_book_notes`: Qualitative user notes (Trust these highly).
+
+**Constraints:**
+
+- **Tone:** Professional, ruthless, objective. No fluff.
+- **Evidence:** Every insight MUST cite a data point (e.g., "Based on 3-7 tiebreak record...").
+- **Output:** STRICTLY Valid JSON matching the provided schema.
+
+---
+
+### Next Steps for Testing
+
+To "test this out" as you requested, we can simulate a run right here.
+
+1. I can generate a **Mock JSON Payload** (What your Node.js backend *would* produce).
+2. I can then simulate the **AI Response** based on that payload using this System Prompt.
+
+**Shall I generate a Mock Payload for "Ivan Rybak" so we can see what the AI outputs?**

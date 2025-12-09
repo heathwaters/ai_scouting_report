@@ -1,0 +1,530 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tennis Scouting Report Raw Input Schema",
+  "description": "The exact JSON structure required by the backend to generate the Comprehensive Scouting Report.",
+  "type": "object",
+  "required": [
+    "player_profile",
+    "rank_history",
+    "ranking_snapshot",
+    "match_history",
+    "match_stats",
+    "match_book"
+  ],
+  "properties": {
+    "player_profile": {
+      "description": "Basic info about the target player being scouted. Maps from API response fields: player_name, utrSinglesDec, wtn_singles, national_rank, player_grad_year.",
+      "type": "object",
+      "required": ["name", "utr", "wtn", "national_rank"],
+      "properties": {
+        "name": { 
+          "type": "string", 
+          "description": "Player full name. Maps from API: player_name",
+          "example": "Max Freedman" 
+        },
+        "utr": { 
+          "type": "number", 
+          "description": "Universal Tennis Rating (Singles, decimal). Maps from API: utrSinglesDec",
+          "example": 11.4 
+        },
+        "wtn": { 
+          "type": "number", 
+          "description": "World Tennis Number (Singles). Maps from API: wtn_singles",
+          "example": 19.96 
+        },
+        "national_rank": { 
+          "type": "integer", 
+          "description": "USTA National ranking. Maps from API: national_rank",
+          "example": 154 
+        },
+        "national_points": {
+          "type": "integer",
+          "description": "Total USTA national points. Maps from API: getUSTAPlayerRankingSummary[].player_national_pts (use B18 entry). Also used for ranking_snapshot.current_points.",
+          "example": 3374
+        },
+        "birth_year": { 
+          "type": "integer", 
+          "description": "Player birth year. May be calculated from player_grad_year and age_group if not directly available.",
+          "example": 2008,
+          "nullable": true
+        },
+        "district_rank": {
+          "type": "integer",
+          "description": "District ranking. Maps from API: district_rank",
+          "example": 5
+        },
+        "section_rank": {
+          "type": "integer",
+          "description": "Section ranking. Maps from API: section_rank",
+          "example": 21
+        },
+        "age_group": {
+          "type": "string",
+          "description": "Player age division. Maps from API: player_age_group",
+          "example": "Boys' 18 Singles"
+        },
+        "location": {
+          "type": "string",
+          "description": "Player location (city, state). Maps from API: player_city, player_state",
+          "example": "Boca Raton, FL"
+        },
+        "grad_year": {
+          "type": "integer",
+          "description": "Graduation year. Maps from API: player_grad_year. Can be used to estimate birth_year if needed.",
+          "example": 2027
+        }
+      }
+    },
+    "rank_history": {
+      "description": "Historical ranking and rating snapshots for trajectory analysis. Maps from API: getRankHistory/. Required for UTR Trajectory and National Ranking Progression. Contains monthly snapshots of USTA, UTR, and WTN ratings over the past 6-7 months.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["list_date", "national_rank", "utrSingles", "wtn_singles"],
+        "properties": {
+          "list_date": { 
+            "type": "string", 
+            "format": "date", 
+            "description": "The date of the ranking snapshot (YYYY-MM-DD format)",
+            "example": "2025-11-19" 
+          },
+          "district_rank": { 
+            "type": "integer", 
+            "description": "District ranking",
+            "example": 5 
+          },
+          "section_rank": { 
+            "type": "integer", 
+            "description": "Section ranking",
+            "example": 21 
+          },
+          "national_rank": { 
+            "type": "integer", 
+            "description": "National ranking",
+            "example": 154 
+          },
+          "utrSingles": { 
+            "type": "number", 
+            "description": "Universal Tennis Rating (Singles)",
+            "example": 11 
+          },
+          "wtn_singles": { 
+            "type": "number", 
+            "description": "World Tennis Number (Singles)",
+            "example": 19.96 
+          },
+          "rank_date": {
+            "type": "string",
+            "description": "Display format date (MM-DD-YYYY)",
+            "example": "11-21-2025"
+          },
+          "rank_order": {
+            "type": "integer",
+            "description": "Ordering index for sorting",
+            "example": 0
+          }
+        }
+      }
+    },
+    "ranking_snapshot": {
+      "description": "Data from the 'Ranking Snapshot' UI (Points Per Round). Maps from ranking snapshot API response. Used for Point Defense & Pressure Analysis.",
+      "type": "object",
+      "required": ["current_points", "top_6_events"],
+      "properties": {
+        "current_points": {
+          "type": "integer",
+          "description": "Total USTA national points. Maps from API: totalPoints",
+          "example": 3374
+        },
+        "next_drop_off": {
+          "description": "The date the next significant points bundle expires. May need to be calculated from oldest event date or obtained from separate API call.",
+          "type": "string",
+          "format": "date",
+          "example": "2026-02-07",
+          "nullable": true
+        },
+        "top_6_events": {
+          "type": "array",
+          "description": "The 6 best tournaments contributing to the ranking. Extract from API: events array, sorted by listPoints (descending), filtered by pointsIncludedInRank=true, take top 6.",
+          "items": {
+            "type": "object",
+            "required": ["date", "name", "points_earned", "bonus_points"],
+            "properties": {
+              "date": {
+                "type": "string",
+                "format": "date",
+                "description": "Tournament start date. Maps from API: events[].startDate",
+                "example": "2025-05-16"
+              },
+              "name": {
+                "type": "string",
+                "description": "Tournament name. Maps from API: events[].displayName or events[].name",
+                "example": "L2-Key Biscayne, FL"
+              },
+              "points_earned": {
+                "type": "integer",
+                "description": "Points earned from tournament. Maps from API: events[].listPoints (points that count toward ranking) or events[].eventPoints",
+                "example": 363
+              },
+              "bonus_points": {
+                "type": "integer",
+                "description": "Bonus points earned. Maps from API: events[].bonusPoints",
+                "example": 214
+              },
+              "level": {
+                "type": "string",
+                "description": "Tournament level. Maps from API: events[].level",
+                "example": "Level 2"
+              },
+              "division": {
+                "type": "string",
+                "description": "Age division. Maps from API: events[].division",
+                "example": "Boys' 18 & under singles"
+              }
+            }
+          }
+        }
+      }
+    },
+    "match_history": {
+      "description": "List of recent matches from USTA Player Record. Maps from API: events[].rounds[] (flatten events array, extract each round as a match). Used for Form, Level, Surface, and Consolation analysis.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "tournament_name",
+          "level",
+          "round",
+          "draw_type",
+          "opponent",
+          "score",
+          "result",
+          "age_division"
+        ],
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "Match date. Maps from API: rounds[].matchDate (extract date from ISO datetime string)",
+            "example": "2025-10-11"
+          },
+          "tournament_name": {
+            "type": "string",
+            "description": "Tournament name. Maps from API: events[].displayName or events[].name",
+            "example": "L2-Naples, FL"
+          },
+          "level": {
+            "type": "string",
+            "description": "Tournament level. Maps from API: events[].level. Extract level code (e.g., 'Level 2' -> 'L2', 'Level 3 Open' -> 'L3', 'ITF J60' -> 'J60', 'ITF J100' -> 'J100', 'ITF J300' -> 'J300', 'ITF J500' -> 'J500', 'Grand Slam' -> 'Grand Slam')",
+            "enum": ["L1", "L2", "L3", "L4", "L5", "L6", "L7", "J30", "J60", "J100", "J300", "J500", "Grand Slam"],
+            "example": "L2"
+          },
+          "surface": {
+            "type": "string",
+            "enum": ["Hard", "Clay", "Grass", "Indoor", "Unknown"],
+            "description": "Court surface. Not directly in API - may need to infer from tournament name/location or set to 'Unknown'",
+            "example": "Hard",
+            "nullable": true
+          },
+          "round": {
+            "type": "string",
+            "description": "Round name. Maps from API: rounds[].round or rounds[].roundName",
+            "example": "R32"
+          },
+          "draw_type": {
+            "type": "string",
+            "enum": ["Main", "FIC", "Consolation", "Qualifier", "Compass"],
+            "description": "Draw type. Maps from API: events[].drawType. Parse to match enum: 'Full Feed in Consolation' -> 'FIC', 'Full Feed-in Consolation' -> 'FIC', 'Compass Draw' -> 'Compass', 'Single Elimination' -> 'Main', etc. Crucial for Consolation Analysis.",
+            "example": "Main"
+          },
+          "age_division": {
+            "type": "string",
+            "description": "Age division. Maps from API: events[].division (e.g., 'Boys' 18 & under singles' -> 'B18')",
+            "example": "B18"
+          },
+          "location": {
+            "type": "string",
+            "description": "Tournament location. Maps from API: events[].organizationCity + ', ' + events[].organizationState (e.g., 'Naples, FL')",
+            "example": "Naples, FL"
+          },
+          "seeding": {
+            "type": "integer",
+            "description": "Player's seeding position. Not directly in API - may need separate lookup or set to null",
+            "example": 8,
+            "nullable": true
+          },
+          "match_duration_minutes": {
+            "type": "integer",
+            "description": "Match duration in minutes. Not directly in API - may need separate lookup or set to null",
+            "example": 95,
+            "nullable": true
+          },
+          "opponent": {
+            "type": "object",
+            "description": "Opponent information. Maps from API: rounds[].opponents[0] (first opponent in array)",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Opponent name. Maps from API: rounds[].opponents[0].name",
+                "example": "James Wakefield"
+              },
+              "utr": {
+                "type": "number",
+                "description": "Opponent UTR. Maps from API: rounds[].opponents[0].utrDec (decimal) or rounds[].opponents[0].utr (integer)",
+                "example": 11.38,
+                "nullable": true
+              },
+              "wtn": {
+                "type": "number",
+                "description": "Opponent WTN. Maps from API: rounds[].opponents[0].wtn_singles",
+                "example": 19.75,
+                "nullable": true
+              },
+              "national_rank": {
+                "type": "integer",
+                "description": "Opponent national rank. Maps from API: rounds[].opponents[0].nationalRank (may be empty string, convert to null)",
+                "example": 138,
+                "nullable": true
+              }
+            }
+          },
+          "score": {
+            "type": "string",
+            "description": "Match score. Maps from API: rounds[].results",
+            "example": "6-2, 4-6, [9-11]"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["Win", "Loss", "Walkover", "Retirement"],
+            "description": "Match result. Maps from API: rounds[].outcome ('W' -> 'Win', 'L' -> 'Loss') combined with rounds[].status ('WALKOVER' -> 'Walkover', 'RETIRED' -> 'Retirement')",
+            "example": "Loss"
+          }
+        }
+      }
+    },
+    "match_stats": {
+      "description": "Match statistics data. Combines data from two APIs: (1) getLiveScoreMatchDetailsPlayer - basic match metadata, (2) getStatsFile - detailed stroke-by-stroke statistics. Used for Serve, Return, and Pressure metrics.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "Stats for a single match. Basic metadata from getLiveScoreMatchDetailsPlayer is always available; detailed stats (totals, sets, games) from getStatsFile are optional and only present for manually tracked matches.",
+        "required": ["match_id"],
+        "properties": {
+          "match_id": {
+            "type": "string",
+            "description": "Unique match identifier. Maps from API: getLiveScoreMatchDetailsPlayer[].lscs_match_id OR getStatsFile.match.matchId",
+            "example": "e5150553-38e1-4c02-9c47-14c1054e1c2d"
+          },
+          "player1_name": {
+            "type": "string",
+            "description": "Player 1 name. Maps from API: getLiveScoreMatchDetailsPlayer[].player1_1name",
+            "example": "Max Freedman",
+            "nullable": true
+          },
+          "player2_name": {
+            "type": "string",
+            "description": "Player 2 name. Maps from API: getLiveScoreMatchDetailsPlayer[].player2_1name",
+            "example": "Francesco Padilla",
+            "nullable": true
+          },
+          "match_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Match date. Maps from API: getLiveScoreMatchDetailsPlayer[].lsc_match_date",
+            "example": "2025-06-07",
+            "nullable": true
+          },
+          "match_time": {
+            "type": "string",
+            "description": "Match time. Maps from API: getLiveScoreMatchDetailsPlayer[].lsc_match_time",
+            "example": "12:45",
+            "nullable": true
+          },
+          "tournament_name": {
+            "type": "string",
+            "description": "Tournament name. Maps from API: getLiveScoreMatchDetailsPlayer[].lsc_tourn_name",
+            "example": "2025 Bobby Curtis Singles Championships 16/18",
+            "nullable": true
+          },
+          "round": {
+            "type": "string",
+            "description": "Tournament round. Maps from API: getLiveScoreMatchDetailsPlayer[].lsc_tourn_round",
+            "example": "R64",
+            "nullable": true
+          },
+          "final_score": {
+            "type": "string",
+            "description": "Final match score. Maps from API: getLiveScoreMatchDetailsPlayer[].lsc_final_score",
+            "example": "1-6 2-6",
+            "nullable": true
+          },
+          "totals": {
+            "type": "object",
+            "description": "Match-level statistics totals per player. Maps from API: getStatsFile.match.totals. Structure: { '1': { serving: {...}, returning: {...}, rally: {...}, points: {...} }, '2': {...} }. Only present for matches with detailed tracking from getStatsFile.",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "serving": {
+                  "type": "object",
+                  "properties": {
+                    "firstServes": { "type": "integer", "description": "Maps from API: totals[player].serving.firstServes" },
+                    "secondServes": { "type": "integer" },
+                    "aces": { "type": "integer", "description": "Maps from API: totals[player].serving.aces" },
+                    "doubleFaults": { "type": "integer", "description": "Maps from API: totals[player].serving.doubleFaults" },
+                    "breakPointsWon": { "type": "integer" },
+                    "breakPointsLost": { "type": "integer" },
+                    "breakPointsSaved": { "type": "integer", "description": "Maps from API: totals[player].serving.breakPointsSaved" },
+                    "breakPointsFaced": { "type": "integer", "description": "Maps from API: totals[player].serving.breakPointsFaced" },
+                    "firstServePct": { "type": "number", "description": "First serve percentage. Maps from API: totals[player].serving.firstServePct" },
+                    "secondServePct": { "type": "number" }
+                  }
+                },
+                "returning": {
+                  "type": "object",
+                  "properties": {
+                    "returnWinners": { "type": "integer" },
+                    "returnErrors": { "type": "integer" },
+                    "fhReturnWinners": { "type": "integer", "description": "Forehand return winners. Maps from API: totals[player].returning.fhReturnWinners" },
+                    "fhReturnErrors": { "type": "integer", "description": "Forehand return errors. Maps from API: totals[player].returning.fhReturnErrors" },
+                    "bhReturnWinners": { "type": "integer", "description": "Backhand return winners. Maps from API: totals[player].returning.bhReturnWinners" },
+                    "bhReturnErrors": { "type": "integer", "description": "Backhand return errors. Maps from API: totals[player].returning.bhReturnErrors" },
+                    "breakPointsWon": { "type": "integer", "description": "Break points converted when returning. Maps from API: totals[player].returning.breakPointsWon" },
+                    "breakPointsLost": { "type": "integer" }
+                  }
+                },
+                "rally": {
+                  "type": "object",
+                  "properties": {
+                    "winners": { "type": "integer", "description": "Maps from API: totals[player].rally.winners" },
+                    "errors": { "type": "integer", "description": "Maps from API: totals[player].rally.errors" },
+                    "fhWinners": { "type": "integer" },
+                    "fhErrors": { "type": "integer" },
+                    "bhWinners": { "type": "integer" },
+                    "bhErrors": { "type": "integer" },
+                    "netWinners": { "type": "integer", "description": "Maps from API: totals[player].rally.netWinners" },
+                    "netErrors": { "type": "integer" }
+                  }
+                },
+                "points": {
+                  "type": "object",
+                  "properties": {
+                    "won": { "type": "integer", "description": "Maps from API: totals[player].points.won" },
+                    "lost": { "type": "integer" }
+                  }
+                }
+              }
+            }
+          },
+          "sets": {
+            "type": "array",
+            "description": "Set-level breakdowns for detecting '3rd Set Physicality'. Maps from API: getStatsFile.match.sets[]. Each set has totals per player and games array. Only present for matches with detailed tracking from getStatsFile.",
+            "nullable": true,
+            "items": {
+              "type": "object",
+              "properties": {
+                "setNumber": {
+                  "type": "integer",
+                  "description": "Maps from API: match.sets[].setNumber",
+                  "example": 1
+                },
+                "score": {
+                  "type": "string",
+                  "description": "Set score. Maps from API: match.sets[].score",
+                  "example": "6-4"
+                },
+                "totals": {
+                  "type": "object",
+                  "description": "Set-level totals per player. Same structure as match.totals. Maps from API: match.sets[].totals",
+                  "additionalProperties": {
+                    "type": "object",
+                    "description": "Same structure as totals[player] object (serving, returning, rally, points)"
+                  }
+                },
+                "games": {
+                  "type": "object",
+                  "description": "Games in this set. Maps from API: match.sets[].games (object with game numbers as keys)",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                      "gameNumber": { "type": "integer" },
+                      "server": { "type": "integer", "description": "Player number (1 or 2) who served" },
+                      "receiver": { "type": "integer", "description": "Player number (1 or 2) who received" },
+                      "winner": { "type": ["integer", "null"], "description": "Player number who won, or null if incomplete" },
+                      "setScoreAfterGame": { "type": ["string", "null"], "description": "Set score after this game" },
+                      "gameComplete": { "type": "boolean" },
+                      "isTiebreak": { "type": "boolean" },
+                      "players": {
+                        "type": "object",
+                        "description": "Per-player stats for this game. Keys are '1' and '2'",
+                        "additionalProperties": {
+                          "type": "object",
+                          "properties": {
+                            "role": { "type": "string", "enum": ["server", "receiver"] },
+                            "serving": { "type": "object", "description": "Serving stats (same structure as totals[player].serving)" },
+                            "returning": { "type": "object", "description": "Returning stats (same structure as totals[player].returning)" },
+                            "rally": { "type": "object", "description": "Rally stats (same structure as totals[player].rally)" }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "players": {
+            "type": "object",
+            "description": "Player information. Maps from API: getStatsFile.match.players. Keys are '1' and '2' for player numbers.",
+            "nullable": true,
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "name": { "type": "string", "description": "Player name. Maps from API: match.players[player].name" },
+                "orgId": { "type": "string", "description": "USTA organization ID. Maps from API: match.players[player].orgId" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "match_book": {
+      "description": "Qualitative user notes. Maps from API: player notes (will be renamed to matchbook). Essential for 'Psychological Profile'. Contains free-form scouting observations that may include serve patterns, weaknesses, mental tells, and strategy notes.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["myplayernote_note"],
+        "properties": {
+          "myplayernote_id": {
+            "type": "integer",
+            "description": "Unique note identifier. Maps from API: myplayernote_id",
+            "example": 3513
+          },
+          "myplayernote_player_id": {
+            "type": "integer",
+            "description": "Player ID. Maps from API: myplayernote_player_id",
+            "example": 930865
+          },
+          "myplayernote_user_id": {
+            "type": "integer",
+            "description": "User ID who created the note. Maps from API: myplayernote_user_id",
+            "example": 100
+          },
+          "myplayernote_note": {
+            "type": "string",
+            "description": "Free-form scouting notes. May contain multiple observations separated by newlines. Maps from API: myplayernote_note",
+            "example": "1. High percentage first serves\n2. Big forehand\n3. All court aggressive style"
+          },
+          "myplayernote_date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Date and time when note was created. Maps from API: myplayernote_date",
+            "example": "2025-11-21 13:29:02"
+          }
+        }
+      }
+    }
+  }
+}
+

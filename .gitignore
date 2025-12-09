@@ -1,0 +1,15 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node modules
+node_modules/
+
+# Test outputs
+scouting_report/test/output_*.md
+
+# OS files
+.DS_Store
+Thumbs.db
+

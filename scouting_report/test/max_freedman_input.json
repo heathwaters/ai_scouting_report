@@ -1,0 +1,764 @@
+{
+  "player_profile": {
+    "name": "Max Freedman",
+    "utr": 11.4,
+    "wtn": 19.96,
+    "national_rank": 154,
+    "national_points": 3374,
+    "birth_year": 2008,
+    "district_rank": 5,
+    "section_rank": 21,
+    "age_group": "Boys' 18 Singles",
+    "location": "Boca Raton, FL",
+    "grad_year": 2027
+  },
+  "rank_history": [
+    {
+      "list_date": "2025-11-19",
+      "district_rank": 5,
+      "section_rank": 21,
+      "national_rank": 154,
+      "utrSingles": 11.40,
+      "wtn_singles": 19.96,
+      "rank_date": "11-21-2025",
+      "rank_order": 0
+    },
+    {
+      "list_date": "2025-10-08",
+      "district_rank": 7,
+      "section_rank": 22,
+      "national_rank": 167,
+      "utrSingles": 11.32,
+      "wtn_singles": 20.09,
+      "rank_date": "10-15-2025",
+      "rank_order": 0
+    },
+    {
+      "list_date": "2025-09-10",
+      "district_rank": 7,
+      "section_rank": 21,
+      "national_rank": 171,
+      "utrSingles": 11.25,
+      "wtn_singles": 19.98,
+      "rank_date": "09-15-2025",
+      "rank_order": 1
+    },
+    {
+      "list_date": "2025-08-13",
+      "district_rank": 6,
+      "section_rank": 20,
+      "national_rank": 171,
+      "utrSingles": 11.27,
+      "wtn_singles": 20,
+      "rank_date": "08-15-2025",
+      "rank_order": 2
+    },
+    {
+      "list_date": "2025-07-09",
+      "district_rank": 7,
+      "section_rank": 21,
+      "national_rank": 162,
+      "utrSingles": 11.21,
+      "wtn_singles": 20.64,
+      "rank_date": "07-15-2025",
+      "rank_order": 3
+    },
+    {
+      "list_date": "2025-06-12",
+      "district_rank": 7,
+      "section_rank": 21,
+      "national_rank": 161,
+      "utrSingles": 11.02,
+      "wtn_singles": 20.75,
+      "rank_date": "06-15-2025",
+      "rank_order": 4
+    },
+    {
+      "list_date": "2025-05-14",
+      "district_rank": 7,
+      "section_rank": 24,
+      "national_rank": 189,
+      "utrSingles": 10.99,
+      "wtn_singles": 20.18,
+      "rank_date": "05-15-2025",
+      "rank_order": 5
+    }
+  ],
+  "ranking_snapshot": {
+    "current_points": 3374,
+    "next_drop_off": null,
+    "top_6_events": [
+      {
+        "date": "2025-05-17",
+        "name": "Key Biscayne, FL",
+        "points_earned": 577,
+        "bonus_points": 214,
+        "level": "Level 2",
+        "division": "Boys' 18 & under singles"
+      },
+      {
+        "date": "2025-04-11",
+        "name": "Torneo Juvenil Nivel 4 #2 (Abierto) - 14 & 18 años o menos",
+        "points_earned": 540,
+        "bonus_points": 0,
+        "level": "Level 4 Open",
+        "division": "Boys' 18 & under singles"
+      },
+      {
+        "date": "2025-02-08",
+        "name": "Key Biscayne, FL",
+        "points_earned": 539,
+        "bonus_points": 225,
+        "level": "Level 2",
+        "division": "Boys' 18 & under singles"
+      },
+      {
+        "date": "2025-10-11",
+        "name": "Naples, FL",
+        "points_earned": 487,
+        "bonus_points": 124,
+        "level": "Level 2",
+        "division": "Boys' 18 & under singles"
+      },
+      {
+        "date": "2025-05-10",
+        "name": "Delray Championships",
+        "points_earned": 427,
+        "bonus_points": 22,
+        "level": "Level 4 Open",
+        "division": "Boys' 18 & under singles"
+      },
+      {
+        "date": "2025-08-01",
+        "name": "USTA Boys' 16 & 18 National Championships",
+        "points_earned": 424,
+        "bonus_points": 214,
+        "level": "Level 1",
+        "division": "Boys' 18 & under singles"
+      }
+    ]
+  },
+  "match_history": [
+    {
+      "date": "2025-10-27",
+      "tournament_name": "Evert ITF J60",
+      "level": "L3",
+      "round": "R64",
+      "draw_type": "Main",
+      "age_division": "Unknown",
+      "location": "Panama City, FL",
+      "opponent": {
+        "name": "Cristobal PLASENCIA ROBLES",
+        "utr": 11.46,
+        "wtn": 20.33,
+        "national_rank": null
+      },
+      "score": "3-6 2-6",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-13",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "C-F",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "Dhakshish ARYAN",
+        "utr": 11.68,
+        "wtn": 19.3,
+        "national_rank": null
+      },
+      "score": "3-6 4-6",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-13",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "C-SF",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "Ivan RYBAK",
+        "utr": 11.38,
+        "wtn": 19.91,
+        "national_rank": null
+      },
+      "score": "6-4 6-4",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-12",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "C-QF",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "Boden WILLIS",
+        "utr": 10.26,
+        "wtn": 22.39,
+        "national_rank": null
+      },
+      "score": "6-3 6-1",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-12",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "C-R16",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "Joaquin BLANCO",
+        "utr": 11.04,
+        "wtn": 21.14,
+        "national_rank": null
+      },
+      "score": "6-3 6-2",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-11",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "C-R16-Q",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "Caleb BUCHANAN",
+        "utr": 9.59,
+        "wtn": 24.93,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-10-11",
+      "tournament_name": "Naples, FL",
+      "level": "L2",
+      "round": "R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Naples, FL",
+      "opponent": {
+        "name": "James WAKEFIELD",
+        "utr": 11.38,
+        "wtn": 19.79,
+        "national_rank": null
+      },
+      "score": "6-2 4-6 [9-11]",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-09-14",
+      "tournament_name": "Altamonte Springs, FL",
+      "level": "L3",
+      "round": "C-R16",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Altamonte Springs, FL",
+      "opponent": {
+        "name": "Cyrus CHAN",
+        "utr": 10.96,
+        "wtn": 20.92,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-09-13",
+      "tournament_name": "Altamonte Springs, FL",
+      "level": "L3",
+      "round": "R16",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Altamonte Springs, FL",
+      "opponent": {
+        "name": "Ivan RYBAK",
+        "utr": 11.38,
+        "wtn": 19.91,
+        "national_rank": null
+      },
+      "score": "6-4 0-6 [6-10]",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-09-13",
+      "tournament_name": "Altamonte Springs, FL",
+      "level": "L3",
+      "round": "R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Altamonte Springs, FL",
+      "opponent": {
+        "name": "Aidan GIONIS",
+        "utr": 9.87,
+        "wtn": 23.87,
+        "national_rank": null
+      },
+      "score": "6-2 6-4",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-08-05",
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "C-R32-Q",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Rajat SHIRUR",
+        "utr": 12.58,
+        "wtn": 15.75,
+        "national_rank": null
+      },
+      "score": "2-6 2-6",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-08-05",
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "C-R64",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Calvin BAIERL",
+        "utr": 13.1,
+        "wtn": 11.05,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": null,
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "C-R64-Q",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Connor COLE",
+        "utr": 11.14,
+        "wtn": 20.32,
+        "national_rank": null
+      },
+      "score": "3-6 6-4 [11-9]",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-08-03",
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "C-R128",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Ozzy West ODOM",
+        "utr": 7.96,
+        "wtn": 27.39,
+        "national_rank": null
+      },
+      "score": "6-1 6-0",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-08-02",
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "R128",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Nischal SPURLING",
+        "utr": 12.52,
+        "wtn": 13.39,
+        "national_rank": null
+      },
+      "score": "1-6 3-6",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-08-01",
+      "tournament_name": "USTA Boys' 16 & 18 National Championships",
+      "level": "L1",
+      "round": "R256",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Kalamazoo, MI",
+      "opponent": {
+        "name": "Alex BORBIU",
+        "utr": 11.36,
+        "wtn": 19.35,
+        "national_rank": null
+      },
+      "score": "6-2 5-7 6-1",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-07-10",
+      "tournament_name": "Boys' 16-18 USTA National Clay Court Championships",
+      "level": "L1",
+      "round": "C-R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Delray Beach, FL",
+      "opponent": {
+        "name": "Noah BAYON",
+        "utr": 11.42,
+        "wtn": 19.94,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-07-09",
+      "tournament_name": "Boys' 16-18 USTA National Clay Court Championships",
+      "level": "L1",
+      "round": "R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Delray Beach, FL",
+      "opponent": {
+        "name": "Jens Holger NISSEN",
+        "utr": 11.84,
+        "wtn": 17.76,
+        "national_rank": null
+      },
+      "score": "5-7 7-6(7-5) 0-3",
+      "result": "Retirement",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-07-08",
+      "tournament_name": "Boys' 16-18 USTA National Clay Court Championships",
+      "level": "L1",
+      "round": "R64",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Delray Beach, FL",
+      "opponent": {
+        "name": "Alexander WALKER",
+        "utr": 10.48,
+        "wtn": 22.17,
+        "national_rank": null
+      },
+      "score": "7-5 6-1",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-07-07",
+      "tournament_name": "Boys' 16-18 USTA National Clay Court Championships",
+      "level": "L1",
+      "round": "R128",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Delray Beach, FL",
+      "opponent": {
+        "name": "Saje Vijay MENON",
+        "utr": 10.52,
+        "wtn": 22.13,
+        "national_rank": null
+      },
+      "score": "6-3 6-4",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-07-06",
+      "tournament_name": "Boys' 16-18 USTA National Clay Court Championships",
+      "level": "L1",
+      "round": "R256",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Delray Beach, FL",
+      "opponent": {
+        "name": null,
+        "utr": null,
+        "wtn": null,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-28",
+      "tournament_name": "Midland, MI",
+      "level": "L2",
+      "round": "C-R16-Q",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Midland, MI",
+      "opponent": {
+        "name": "Maksim HRISTOV",
+        "utr": 11.74,
+        "wtn": 19.57,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-28",
+      "tournament_name": "Midland, MI",
+      "level": "L2",
+      "round": "R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Midland, MI",
+      "opponent": {
+        "name": "Andrew VINCLER",
+        "utr": 10.78,
+        "wtn": 20.05,
+        "national_rank": null
+      },
+      "score": "1-6 7-5 [9-11]",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-09",
+      "tournament_name": "2025 Bobby Curtis Singles Championships 16/18",
+      "level": "L3",
+      "round": "C-R16",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Orlando, FL",
+      "opponent": {
+        "name": "Jeremie PORTNER",
+        "utr": 10.23,
+        "wtn": 23.18,
+        "national_rank": null
+      },
+      "score": "",
+      "result": "Walkover",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-08",
+      "tournament_name": "2025 Bobby Curtis Singles Championships 16/18",
+      "level": "L3",
+      "round": "R16",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Orlando, FL",
+      "opponent": {
+        "name": "Caleb CHOW",
+        "utr": 11.3,
+        "wtn": 19.99,
+        "national_rank": null
+      },
+      "score": "7-5 6-7(13-15) [4-10]",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-07",
+      "tournament_name": "2025 Bobby Curtis Singles Championships 16/18",
+      "level": "L3",
+      "round": "R32",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Orlando, FL",
+      "opponent": {
+        "name": "ANDRES GERDEL",
+        "utr": 9.26,
+        "wtn": 26.25,
+        "national_rank": null
+      },
+      "score": "6-2 6-3",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-07",
+      "tournament_name": "2025 Bobby Curtis Singles Championships 16/18",
+      "level": "L3",
+      "round": "R64",
+      "draw_type": "FIC",
+      "age_division": "Unknown",
+      "location": "Orlando, FL",
+      "opponent": {
+        "name": "Francesco PADILLA",
+        "utr": 8.59,
+        "wtn": 27.78,
+        "national_rank": null
+      },
+      "score": "6-1 6-2",
+      "result": "Win",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-07",
+      "tournament_name": "Cincinnati ITF J30 ",
+      "level": "L3",
+      "round": "R16",
+      "draw_type": "Main",
+      "age_division": "Unknown",
+      "location": "Panama City, FL",
+      "opponent": {
+        "name": "Carson KUCHAR",
+        "utr": 10.91,
+        "wtn": 22.05,
+        "national_rank": null
+      },
+      "score": "3-6 4-6",
+      "result": "Loss",
+      "surface": "Hard"
+    },
+    {
+      "date": "2025-06-07",
+      "tournament_name": "Cincinnati ITF J30 ",
+      "level": "L3",
+      "round": "R32",
+      "draw_type": "Main",
+      "age_division": "Unknown",
+      "location": "Panama City, FL",
+      "opponent": {
+        "name": "Anuj MATHUR",
+        "utr": 10.86,
+        "wtn": 21.02,
+        "national_rank": null
+      },
+      "score": "6-1 7-5",
+      "result": "Win",
+      "surface": "Hard"
+    }
+  ],
+  "match_stats": [
+    {
+      "match_id": "e5150553-38e1-4c02-9c47-14c1054e1c2d",
+      "player1_name": "Max Freedman",
+      "player2_name": "Francesco Padilla",
+      "match_date": "2025-06-07",
+      "match_time": "12:45",
+      "tournament_name": "2025 Bobby Curtis Singles Championships 16/18",
+      "round": "R64",
+      "final_score": "6-1 6-2",
+      "totals": {
+        "1": {
+          "points": {
+            "won": 49,
+            "lost": 22
+          },
+          "serving": {
+            "firstServes": 13,
+            "secondServes": 17,
+            "aces": 6,
+            "doubleFaults": 0,
+            "breakPointsWon": 0,
+            "breakPointsLost": 2,
+            "breakPointsSaved": 0,
+            "breakPointsFaced": 2,
+            "firstServePct": 43.3,
+            "secondServePct": 56.7
+          },
+          "returning": {
+            "returnWinners": 12,
+            "returnErrors": 3,
+            "fhReturnWinners": 6,
+            "fhReturnErrors": 2,
+            "bhReturnWinners": 6,
+            "bhReturnErrors": 1,
+            "breakPointsWon": 1,
+            "breakPointsLost": 0
+          },
+          "rally": {
+            "winners": 18,
+            "errors": 10,
+            "fhWinners": 13,
+            "fhErrors": 3,
+            "bhWinners": 2,
+            "bhErrors": 7,
+            "netWinners": 3,
+            "netErrors": 0
+          }
+        },
+        "2": {
+          "points": {
+            "lost": 49,
+            "won": 22
+          },
+          "serving": {
+            "firstServes": 13,
+            "secondServes": 25,
+            "aces": 0,
+            "doubleFaults": 1,
+            "breakPointsWon": 0,
+            "breakPointsLost": 1,
+            "breakPointsSaved": 1,
+            "breakPointsFaced": 2,
+            "firstServePct": 34.2,
+            "secondServePct": 65.8
+          },
+          "returning": {
+            "returnWinners": 2,
+            "returnErrors": 3,
+            "fhReturnWinners": 0,
+            "fhReturnErrors": 2,
+            "bhReturnWinners": 2,
+            "bhReturnErrors": 1,
+            "breakPointsWon": 2,
+            "breakPointsLost": 0
+          },
+          "rally": {
+            "winners": 7,
+            "errors": 9,
+            "fhWinners": 5,
+            "fhErrors": 1,
+            "bhWinners": 2,
+            "bhErrors": 5,
+            "netWinners": 0,
+            "netErrors": 3
+          }
+        }
+      }
+    }
+  ],
+  "match_book": [
+    {
+      "myplayernote_id": 3513,
+      "myplayernote_player_id": 930865,
+      "myplayernote_user_id": 100,
+      "myplayernote_note": "1. High percentage first serves\n2. Big forehand\n3. All court aggressive style",
+      "myplayernote_date": "2025-11-21 13:29:02"
+    }
+  ]
+}

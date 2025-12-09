@@ -1,0 +1,251 @@
+### Part 1: The "Hard Logic" (Node.js Pre-Processing)
+
+The AI should not calculate dates or averages. This code runs *before* the prompt is sent. It ingests raw USTA/UTR data and outputs a clean `context` object for the LLM.
+
+```jsx
+// scouting-logic.js
+
+/**
+ * 1. POINT DEFENSE PRESSURE CALCULATOR
+ * Determines if player is defending major points in the next 30 days.
+ */
+function analyzePointPressure(rankingSnapshot, upcomingMatchDate = new Date()) {
+  const pressures = [];
+  const thirtyDaysMs = 30 * 24 * 60 * 60 * 1000;
+  let totalPointsDefending = 0;
+
+  rankingSnapshot.forEach(event => {
+    const eventDate = new Date(event.date);
+    
+    // Check if event is ~1 year old (within 30 day window of falling off)
+    const anniversaryDate = new Date(eventDate);
+    anniversaryDate.setFullYear(anniversaryDate.getFullYear() + 1);
+    
+    const timeToExpiry = anniversaryDate - upcomingMatchDate;
+    const daysToExpiry = Math.ceil(timeToExpiry / (1000 * 60 * 60 * 24));
+
+    if (daysToExpiry > 0 && daysToExpiry <= 30) {
+      totalPointsDefending += event.points;
+      pressures.push({
+        event: event.name,
+        points: event.points,
+        days_to_expiry: daysToExpiry,
+        pressure_level: event.points > 300 ? "HIGH" : "MODERATE" 
+      });
+    }
+  });
+
+  return {
+    is_under_pressure: pressures.length > 0,
+    total_points_at_risk: totalPointsDefending,
+    expiring_events: pressures
+  };
+}
+
+/**
+ * 2. TREND & MOMENTUM ANALYZER
+ * Calculates slope of UTR/Ranking and identifies streaks.
+ */
+function analyzeMomentum(matchHistory, currentUTR) {
+  const recentMatches = matchHistory.slice(0, 10); // Last 10 matches
+  const wins = recentMatches.filter(m => m.result === 'Win').length;
+  
+  // Calculate Streak
+  let currentStreak = 0;
+  let streakType = ''; // 'Win' or 'Loss'
+  if (recentMatches.length > 0) {
+    streakType = recentMatches[0].result;
+    for (const match of recentMatches) {
+      if (match.result === streakType) currentStreak++;
+      else break;
+    }
+  }
+
+  return {
+    form_last_10: `${wins}-${10-wins}`,
+    current_streak: `${currentStreak} ${streakType}`,
+    momentum_score: (wins / 10) * (streakType === 'Win' ? 1.2 : 0.8)
+  };
+}
+
+/**
+ * 3. SURFACE & LEVEL PERFORMANCE
+ * Aggregates win % by tag.
+ */
+function analyzePerformanceSplits(matchHistory) {
+  const surfaces = { Hard: {w:0, l:0}, Clay: {w:0, l:0}, Grass: {w:0, l:0} };
+  const levels = { L1: {w:0, l:0}, L2: {w:0, l:0}, L3: {w:0, l:0}, L4: {w:0, l:0}, L5: {w:0, l:0}, L6: {w:0, l:0} };
+  const tiebreaks = { w: 0, l: 0 };
+
+  matchHistory.forEach(m => {
+    // Surface
+    const surf = m.surface || 'Unknown';
+    if (surfaces[surf]) {
+      m.result === 'Win' ? surfaces[surf].w++ : surfaces[surf].l++;
+    }
+    
+    // Level (Extract just L1-L6)
+    const lvl = m.level && m.level.startsWith('L') ? m.level.substring(0, 2) : null;
+    if (lvl && levels[lvl]) {
+      m.result === 'Win' ? levels[lvl].w++ : levels[lvl].l++;
+    }
+
+    // Tiebreaks (Check score string for "7-6" or "1-0")
+    if (m.score && (m.score.includes('7-6') || m.score.includes('1-0'))) {
+       m.result === 'Win' ? tiebreaks.w++ : tiebreaks.l++; 
+    }
+  });
+
+  return { surfaces, levels, tiebreaks };
+}
+
+/**
+ * MAIN AGGREGATOR
+ * Generates the JSON payload to send to the AI.
+ */
+function buildAIContext(playerData, opponentData, matchHistory, rankingSnapshot) {
+  const pressure = analyzePointPressure(rankingSnapshot);
+  const momentum = analyzeMomentum(matchHistory, opponentData.utr);
+  const splits = analyzePerformanceSplits(matchHistory);
+
+  return {
+    opponent_profile: {
+      name: opponentData.name,
+      utr: opponentData.utr,
+      wtn: opponentData.wtn,
+      ranking: opponentData.national_rank
+    },
+    computed_metrics: {
+      pressure_analysis: pressure,
+      momentum_analysis: momentum,
+      surface_affinity: splits.surfaces,
+      level_competence: splits.levels,
+      clutch_factor: {
+        tiebreak_record: splits.tiebreaks,
+        tiebreak_win_rate: splits.tiebreaks.w / (splits.tiebreaks.w + splits.tiebreaks.l || 1)
+      }
+    },
+    raw_history: matchHistory.slice(0, 20).map(m => ({
+      date: m.date,
+      opponent_name: m.opponent?.name,
+      opponent_utr: m.opponent?.utr,
+      score: m.score,
+      result: m.result,
+      surface: m.surface,
+      level: m.level,
+      draw_type: m.draw_type
+    })),
+    match_book_notes: opponentData.user_notes || []
+  };
+}
+
+module.exports = { buildAIContext };
+```
+
+---
+
+### Part 2: The System Prompt
+
+**Role:** You are an expert Tennis Tactical Analyst and High-Performance Coach. Your goal is to provide deep, data-driven competitive intelligence. You do not just summarize stats; you diagnose the opponent's game, identifying patterns, psychological tendencies, and tactical vulnerabilities using data as evidence. Your tone is professional, objective, and strategic—never derogatory.
+
+**Task:** Analyze the provided JSON context about an opponent and generate a Comprehensive Scouting Report in Markdown format.
+
+**Analysis Framework (The "Lens" you must use):**
+
+1.  **Pressure & Ranking Defense:**
+    *   Analyze `pressure_analysis`. Is the player defending major points soon?
+    *   *Logic:* High points at risk + recent losses = Potential "Defensive/Anxious" mindset. Safe points + win streak = "Free Swinging/Confident".
+2.  **Resilience & Recovery Analysis (The "Mental Engine"):**
+    *   Scan `raw_history` for "Retirements", "Walkovers", or lopsided final sets (e.g., losing 1-6 or 0-6 in the 3rd).
+    *   *Logic:* Frequent 3rd set collapses or withdrawals suggest conditioning issues or emotional fragility.
+    *   *Logic:* Winning close matches and tiebreaks indicates high "Clutch Factor."
+3.  **Level Ceiling & Consistency:**
+    *   Compare performance across levels (L5/L4 vs L3/L2).
+    *   *Logic:* A player who dominates L4s but struggles in L2s has a clear "Level Ceiling."
+4.  **Surface & Condition Adaptability:**
+    *   Compare win rates on different surfaces.
+    *   *Logic:* Significant gaps indicate a "Surface Specialist."
+
+**Input Context:**
+
+You will receive a JSON object containing:
+- `computed_metrics`: Pre-calculated trends, pressure, and splits.
+- `raw_history`: List of recent matches with scores and opponents.
+- `match_book_notes`: Qualitative user notes (Trust these highly for tactical details).
+- `rank_history`: Historical ranking data to assess trajectory.
+- `match_stats`: Detailed stroke-by-stroke telemetry (if available).
+
+**Output Format:**
+
+Please generate the report in clear, structured Markdown using the following 12-section template. Ensure every section is filled with insights derived from the data.
+
+```markdown
+# Comprehensive Scouting Report: [Opponent Name]
+
+## 1. Performance Analytics
+- **Win/Loss Ratio:** [Analysis of overall record and recent form]
+- **Match Outcome Patterns:** [Do they blow people out or play close grinders?]
+- **Tiebreak & Clutch Performance:** [Win rate in TBs and deciding sets]
+
+## 2. Competition Level Analysis
+- **Level Ceiling:** [What level (L1-L5) do they consistently win at vs. struggle at?]
+- **Opponent Quality:** [Do they beat players with higher UTRs, or only lower?]
+
+## 3. Rating & Ranking Analytics
+- **Trajectory:** [Is their UTR/Ranking trending up, down, or plateauing?]
+- **Ranking Efficiency:** [Comparison of National Rank vs. UTR/WTN. Are they over/underrated?]
+
+## 4. Surface Performance
+- **Surface Preference:** [Best surface based on win %]
+- **Adaptability:** [Performance on secondary surfaces]
+
+## 5. Point Defense & Pressure Analysis
+- **Pressure Status:** [Are they defending major points in the next 30 days?]
+- **Mental State Prediction:** [Likely mindset based on pressure: Confident vs. Anxious]
+
+## 6. Temporal & Scheduling Analytics
+- **Activity Level:** [Match frequency - are they match tough or rusty?]
+- **Fatigue Factors:** [Recent heavy match loads?]
+
+## 7. Strategic Pattern Recognition
+- **Tournament Selection:** [Do they chase points in lower levels or seek tough competition?]
+- **Consistency:** [Reliable results or "boom/bust" performance?]
+
+## 8. Head-to-Head & Common Opponents
+- **Common Opponent Analysis:** [Performance against mutual opponents, if any data exists]
+
+## 9. Momentum & Confidence Indicators
+- **Current Form:** [Winning/Losing streaks]
+- **Recent Breakthroughs/Slumps:** [Significant wins or bad losses recently]
+
+## 10. Tactical Blueprint (The Game Plan)
+- **Primary Strategy:** [The #1 way to beat them]
+- **Serve/Return Strategy:** [Specific targets based on notes/stats]
+- **Rally Patterns:** [Neutralize their strengths, exploit their movement/consistency]
+
+## 11. Psychological Profile
+- **Mental Durability:** [Response to adversity (losing sets, tiebreaks)]
+- **Emotional Control:** [Likelihood of tilting vs. staying composed]
+
+## 12. Weakness Identification
+- **Specific Vulnerabilities:** [Technical or physical gaps to exploit]
+- **Red Flags:** [Patterns of withdrawals, tanking sets, or injury history]
+```
+
+**Constraints:**
+- **Tone:** Professional, objective, high-performance coaching style.
+- **Evidence:** Every insight MUST cite a data point (e.g., "Evidenced by 3-7 tiebreak record" or "As seen in the 6-1 6-2 win over Padilla").
+- **Formatting:** Use standard Markdown headers, lists, and bolding.
+
+
+
+
+
+
+
+
+
+
+
+
+

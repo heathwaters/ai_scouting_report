@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scouting Report Test</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --danger: #ef4444;
+            --success: #22c55e;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .meta {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Markdown Content Styles */
+        h1 { color: var(--primary); font-size: 2.25rem; margin-bottom: 1rem; }
+        h2 { color: var(--secondary); font-size: 1.5rem; margin-top: 2rem; border-left: 4px solid var(--primary); padding-left: 12px; }
+        h3 { color: var(--text); font-size: 1.25rem; margin-top: 1.5rem; }
+        
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        
+        strong { color: var(--secondary); font-weight: 700; }
+        
+        blockquote {
+            border-left: 4px solid var(--secondary);
+            background: #eff6ff;
+            padding: 16px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #1e293b;
+            color: #f8fafc;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
+
+        /* Specific Scouting Report Highlights */
+        /* Highlight words like "CRITICAL", "HIGH", "FRAGILE" if they appear */
+        
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Scouting Report Analysis</h1>
+            <div class="meta">
+                <strong>Model:</strong> {{MODEL_NAME}} <br>
+                <strong>Date:</strong> {{TIMESTAMP}}
+            </div>
+        </div>
+        <div class="content">
+            {{CONTENT}}
+        </div>
+    </div>
+</body>
+</html>
+

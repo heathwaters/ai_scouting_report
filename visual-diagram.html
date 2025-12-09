@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scouting Report UX Flow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f7fa;
+            padding: 60px 20px;
+            line-height: 1.7;
+            color: #2d3748;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 60px;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.05),
+                0 20px 60px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #4a5568;
+            font-weight: 500;
+            margin-top: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .header .option-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2c5282;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 6px;
+            margin-top: 24px;
+            font-weight: 600;
+            font-size: 0.9em;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 12px;
+            letter-spacing: -0.01em;
+        }
+
+        .section-header p {
+            color: #718096;
+            font-size: 1.05em;
+        }
+
+        /* Entry Points Section */
+        .entry-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .entry-card {
+            background: linear-gradient(135deg, #2c5282 0%, #2a4365 100%);
+            color: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(44, 82, 130, 0.15);
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .entry-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(44, 82, 130, 0.25);
+        }
+
+        .entry-card::after {
+            content: '↓';
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2em;
+            color: #cbd5e0;
+            animation: float 3s ease-in-out infinite;
+            font-weight: 300;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-8px); }
+        }
+
+        .entry-number {
+            font-size: 0.75em;
+            opacity: 0.9;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .entry-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .entry-desc {
+            font-size: 0.95em;
+            opacity: 0.95;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        /* Main Flow Timeline */
+        .flow-timeline {
+            position: relative;
+            padding: 80px 0;
+        }
+
+        .flow-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, 
+                transparent 0%,
+                #cbd5e0 5%,
+                #cbd5e0 95%,
+                transparent 100%
+            );
+            transform: translateX(-50%);
+        }
+
+        .flow-step {
+            position: relative;
+            margin-bottom: 100px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 64px;
+            height: 64px;
+            background: #2c5282;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.6em;
+            font-weight: 700;
+            box-shadow: 
+                0 0 0 8px #ffffff,
+                0 4px 16px rgba(44, 82, 130, 0.3);
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        .flow-step:hover .step-number {
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 
+                0 0 0 8px #ffffff,
+                0 8px 24px rgba(44, 82, 130, 0.4);
+        }
+
+        .step-content {
+            width: 48%;
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.05),
+                0 4px 16px rgba(0,0,0,0.08);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .step-content:hover {
+            box-shadow: 
+                0 1px 3px rgba(0,0,0,0.05),
+                0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+            border-color: #cbd5e0;
+        }
+
+        .flow-step:nth-child(odd) .step-content {
+            margin-left: auto;
+        }
+
+        .flow-step:nth-child(even) .step-content {
+            margin-right: auto;
+        }
+
+        .step-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.75em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .type-user {
+            background: #276749;
+            color: white;
+        }
+
+        .type-system {
+            background: #975a16;
+            color: white;
+        }
+
+        .type-output {
+            background: #5a67d8;
+            color: white;
+        }
+
+        .step-title {
+            font-size: 1.6em;
+            color: #1a365d;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+        }
+
+        .step-details {
+            color: #718096;
+            margin-top: 16px;
+            font-size: 1em;
+            line-height: 1.7;
+        }
+
+        .step-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .step-list li {
+            padding: 10px 0 10px 28px;
+            position: relative;
+            color: #4a5568;
+            font-size: 0.95em;
+            line-height: 1.6;
+            border-left: 2px solid #e2e8f0;
+            margin-left: 8px;
+        }
+
+        .step-list li::before {
+            content: '•';
+            position: absolute;
+            left: -10px;
+            color: #2c5282;
+            font-weight: bold;
+            font-size: 1.5em;
+            top: 6px;
+        }
+
+        /* Screen Preview */
+        .screen-preview {
+            background: #f7fafc;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 24px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .screen-title {
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 16px;
+            font-size: 1.05em;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+        }
+
+        .screen-content {
+            font-size: 0.95em;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+
+        .screen-content p {
+            margin-bottom: 8px;
+        }
+
+        .screen-content strong {
+            color: #1a365d;
+            font-weight: 600;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary {
+            background: #2c5282;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2a4365;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(44, 82, 130, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #4a5568;
+            border: 1.5px solid #cbd5e0;
+        }
+
+        .btn-secondary:hover {
+            background: #f7fafc;
+            border-color: #a0aec0;
+        }
+
+        /* Progress Indicator */
+        .progress-bar {
+            background: #e2e8f0;
+            border-radius: 4px;
+            height: 24px;
+            margin: 20px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-fill {
+            background: #2c5282;
+            height: 100%;
+            width: 75%;
+            border-radius: 4px;
+            position: relative;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 700;
+            color: white;
+            font-size: 0.8em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* Stats Display */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .stat-box {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #cbd5e0;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            color: #2c5282;
+            line-height: 1.2;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #718096;
+            margin-top: 8px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        /* Insights Box */
+        .insights-box {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .insights-box h4 {
+            color: #1a365d;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .insight-item {
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 6px;
+            font-size: 0.95em;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+            border-left: 3px solid;
+        }
+
+        .insight-item:hover {
+            transform: translateX(4px);
+        }
+
+        .strength {
+            background: #f0fdf4;
+            border-left-color: #276749;
+            color: #22543d;
+        }
+
+        .weakness {
+            background: #fef2f2;
+            border-left-color: #c53030;
+            color: #742a2a;
+        }
+
+        .strategy {
+            background: #eff6ff;
+            border-left-color: #2c5282;
+            color: #1e40af;
+        }
+
+        .insight-item strong {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #2c5282;
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+
+        .highlight-box h4 {
+            margin-bottom: 16px;
+            font-size: 1.05em;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .highlight-box .step-list li {
+            color: rgba(255,255,255,0.95);
+            border-left-color: rgba(255,255,255,0.3);
+        }
+
+        .highlight-box .step-list li::before {
+            color: white;
+        }
+
+        .highlight-box strong {
+            color: white;
+        }
+
+        /* Info Callout */
+        .info-callout {
+            margin-top: 24px;
+            padding: 16px 20px;
+            background: #ebf8ff;
+            border-radius: 6px;
+            border-left: 3px solid #2c5282;
+            color: #2c5282;
+            font-size: 0.95em;
+        }
+
+        .info-callout strong {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.05em;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 2px solid #e2e8f0;
+        }
+
+        .footer p {
+            color: #718096;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .footer strong {
+            color: #4a5568;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+
+            .container {
+                padding: 40px 24px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header .subtitle {
+                font-size: 1.1em;
+            }
+
+            .flow-timeline::before {
+                left: 30px;
+            }
+
+            .step-number {
+                left: 30px;
+                width: 52px;
+                height: 52px;
+                font-size: 1.3em;
+            }
+
+            .step-content {
+                width: calc(100% - 100px);
+                margin-left: 100px !important;
+                padding: 28px;
+            }
+
+            .entry-points {
+                grid-template-columns: 1fr;
+            }
+
+            .step-title {
+                font-size: 1.3em;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AI Scouting Report UX Flow</h1>
+            <div class="subtitle">Complete User Journey & Interaction Design</div>
+        </div>
+
+        <!-- Entry Points -->
+        <div class="section-header">
+            <h2>Multiple Entry Points</h2>
+            <p>Users can access the AI scouting feature from four strategic locations in the application</p>
+        </div>
+        <div class="entry-points">
+            <div class="entry-card">
+                <div class="entry-number">Entry Point 1</div>
+                <div class="entry-title">Opponent Profile Page</div>
+                <div class="entry-desc">Direct access from any player's profile with full context including head-to-head history and performance metrics</div>
+            </div>
+
+            <div class="entry-card">
+                <div class="entry-number">Entry Point 2</div>
+                <div class="entry-title">Tournament Draw</div>
+                <div class="entry-desc">Quick scout action directly from upcoming match cards in the tournament draw view</div>
+            </div>
+
+            <div class="entry-card">
+                <div class="entry-number">Entry Point 3</div>
+                <div class="entry-title">AI Dashboard</div>
+                <div class="entry-desc">Centralized AI Command Center providing access to all AI-powered features in one location</div>
+            </div>
+
+            <div class="entry-card">
+                <div class="entry-number">Entry Point 4</div>
+                <div class="entry-title">Search & Suggestions</div>
+                <div class="entry-desc">Smart search functionality with instant scout action directly from search results</div>
+            </div>
+        </div>
+
+        <!-- Main Flow Timeline -->
+        <div class="flow-timeline">
+            <!-- Step 1: Player Profile -->
+            <div class="flow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <span class="step-type type-user">User View</span>
+                    <h3 class="step-title">Player Profile Display</h3>
+                    <p class="step-details">User navigates to opponent's profile to review comprehensive performance data and competitive history</p>
+                    
+                    <div class="screen-preview">
+                        <div class="screen-title">Ivan Rybak - Player Profile</div>
+                        <div class="screen-content">
+                            <p><strong>UTR Rating:</strong> 11.37 | <strong>Division:</strong> Boys 18</p>
+                            <p><strong>Head-to-Head Record:</strong> 1-1 (Even)</p>
+                            <p><strong>Recent Performance:</strong> 5-match winning streak</p>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary">View Match History</button>
+                            <button class="btn btn-primary">Generate AI Scout Report</button>
+                        </div>
+                        <p style="margin-top: 16px; color: #276749; font-weight: 600;">Cost: 20 credits | Free this week with Pro subscription</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Confirmation Modal -->
+            <div class="flow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <span class="step-type type-user">User Decision</span>
+                    <h3 class="step-title">Confirmation Modal</h3>
+                    <p class="step-details">System displays detailed preview of report contents and confirms user's intent to generate analysis</p>
+                    
+                    <div class="screen-preview">
+                        <div class="screen-title">Generate AI Scout Report?</div>
+                        <div class="screen-content">
+                            <p style="margin-bottom: 12px;"><strong>Report Components:</strong></p>
+                            <ul class="step-list">
+                                <li>Comprehensive strengths and weaknesses analysis</li>
+                                <li>Head-to-head pattern identification and trends</li>
+                                <li>Win probability forecast with 87% confidence level</li>
+                                <li>Strategic game plan with specific tactical recommendations</li>
+                            </ul>
+                            <div class="stats-grid" style="margin-top: 20px;">
+                                <div class="stat-box">
+                                    <div class="stat-value">20</div>
+                                    <div class="stat-label">Credits</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">80</div>
+                                    <div class="stat-label">Balance After</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-secondary">Cancel</button>
+                            <button class="btn btn-primary">Confirm Generation</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Generation Process -->
+            <div class="flow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <span class="step-type type-system">System Processing</span>
+                    <h3 class="step-title">AI Generation in Progress</h3>
+                    <p class="step-details">Advanced AI engine analyzes historical match data, identifies tactical patterns, and generates strategic recommendations</p>
+                    
+                    <div class="screen-preview">
+                        <div class="screen-title">Generating Report</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                            <div class="progress-text">75% Complete</div>
+                        </div>
+                        <div class="screen-content">
+                            <p style="margin-bottom: 12px;"><strong>Analysis Progress:</strong></p>
+                            <ul class="step-list">
+                                <li>Reviewed 47 match results from database</li>
+                                <li>Identified 12 distinct tactical patterns</li>
+                                <li>Comparing opponent style to user profile</li>
+                                <li>Generating strategic insights and recommendations</li>
+                            </ul>
+                            <p style="margin-top: 20px; text-align: center; color: #718096; font-weight: 600;">
+                                Estimated completion time: 8 seconds
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4: Generated Report -->
+            <div class="flow-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <span class="step-type type-output">AI Output</span>
+                    <h3 class="step-title">Complete Scouting Report</h3>
+                    <p class="step-details">Comprehensive AI-generated analysis with data-driven insights and actionable strategic recommendations</p>
+                    
+                    <div class="screen-preview">
+                        <div class="screen-title">AI Scouting Report</div>
+                        <div class="screen-content">
+                            <p><strong>Matchup Analysis:</strong> Ivan Rybak vs Max Freedman</p>
+                            <p><strong>Generated:</strong> November 10, 2025 at 2:47 PM</p>
+                            
+                            <div class="stats-grid" style="margin-top: 20px;">
+                                <div class="stat-box">
+                                    <div class="stat-value">48%</div>
+                                    <div class="stat-label">Your Win Probability</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">52%</div>
+                                    <div class="stat-label">Opponent Win Probability</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">87%</div>
+                                    <div class="stat-label">Confidence Level</div>
+                                </div>
+                            </div>
+
+                            <div class="insights-box">
+                                <h4>Key Insights</h4>
+                                
+                                <div class="insight-item strength">
+                                    <strong>Opponent Strengths</strong>
+                                    Demonstrates exceptional performance in extended rallies exceeding 10 shots with a 72% success rate. Shows preference for clay court surfaces with 65% win rate compared to 52% on hard courts.
+                                </div>
+
+                                <div class="insight-item weakness">
+                                    <strong>Opponent Weaknesses</strong>
+                                    Exhibits vulnerability to aggressive net play with only 38% passing shot success rate. Demonstrates inconsistency in tiebreak situations with a 3-7 record in 2025 season.
+                                </div>
+
+                                <div class="insight-item strategy">
+                                    <strong>Competitive Advantages</strong>
+                                    Historical data shows 100% tiebreak success rate against this opponent. Service game demonstrates 1.2 UTR advantage over opponent average. Net play efficiency at 62% versus opponent's 45%.
+                                </div>
+                            </div>
+
+                            <div class="highlight-box">
+                                <h4>Strategic Game Plan</h4>
+                                <ul class="step-list">
+                                    <li><strong>Disrupt Rhythm:</strong> Implement pace variation combining heavy topspin with flat drives, change court directions frequently to prevent opponent settling into baseline patterns</li>
+                                    <li><strong>Net Pressure:</strong> Execute serve-volley tactics on critical points, approach net on short balls to exploit weak passing shot percentage</li>
+                                    <li><strong>Target Backhand:</strong> Focus play to backhand side where opponent shows breakdown under pressure with 67% error rate on slice returns</li>
+                                    <li><strong>Tiebreak Aggression:</strong> Leverage historical tiebreak dominance with first-strike tennis approach and aggressive serving strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 5: Follow-up Actions -->
+            <div class="flow-step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <span class="step-type type-user">User Options</span>
+                    <h3 class="step-title">Follow-up Actions</h3>
+                    <p class="step-details">User can take additional actions to maximize the value derived from the scouting report analysis</p>
+                    
+                    <div class="screen-preview">
+                        <div class="screen-title">Available Actions</div>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary">Ask AI Follow-Up Question (5 credits)</button>
+                            <button class="btn btn-secondary">Save to Notes</button>
+                            <button class="btn btn-secondary">Share Report</button>
+                            <button class="btn btn-secondary">Refresh Analysis (20 credits)</button>
+                        </div>
+                        
+                        <div class="info-callout">
+                            <strong>Recommendation</strong>
+                            Save this report for pre-match reference. Elite subscription includes 20 complementary reports per month.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                <strong>Design Pattern:</strong> Hybrid Timeline with Visual Connectors<br>
+                Sequential progression with numbered steps, categorized action types, and clear visual hierarchy
+            </p>
+        </div>
+    </div>
+</body>
+</html>
