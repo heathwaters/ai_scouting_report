@@ -1,0 +1,3654 @@
+
+Array
+(
+    [player_id] => 1548388
+    [player_usta_id] =>
+    [player_ustaID] => 2017344697
+    [player_st_id] => E08183DC-6D5E-4B7A-8F50-992D7B303D40
+    [player_utr_id] => 2597901
+    [player_itf_id] =>
+    [player_rtn_id] => 988215
+    [player_te_id] => BER8487754
+    [wtn_singles] => 26.2
+    [wtn_doubles] => 30.09
+    [wtn_date] => 1765395022
+    [usta_no] => 2017344697
+    [player_first] => Alana
+    [player_last] => Berry
+    [player_age_group] => Girls' 18 Singles
+    [player_city] => Cambridge
+    [player_state] => MA
+    [player_country] => USA
+    [player_district] => Eastern Massachusett
+    [player_section] => New England
+    [player_state_pts] => 0
+    [player_state_pts_yellow] => 0
+    [player_section_pts] => 0
+    [player_section_pts_yellow] => 0
+    [player_national_pts] => 538
+    [player_itf_points] => 0
+    [list_date] => 2025-12-10
+    [district_list_id] =>
+    [section_list_id] =>
+    [national_list_id] =>
+    [district_rank] => 22
+    [district_rank_yellow] => 0
+    [section_rank] => 48
+    [section_rank_yellow] => 0
+    [national_rank] => 1210
+    [utrSingles] => 8
+    [ratingStatusSingles] =>
+    [ratingProgressSingles] =>
+    [utrDoubles] => 7.81
+    [ratingStatusDoubles] =>
+    [ratingProgressDoubles] =>
+    [player_itf_ranking] => 0
+    [player_trn_ranking] => 4
+    [te_overall_rank] => 1210
+    [te_u14_rank] => 3
+    [te_list_id] => 0
+    [player_gender] => F
+    [player_grad_year] => 0
+    [player_sat_math] => 0
+    [player_sat_verbal] => 0
+    [player_act] => 0
+    [player_gpa] => 0
+    [player_dob] => 2011-03-06
+    [player_video] =>
+    [utrSinglesDec] => 7.75
+    [utrSinglesDecDate] => 1765438825
+    [player_zip] =>
+    [player_name] =>
+    [player_image] =>
+    [player_image_status] => 0
+    [computed_metrics] => Array
+        (
+            [performance_summary] => Array
+                (
+                    [overall] => Array
+                        (
+                            [wins] => 108
+                            [losses] => 35
+                        )
+
+                    [close_score] => Array
+                        (
+                            [wins] => 16
+                            [losses] => 17
+                        )
+
+                )
+
+            [competition_summary] => Array
+                (
+                    [record_vs_higher_rated] => Array
+                        (
+                            [wins] => 0
+                            [losses] => 0
+                        )
+
+                    [matches_vs_higher_rated] => Array
+                        (
+                        )
+
+                    [record_vs_12_plus] => Array
+                        (
+                            [wins] => 0
+                            [losses] => 0
+                        )
+
+                    [record_vs_11_5_plus] => Array
+                        (
+                            [wins] => 0
+                            [losses] => 0
+                        )
+
+                    [upset_losses] => Array
+                        (
+                        )
+
+                    [upset_losses_count] => 0
+                    [worst_losses_top2] => Array
+                        (
+                        )
+
+                    [record_by_round] => Array
+                        (
+                            [P-F] => Array
+                                (
+                                    [wins] => 10
+                                    [losses] => 0
+                                )
+
+                            [SF] => Array
+                                (
+                                    [wins] => 16
+                                    [losses] => 8
+                                )
+
+                            [QF] => Array
+                                (
+                                    [wins] => 24
+                                    [losses] => 3
+                                )
+
+                            [F] => Array
+                                (
+                                    [wins] => 4
+                                    [losses] => 12
+                                )
+
+                            [R16] => Array
+                                (
+                                    [wins] => 17
+                                    [losses] => 4
+                                )
+
+                            [C-F] => Array
+                                (
+                                    [wins] => 3
+                                    [losses] => 1
+                                )
+
+                            [Round 3] => Array
+                                (
+                                    [wins] => 3
+                                    [losses] => 0
+                                )
+
+                            [Round 2] => Array
+                                (
+                                    [wins] => 4
+                                    [losses] => 0
+                                )
+
+                            [Round 1] => Array
+                                (
+                                    [wins] => 4
+                                    [losses] => 0
+                                )
+
+                            [NE-SF] => Array
+                                (
+                                    [wins] => 0
+                                    [losses] => 2
+                                )
+
+                            [E-QF] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 2
+                                )
+
+                            [E-R16] => Array
+                                (
+                                    [wins] => 3
+                                    [losses] => 0
+                                )
+
+                            [E-R32] => Array
+                                (
+                                    [wins] => 2
+                                    [losses] => 0
+                                )
+
+                            [C-R32] => Array
+                                (
+                                    [wins] => 0
+                                    [losses] => 1
+                                )
+
+                            [C-R32-Q] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [C-R64] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [R64] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 1
+                                )
+
+                            [R128] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [Round 5] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [Round 4] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [P-SF] => Array
+                                (
+                                    [wins] => 2
+                                    [losses] => 0
+                                )
+
+                            [R32] => Array
+                                (
+                                    [wins] => 6
+                                    [losses] => 0
+                                )
+
+                            [NW-F] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [N-SF] => Array
+                                (
+                                    [wins] => 0
+                                    [losses] => 1
+                                )
+
+                            [C-SF] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                            [C-QF] => Array
+                                (
+                                    [wins] => 1
+                                    [losses] => 0
+                                )
+
+                        )
+
+                    [average_utr_in_wins] =>
+                    [average_utr_in_losses] =>
+                )
+
+            [rating_summary] => Array
+                (
+                    [utr_trend] => up
+                    [ranking_trend] => flat
+                    [utr_history] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [date] => 2025-11-15
+                                    [utr] => 7.8
+                                    [national_rank] => 72
+                                )
+
+                            [1] => Array
+                                (
+                                    [date] => 2025-10-15
+                                    [utr] => 7.76
+                                    [national_rank] => 66
+                                )
+
+                            [2] => Array
+                                (
+                                    [date] => 2025-09-15
+                                    [utr] => 7.67
+                                    [national_rank] => 67
+                                )
+
+                            [3] => Array
+                                (
+                                    [date] => 2025-08-15
+                                    [utr] => 7.61
+                                    [national_rank] => 73
+                                )
+
+                            [4] => Array
+                                (
+                                    [date] => 2025-07-15
+                                    [utr] => 7.55
+                                    [national_rank] => 0
+                                )
+
+                            [5] => Array
+                                (
+                                    [date] => 2025-06-15
+                                    [utr] => 7.48
+                                    [national_rank] => 0
+                                )
+
+                        )
+
+                    [current_utr] => 7.75
+                    [average_opponent_utr] =>
+                )
+
+            [surface_summary] => Array
+                (
+                    [Hard] => Array
+                        (
+                            [wins] => 85
+                            [losses] => 27
+                            [win_pct] => 0.7589
+                        )
+
+                    [Grass] => Array
+                        (
+                            [wins] => 9
+                            [losses] => 0
+                            [win_pct] => 1
+                        )
+
+                    [Clay] => Array
+                        (
+                            [wins] => 14
+                            [losses] => 8
+                            [win_pct] => 0.6364
+                        )
+
+                )
+
+            [point_defense_stress] => Array
+                (
+                    [is_under_stress_defending_points] => 1
+                    [expiring_tournaments_count] => 2
+                    [expiring_events] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [name] => Boca Delray Level 5 Championships @ ProWorld -- Flighted
+                                    [match_date] => 2024-12-14
+                                    [expiry_date] => 2025-12-14
+                                    [days_to_expiry] => 2
+                                    [level] => Full Feed-in Consolation (Through QF)
+                                    [pressure_level] => MODERATE
+                                    [result] => Loss
+                                )
+
+                            [1] => Array
+                                (
+                                    [name] => L1: San Antonio USTA National Winter Championships
+                                    [match_date] => 2024-12-28
+                                    [expiry_date] => 2025-12-28
+                                    [days_to_expiry] => 16
+                                    [level] => Single Elimination
+                                    [pressure_level] => MODERATE
+                                    [result] => Loss
+                                )
+
+                        )
+
+                )
+
+            [temporal_summary] => Array
+                (
+                    [activity] => Array
+                        (
+                            [matches_last_30] => 0
+                            [matches_last_60] => 0
+                            [matches_last_90] => 37
+                            [avg_days_between_matches] => 1.4
+                        )
+
+                    [fatigue_pattern] => Array
+                        (
+                            [wins] => 97
+                            [losses] => 33
+                        )
+
+                    [rust_pattern] => Array
+                        (
+                            [wins] => 2
+                            [losses] => 1
+                        )
+
+                )
+
+            [strategic_summary] => Array
+                (
+                    [record_by_level] => Array
+                        (
+                            [Single Elimination] => Array
+                                (
+                                    [wins] => 18
+                                    [losses] => 7
+                                )
+
+                            [Full Feed in Consolation (Through R16)] => Array
+                                (
+                                    [wins] => 56
+                                    [losses] => 15
+                                )
+
+                            [Round Robin] => Array
+                                (
+                                    [wins] => 13
+                                    [losses] => 0
+                                )
+
+                            [Compass Draw] => Array
+                                (
+                                    [wins] => 7
+                                    [losses] => 5
+                                )
+
+                            [Full Feed-in Consolation (Through QF)] => Array
+                                (
+                                    [wins] => 10
+                                    [losses] => 6
+                                )
+
+                            [Modified Feed-in Consolation] => Array
+                                (
+                                    [wins] => 4
+                                    [losses] => 2
+                                )
+
+                        )
+
+                    [soft_level_not_dominant] =>
+                    [high_level_struggle] =>
+                )
+
+            [head_to_head_summary] => Array
+                (
+                    [repeated_opponents] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Kiera DELIMA
+                                            [usta_no] => 2018127464
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 2
+                                            [losses] => 4
+                                        )
+
+                                    [total_matches] => 6
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-08-30
+                                                    [result] => Loss
+                                                    [score] => 4-6 6-4 4-6
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-08-30
+                                                    [result] => Loss
+                                                    [score] => 4-6 6-4 4-6
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-01-31
+                                                    [result] => Win
+                                                    [score] => 8-3
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-01-31
+                                                    [result] => Win
+                                                    [score] => 8-3
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [date] => 2025-01-17
+                                                    [result] => Loss
+                                                    [score] => 5-7 4-6
+                                                )
+
+                                            [5] => Array
+                                                (
+                                                    [date] => 2025-01-17
+                                                    [result] => Loss
+                                                    [score] => 5-7 4-6
+                                                )
+
+                                        )
+
+                                )
+
+                            [1] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Heidi WANG
+                                            [usta_no] => 2018248737
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 6
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 6
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-06-20
+                                                    [result] => Win
+                                                    [score] => 6-0 6-2
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-06-20
+                                                    [result] => Win
+                                                    [score] => 6-0 6-2
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-06-06
+                                                    [result] => Win
+                                                    [score] => 6-4 6-2
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-06-06
+                                                    [result] => Win
+                                                    [score] => 6-4 6-2
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [date] => 2025-01-17
+                                                    [result] => Win
+                                                    [score] => 3-6 7-5 6-2
+                                                )
+
+                                            [5] => Array
+                                                (
+                                                    [date] => 2025-01-17
+                                                    [result] => Win
+                                                    [score] => 3-6 7-5 6-2
+                                                )
+
+                                        )
+
+                                )
+
+                            [2] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Alexandra DIAS
+                                            [usta_no] => 2017246230
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 3
+                                            [losses] => 2
+                                        )
+
+                                    [total_matches] => 5
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-1 6-1
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-1 6-1
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-1 6-1
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-05-02
+                                                    [result] => Loss
+                                                    [score] => 2-6 7-5 [11-13]
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [date] => 2025-05-02
+                                                    [result] => Loss
+                                                    [score] => 2-6 7-5 [11-13]
+                                                )
+
+                                        )
+
+                                )
+
+                            [3] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Linnea SAWYER
+                                            [usta_no] => 2018495437
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 5
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 5
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-06-20
+                                                    [result] => Win
+                                                    [score] => 6-0 6-2
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [date] => 2025-06-20
+                                                    [result] => Win
+                                                    [score] => 6-0 6-2
+                                                )
+
+                                        )
+
+                                )
+
+                            [4] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Anna MIRAGLIA
+                                            [usta_no] => 2017140628
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 5
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 5
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-08-30
+                                                    [result] => Win
+                                                    [score] => 6-2 6-3
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-08-30
+                                                    [result] => Win
+                                                    [score] => 6-2 6-3
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 6-2 6-2
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 6-2 6-2
+                                                )
+
+                                            [4] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 6-2 6-2
+                                                )
+
+                                        )
+
+                                )
+
+                            [5] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Kimberly TAI
+                                            [usta_no] => 2017259944
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 0
+                                            [losses] => 4
+                                        )
+
+                                    [total_matches] => 4
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Loss
+                                                    [score] => 1-8
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Loss
+                                                    [score] => 1-8
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Loss
+                                                    [score] => 1-8
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-07-18
+                                                    [result] => Loss
+                                                    [score] => 4-6
+                                                )
+
+                                        )
+
+                                )
+
+                            [6] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Olivia GILBERT
+                                            [usta_no] => 2010713332
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 3
+                                            [losses] => 1
+                                        )
+
+                                    [total_matches] => 4
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-05-31
+                                                    [result] => Loss
+                                                    [score] => 8-9(8)
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 0-6 6-2 [10-3]
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 0-6 6-2 [10-3]
+                                                )
+
+                                            [3] => Array
+                                                (
+                                                    [date] => 2025-05-09
+                                                    [result] => Win
+                                                    [score] => 0-6 6-2 [10-3]
+                                                )
+
+                                        )
+
+                                )
+
+                            [7] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Nathan GOLDMAN
+                                            [usta_no] => 2017221473
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 3
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 3
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 9-8(7)
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 9-8(7)
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 9-8(7)
+                                                )
+
+                                        )
+
+                                )
+
+                            [8] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Grant FAN
+                                            [usta_no] => 2018371769
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 3
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 3
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 8-4
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 8-4
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-27
+                                                    [result] => Win
+                                                    [score] => 8-4
+                                                )
+
+                                        )
+
+                                )
+
+                            [9] => Array
+                                (
+                                    [opponent] => Array
+                                        (
+                                            [name] => Amalia OGANESIAN
+                                            [usta_no] => 2017125489
+                                            [utr] =>
+                                        )
+
+                                    [record] => Array
+                                        (
+                                            [wins] => 3
+                                            [losses] => 0
+                                        )
+
+                                    [total_matches] => 3
+                                    [matches] => Array
+                                        (
+                                            [0] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                            [1] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                            [2] => Array
+                                                (
+                                                    [date] => 2025-09-13
+                                                    [result] => Win
+                                                    [score] => 6-4 6-3
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [common_opponents] => Array
+                        (
+                        )
+
+                    [user_style] =>
+                    [weak_vs_styles] => Array
+                        (
+                        )
+
+                )
+
+            [momentum_summary] => Array
+                (
+                    [last10] => Array
+                        (
+                            [wins] => 7
+                            [losses] => 3
+                            [matches] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Olivia LIANG
+                                                    [usta_no] => 2018264350
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 8-5
+                                            [level] => Single Elimination
+                                            [round] => P-F
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Eleanor ARMISTEAD
+                                                    [usta_no] => 2018378099
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Loss
+                                            [score] => 6-8
+                                            [level] => Single Elimination
+                                            [round] => SF
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Veronika MATULSKAYA
+                                                    [usta_no] => 2017354102
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 8-3
+                                            [level] => Single Elimination
+                                            [round] => QF
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => YY LIANG
+                                                    [usta_no] => 2017371037
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 8-5
+                                            [level] => Single Elimination
+                                            [round] => P-F
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Eleanor ARMISTEAD
+                                                    [usta_no] => 2018378099
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Loss
+                                            [score] => 6-8
+                                            [level] => Single Elimination
+                                            [round] => SF
+                                        )
+
+                                    [5] => Array
+                                        (
+                                            [date] => 2025-10-11
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Juliana BRUSHABER
+                                                    [usta_no] => 2019124766
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 8-3
+                                            [level] => Single Elimination
+                                            [round] => QF
+                                        )
+
+                                    [6] => Array
+                                        (
+                                            [date] => 2025-09-27
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Rachit JHA
+                                                    [usta_no] => 2010857743
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Loss
+                                            [score] => 1-8
+                                            [level] => Full Feed in Consolation (Through R16)
+                                            [round] => F
+                                        )
+
+                                    [7] => Array
+                                        (
+                                            [date] => 2025-09-27
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Charlie BARTON
+                                                    [usta_no] => 2010768779
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 9-7
+                                            [level] => Full Feed in Consolation (Through R16)
+                                            [round] => SF
+                                        )
+
+                                    [8] => Array
+                                        (
+                                            [date] => 2025-09-27
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Nathan GOLDMAN
+                                                    [usta_no] => 2017221473
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 9-8(7)
+                                            [level] => Full Feed in Consolation (Through R16)
+                                            [round] => QF
+                                        )
+
+                                    [9] => Array
+                                        (
+                                            [date] => 2025-09-27
+                                            [opponent] => Array
+                                                (
+                                                    [name] => Grant FAN
+                                                    [usta_no] => 2018371769
+                                                    [utr] =>
+                                                )
+
+                                            [result] => Win
+                                            [score] => 8-4
+                                            [level] => Full Feed in Consolation (Through R16)
+                                            [round] => R16
+                                        )
+
+                                )
+
+                        )
+
+                    [last10_upset_losses] => Array
+                        (
+                        )
+
+                    [current_streak] => Array
+                        (
+                            [type] => winning
+                            [count] => 1
+                        )
+
+                )
+
+            [vulnerability_flags] => Array
+                (
+                )
+
+        )
+
+    [player_utr] => 7.75
+    [player_wtn] => 26.2
+    [player_trn_ranking_date] =>
+    [player_trn_ranking_source] =>
+    [player_trn_ranking_source_date] =>
+    [rank_history] => Array
+        (
+            [0] => Array
+                (
+                    [list_date] => 2025-12-10
+                    [district_rank] => 22
+                    [section_rank] => 48
+                    [national_rank] => 1210
+                    [utrSingles] => 8
+                    [wtn_singles] => 26.2
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-12-10
+                    [rank_date] => 12-11-2025
+                    [rank_order] => 0
+                )
+
+            [1] => Array
+                (
+                    [list_date] => 2025-11-12
+                    [district_rank] => 22
+                    [section_rank] => 46
+                    [national_rank] => 1297
+                    [utrSingles] => 8
+                    [wtn_singles] => 26.15
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-11-12
+                    [rank_date] => 11-15-2025
+                    [rank_order] => 0
+                )
+
+            [2] => Array
+                (
+                    [list_date] => 2025-10-08
+                    [district_rank] => 22
+                    [section_rank] => 48
+                    [national_rank] => 1243
+                    [utrSingles] => 8
+                    [wtn_singles] => 26.17
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-10-08
+                    [rank_date] => 10-15-2025
+                    [rank_order] => 1
+                )
+
+            [3] => Array
+                (
+                    [list_date] => 2025-09-10
+                    [district_rank] => 20
+                    [section_rank] => 42
+                    [national_rank] => 1137
+                    [utrSingles] => 8
+                    [wtn_singles] => 26.62
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-09-10
+                    [rank_date] => 09-15-2025
+                    [rank_order] => 2
+                )
+
+            [4] => Array
+                (
+                    [list_date] => 2025-08-13
+                    [district_rank] => 21
+                    [section_rank] => 45
+                    [national_rank] => 1214
+                    [utrSingles] => 8
+                    [wtn_singles] => 26.78
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-08-13
+                    [rank_date] => 08-15-2025
+                    [rank_order] => 3
+                )
+
+            [5] => Array
+                (
+                    [list_date] => 2025-07-09
+                    [district_rank] => 21
+                    [section_rank] => 45
+                    [national_rank] => 1236
+                    [utrSingles] => 7
+                    [wtn_singles] => 26.17
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-07-09
+                    [rank_date] => 07-15-2025
+                    [rank_order] => 4
+                )
+
+            [6] => Array
+                (
+                    [list_date] => 2025-06-12
+                    [district_rank] => 23
+                    [section_rank] => 49
+                    [national_rank] => 1237
+                    [utrSingles] => 7
+                    [wtn_singles] => 26.76
+                    [player_trn_ranking] => 4
+                    [rank_sort] => 2025-06-12
+                    [rank_date] => 06-15-2025
+                    [rank_order] => 5
+                )
+
+        )
+
+    [ranking_snap] => Array
+        (
+            [uaid] => 2017344697
+            [source] => CLUBSPARK
+            [catalogId] => JUNIOR_NULL_F_STANDING_Y14_UNDER_NULL_NULL_NULL
+            [ranklistId] => 693941628450c8f676df69e0
+            [publishDate] => 2025-12-10
+            [rank] => 78
+            [sectionRank] => 3
+            [districtRank] => 3
+            [singlePoints] => 2877
+            [doublePoints] => 915
+            [bonusPoints] => 554
+            [totalPoints] => 4346
+            [playerType] => junior
+            [events] => Array
+                (
+                    [0] => Array
+                        (
+                            [eventId] => a38b5d0c-ae64-4ee2-b89a-1293a7b11283
+                            [tournamentId] => 6F8A165F-57E6-4C85-9793-211E16C5EDC3
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/TwosAthleticClub/Tournaments/overview/6F8A165F-57E6-4C85-9793-211E16C5EDC3
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/TwosAthleticClub/Tournaments/overview/6F8A165F-57E6-4C85-9793-211E16C5EDC3
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 1
+                            [name] =>  Girls' 14 National Indoor Championships
+                            [displayName] =>  Girls' 14 National Indoor Championships
+                            [division] => Girls' 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Single Elimination
+                            [startDate] => 2025-11-28
+                            [endDate] => 2025-12-01
+                            [isPosition] => false
+                            [eventPoints] => 166
+                            [listPoints] => 166
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => SE
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => a38b5d0c-ae64-4ee2-b89a-1293a7b11283
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Chloe WANG
+                                            [partnerUaid] => 2018140840
+                                            [opponentsName] => Jessie JANIAK / Sophia NGUYEN-HUYNH
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017343719
+                                                            [name] => Jessie JANIAK
+                                                            [utr] => 8
+[wtn_singles] => 25.16
+[utrDec] => 8.34
+[nationalRank] => 22
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017315508
+                                                            [name] => Sophia NGUYEN-HUYNH
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 5-8
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => a38b5d0c-ae64-4ee2-b89a-1293a7b11283
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Chloe WANG
+                                            [partnerUaid] => 2018140840
+                                            [opponentsName] => Charlotte BOYCE / Heidi WANG
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018302022
+                                                            [name] => Charlotte BOYCE
+                                                            [utr] => 7
+[wtn_singles] => 28.03
+[utrDec] => 7.32
+[nationalRank] => 120
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018248737
+                                                            [name] => Heidi WANG
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-2
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => a38b5d0c-ae64-4ee2-b89a-1293a7b11283
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] => Chloe WANG
+                                            [partnerUaid] => 2018140840
+                                            [opponentsName] => Cydney CROCKER / Nicole ALEXANDROVICH
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018419187
+                                                            [name] => Cydney CROCKER
+                                                            [utr] => 8
+[wtn_singles] => 26.04
+[utrDec] => 7.54
+[nationalRank] => 119
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018481538
+                                                            [name] => Nicole ALEXANDROVICH
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [1] => Array
+                        (
+                            [eventId] => d89820a3-51b4-463e-82eb-da5cdc77338c
+                            [tournamentId] => 15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/fiveseasonssportsclub/Tournaments/overview/15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/fiveseasonssportsclub/Tournaments/overview/15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 2
+                            [name] => Cincinnati, OH
+                            [displayName] => Cincinnati, OH
+                            [division] => Girls' 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Single Elimination
+                            [startDate] => 2025-10-11
+                            [endDate] => 2025-10-13
+                            [isPosition] => false
+                            [eventPoints] => 148
+                            [listPoints] => 148
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => SE
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => d89820a3-51b4-463e-82eb-da5cdc77338c
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => PL-Final
+                                            [round] => P-F
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Olivia LIANG / YY LIANG
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018264350
+                                                            [name] => Olivia LIANG
+                                                            [utr] => 7
+[wtn_singles] => 29.46
+[utrDec] => 6.69
+[nationalRank] => 194
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017371037
+                                                            [name] => YY LIANG
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-5
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => d89820a3-51b4-463e-82eb-da5cdc77338c
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Erika DUNWOODY / Eleanor ARMISTEAD
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010873244
+                                                            [name] => Erika DUNWOODY
+                                                            [utr] => 7
+[wtn_singles] => 28.21
+[utrDec] => 7.29
+[nationalRank] => 63
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018378099
+                                                            [name] => Eleanor ARMISTEAD
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 6-8
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => d89820a3-51b4-463e-82eb-da5cdc77338c
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Veronika MATULSKAYA / Juliana BRUSHABER
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017354102
+                                                            [name] => Veronika MATULSKAYA
+                                                            [utr] => 7
+[wtn_singles] => 27.3
+[utrDec] => 7.41
+[nationalRank] => 148
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2019124766
+                                                            [name] => Juliana BRUSHABER
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => d89820a3-51b4-463e-82eb-da5cdc77338c
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] =>
+                                            [opponents] => Array
+                                                (
+                                                )
+
+                                            [outcome] => W
+                                            [results] =>
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [2] => Array
+                        (
+                            [eventId] => 4a278d5a-e1c3-4cf4-b685-db15170699ed
+                            [tournamentId] => 15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/fiveseasonssportsclub/Tournaments/overview/15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/fiveseasonssportsclub/Tournaments/overview/15B4B03F-48A7-4211-BE05-884A70B1B1BF
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 2
+                            [name] => Cincinnati, OH
+                            [displayName] => Cincinnati, OH
+                            [division] => Girls' 14 & under singles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed in Consolation (Through R16)
+                            [startDate] => 2025-10-11
+                            [endDate] => 2025-10-13
+                            [isPosition] => false
+                            [eventPoints] => 264
+                            [listPoints] => 377
+                            [bonusPoints] => 113
+                            [matchFormat] => Singles
+                            [pointsTable] => FIC-R16
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => 4a278d5a-e1c3-4cf4-b685-db15170699ed
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-Quarterfinals
+                                            [round] => C-QF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Gabriela HERNANDEZ
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018203676
+                                                            [name] => Gabriela HERNANDEZ
+                                                            [utr] => 8
+[wtn_singles] => 27.46
+[utrDec] => 7.61
+[nationalRank] => 110
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 5-7 4-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => 4a278d5a-e1c3-4cf4-b685-db15170699ed
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-R16
+                                            [round] => C-R16
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Veronika MATULSKAYA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017354102
+                                                            [name] => Veronika MATULSKAYA
+                                                            [utr] => 7
+[wtn_singles] => 27.3
+[utrDec] => 7.41
+[nationalRank] => 148
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 6-4
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => 4a278d5a-e1c3-4cf4-b685-db15170699ed
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-R16-Q
+                                            [round] => C-R16-Q
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Juliana BRUSHABER
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2019124766
+                                                            [name] => Juliana BRUSHABER
+                                                            [utr] => 8
+[wtn_singles] => 26.73
+[utrDec] => 7.6
+[nationalRank] => 113
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-3 6-4
+                                            [bonusPoints] => 68
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => 4a278d5a-e1c3-4cf4-b685-db15170699ed
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Beatrice BIZZIERI
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017177174
+                                                            [name] => Beatrice BIZZIERI
+                                                            [utr] => 8
+[wtn_singles] => 25.39
+[utrDec] => 8.12
+[nationalRank] => 40
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 6-1 3-6 [6-10]
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [3] => Array
+                        (
+                            [eventId] => ada3c9ee-915d-4327-869e-4e733e2aed93
+                            [tournamentId] => 2053002A-77B8-40BF-84DE-7D722ADF2B8F
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/USTANatlcampus/Tournaments/overview/2053002A-77B8-40BF-84DE-7D722ADF2B8F
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/USTANatlcampus/Tournaments/overview/2053002A-77B8-40BF-84DE-7D722ADF2B8F
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 1
+                            [name] => USTA National Doubles Championships Presented by Drew Hassenbein Dream Big
+                            [displayName] => USTA National Doubles Championships Presented by Drew Hassenbein Dream Big
+                            [division] => Girls' 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Compass Draw
+                            [startDate] => 2025-08-22
+                            [endDate] => 2025-08-24
+                            [isPosition] => false
+                            [eventPoints] => 166
+                            [listPoints] => 166
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => COMP
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => ada3c9ee-915d-4327-869e-4e733e2aed93
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => NE-Semifinals
+                                            [round] => NE-SF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Ava CHUA
+                                            [partnerUaid] => 2018149118
+                                            [opponentsName] => Annalyn MCKEE / Sophie ZAKRZEWSKI
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018412577
+                                                            [name] => Annalyn MCKEE
+                                                            [utr] => 8
+[wtn_singles] => 26.59
+[utrDec] => 8.05
+[nationalRank] => 67
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018117318
+                                                            [name] => Sophie ZAKRZEWSKI
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 6-4 5-7 [3-10]
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => ada3c9ee-915d-4327-869e-4e733e2aed93
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => E-Quarterfinals
+                                            [round] => E-QF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Ava CHUA
+                                            [partnerUaid] => 2018149118
+                                            [opponentsName] => Reena ALAVALAPATI / ANABELLA ORDONEZ
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010791610
+                                                            [name] => Reena ALAVALAPATI
+                                                            [utr] => 9
+[wtn_singles] => 23.4
+[utrDec] => 8.83
+[nationalRank] => 13
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017090703
+                                                            [name] => ANABELLA ORDONEZ
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 6-1 3-6 [10-12]
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => ada3c9ee-915d-4327-869e-4e733e2aed93
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => E-R16
+                                            [round] => E-R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Ava CHUA
+                                            [partnerUaid] => 2018149118
+                                            [opponentsName] => Delaney GUIDER / Vasiana CHRISTOPOULOS
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018662578
+                                                            [name] => Delaney GUIDER
+                                                            [utr] => 7
+[wtn_singles] => 29.46
+[utrDec] => 6.77
+[nationalRank] => 484
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018567474
+                                                            [name] => Vasiana CHRISTOPOULOS
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-3 6-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => ada3c9ee-915d-4327-869e-4e733e2aed93
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => E-R32
+                                            [round] => E-R32
+                                            [playerName] => Alana BERRY
+                                            [partner] => Ava CHUA
+                                            [partnerUaid] => 2018149118
+                                            [opponentsName] => Reaghan GREER / Jana RIEGO
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018125509
+                                                            [name] => Reaghan GREER
+                                                            [utr] => 5
+[wtn_singles] => 33.71
+[utrDec] => 4.64
+[nationalRank] => 995
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018717122
+                                                            [name] => Jana RIEGO
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 6-1
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [4] => Array
+                        (
+                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                            [tournamentId] => CB583E39-CA48-4C67-9F57-3B3B7BA13542
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/metro-tennis-associates/Tournaments/overview/CB583E39-CA48-4C67-9F57-3B3B7BA13542
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/metro-tennis-associates/Tournaments/overview/CB583E39-CA48-4C67-9F57-3B3B7BA13542
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 1
+                            [name] => Girls' 14 USTA National Championships
+                            [displayName] => Girls' 14 USTA National Championships
+                            [division] => Girls' 14 & under singles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed-in Consolation (Through QF)
+                            [startDate] => 2025-08-02
+                            [endDate] => 2025-08-09
+                            [isPosition] => false
+                            [eventPoints] => 300
+                            [listPoints] => 458
+                            [bonusPoints] => 158
+                            [matchFormat] => Singles
+                            [pointsTable] => FIC-QF
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-R32
+                                            [round] => C-R32
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Charlotte KIM
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018270366
+                                                            [name] => Charlotte KIM
+                                                            [utr] => 9
+[wtn_singles] => 25.32
+[utrDec] => 8.58
+[nationalRank] => 57
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 0-6 1-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-R32-Q
+                                            [round] => C-R32-Q
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Juliette HOLSEN
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010946389
+                                                            [name] => Juliette HOLSEN
+                                                            [utr] => 8
+[wtn_singles] => 27.37
+[utrDec] => 7.51
+[nationalRank] => 193
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 6-3
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => C-R16
+                                            [round] => C-R64
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Lanxin LIU
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2019287394
+                                                            [name] => Lanxin LIU
+                                                            [utr] => 8
+[wtn_singles] => 26.54
+[utrDec] => 7.85
+[nationalRank] => 131
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-2 6-3
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R64
+                                            [round] => R64
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Anna Scott LANEY
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017244215
+                                                            [name] => Anna Scott LANEY
+                                                            [utr] => 9
+[wtn_singles] => 23.47
+[utrDec] => 9.06
+[nationalRank] => 7
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 1-6 2-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R128
+                                            [round] => R128
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Nashita PARUCHURI
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017290310
+                                                            [name] => Nashita PARUCHURI
+                                                            [utr] => 7
+[wtn_singles] => 26.68
+[utrDec] => 7.47
+[nationalRank] => 213
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-0 6-7(1) 6-0
+                                            [bonusPoints] => 68
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [5] => Array
+                                        (
+                                            [eventId] => 71eddb62-2538-487d-a40f-05654c68a1d9
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R256
+                                            [round] => R256
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] =>
+                                            [opponents] => Array
+                                                (
+                                                )
+
+                                            [outcome] => W
+                                            [results] =>
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [5] => Array
+                        (
+                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                            [tournamentId] => B293BB87-0D93-4CE3-A3AB-89EE63B14458
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/USTANewEngland/Tournaments/overview/B293BB87-0D93-4CE3-A3AB-89EE63B14458
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/USTANewEngland/Tournaments/overview/B293BB87-0D93-4CE3-A3AB-89EE63B14458
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 3 Closed
+                            [name] => USTA New England Junior Sectionals
+                            [displayName] => USTA New England Junior Sectionals
+                            [division] => Girls' 14 & under singles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed in Consolation (Through R16)
+                            [startDate] => 2025-06-20
+                            [endDate] => 2025-06-24
+                            [isPosition] => false
+                            [eventPoints] => 900
+                            [listPoints] => 1013
+                            [bonusPoints] => 113
+                            [matchFormat] => Singles
+                            [pointsTable] => FIC-R16
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Final
+                                            [round] => F
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Heidi WANG
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018248737
+                                                            [name] => Heidi WANG
+                                                            [utr] => 8
+[wtn_singles] => 27.09
+[utrDec] => 7.62
+[nationalRank] => 102
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-0 6-2
+                                            [bonusPoints] => 23
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Chloe ANTHONY
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018525158
+                                                            [name] => Chloe ANTHONY
+                                                            [utr] => 8
+[wtn_singles] => 27.31
+[utrDec] => 7.66
+[nationalRank] => 173
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 6-4
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Linnea SAWYER
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018495437
+                                                            [name] => Linnea SAWYER
+                                                            [utr] => 7
+[wtn_singles] => 28.29
+[utrDec] => 7.1
+[nationalRank] =>
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-0 6-2
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Adrianna GAVRILOIU
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018352657
+                                                            [name] => Adrianna GAVRILOIU
+                                                            [utr] => 5
+[wtn_singles] => 32.3
+[utrDec] => 4.72
+[nationalRank] => 1555
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-0 6-4
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [eventId] => 8324d85a-3cbd-45fb-9737-536a92b31a58
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Zoe PIERRE
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018522708
+                                                            [name] => Zoe PIERRE
+                                                            [utr] => 6
+[wtn_singles] => 31.42
+[utrDec] => 5.59
+[nationalRank] => 503
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-3 6-4
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [6] => Array
+                        (
+                            [eventId] => c27c9e15-e3c9-4cf8-b756-55d1555f6883
+                            [tournamentId] => 1AFB93BF-8C6E-4EEB-8089-32FDAD7175D4
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/usta-northern/Tournaments/overview/1AFB93BF-8C6E-4EEB-8089-32FDAD7175D4
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/usta-northern/Tournaments/overview/1AFB93BF-8C6E-4EEB-8089-32FDAD7175D4
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 2
+                            [name] => Minneapolis, MN
+                            [displayName] => Minneapolis, MN
+                            [division] => Girls' 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Single Elimination
+                            [startDate] => 2025-05-17
+                            [endDate] => 2025-05-19
+                            [isPosition] => false
+                            [eventPoints] => 185
+                            [listPoints] => 185
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => SE
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => c27c9e15-e3c9-4cf8-b756-55d1555f6883
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Final
+                                            [round] => F
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Natalia MARTINEZ / Alexandra HU
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010837875
+                                                            [name] => Natalia MARTINEZ
+                                                            [utr] => 8
+[wtn_singles] => 25.81
+[utrDec] => 8.15
+[nationalRank] => 32
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018179417
+                                                            [name] => Alexandra HU
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 8-9(4)
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => c27c9e15-e3c9-4cf8-b756-55d1555f6883
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Masha SEMENOVA / Ava CHUA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017270184
+                                                            [name] => Masha SEMENOVA
+                                                            [utr] => 9
+[wtn_singles] => 23.47
+[utrDec] => 8.7
+[nationalRank] =>
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018149118
+                                                            [name] => Ava CHUA
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => c27c9e15-e3c9-4cf8-b756-55d1555f6883
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Madeline BELLOMY / Isabella GONZALEZ
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017192925
+                                                            [name] => Madeline BELLOMY
+                                                            [utr] => 6
+[wtn_singles] => 29.94
+[utrDec] => 6.22
+[nationalRank] => 278
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018117548
+                                                            [name] => Isabella GONZALEZ
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => c27c9e15-e3c9-4cf8-b756-55d1555f6883
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Reese ELLINGSON / Haruka NISHIMURA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018237630
+                                                            [name] => Reese ELLINGSON
+                                                            [utr] => 9
+[wtn_singles] => 24.43
+[utrDec] => 8.55
+[nationalRank] => 16
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018973729
+                                                            [name] => Haruka NISHIMURA
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [7] => Array
+                        (
+                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                            [tournamentId] => 3E4E06E0-00FE-44E2-9386-4A654BBFDB2D
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/easthartfordracquetclub/Tournaments/overview/3E4E06E0-00FE-44E2-9386-4A654BBFDB2D
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/easthartfordracquetclub/Tournaments/overview/3E4E06E0-00FE-44E2-9386-4A654BBFDB2D
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 4 Closed
+                            [name] => East Hartford Tennis Club Girls 16s (FIC+16)
+                            [displayName] => East Hartford Tennis Club Girls 16s (FIC+16)
+                            [division] => Girls' 16 & under singles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed in Consolation (Through R16)
+                            [startDate] => 2025-05-09
+                            [endDate] => 2025-05-11
+                            [isPosition] => false
+                            [eventPoints] => 405
+                            [listPoints] => 416
+                            [bonusPoints] => 11
+                            [matchFormat] => Singles
+                            [pointsTable] => FIC-R16
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Final
+                                            [round] => F
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Olivia LIN
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018501488
+                                                            [name] => Olivia LIN
+                                                            [utr] => 9
+[wtn_singles] => 22.21
+[utrDec] => 9.36
+[nationalRank] => 2
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 0-6 5-7
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Anna MIRAGLIA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017140628
+                                                            [name] => Anna MIRAGLIA
+                                                            [utr] => 7
+[wtn_singles] => 27.11
+[utrDec] => 7.19
+[nationalRank] =>
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-2 6-2
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Taria KUDRJAVTSEVA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010737322
+                                                            [name] => Taria KUDRJAVTSEVA
+                                                            [utr] =>
+[wtn_singles] =>
+[utrDec] =>
+[nationalRank] =>
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-2 6-2
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Olivia GILBERT
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010713332
+                                                            [name] => Olivia GILBERT
+                                                            [utr] => 8
+[wtn_singles] => 27.05
+[utrDec] => 7.56
+[nationalRank] =>
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 0-6 6-2 [10-3]
+                                            [bonusPoints] => 11
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [eventId] => 07b1702f-0a65-451c-a995-54a6334e94a3
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Leigh OYEBOG
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2010659088
+                                                            [name] => Leigh OYEBOG
+                                                            [utr] => 7
+[wtn_singles] => 28.76
+[utrDec] => 7.05
+[nationalRank] => 366
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 3-6 [10-8]
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [8] => Array
+                        (
+                            [eventId] => F-SINGLES-14-149c1c9d-20eb-41b4-83da-cf230e2f6bda
+                            [tournamentId] => 137B498B-8859-4156-BF48-B5DD99C76604
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/myadllc/Tournaments/overview/137B498B-8859-4156-BF48-B5DD99C76604
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/myadllc/Tournaments/overview/137B498B-8859-4156-BF48-B5DD99C76604
+                            [eventType] => TOURNAMENT
+                            [flightName] => Draw
+                            [level] => Level 3 Open
+                            [name] => Macon, GA Dominant Duo
+                            [displayName] => Macon, GA Dominant Duo
+                            [division] => Girls' 14 & under team
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Compass Draw
+                            [startDate] => 2025-04-12
+                            [endDate] => 2025-04-14
+                            [isPosition] => false
+                            [eventPoints] => 468
+                            [listPoints] => 581
+                            [bonusPoints] => 113
+                            [matchFormat] => Singles
+                            [pointsTable] => TEAM
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => F-SINGLES-14-149c1c9d-20eb-41b4-83da-cf230e2f6bda
+                                            [positionOfPlay] => 1
+[positionOfPlayDisplay] => #1 Singles
+                                            [teamName] => Topspin Twins
+                                            [opponentTeamName] => Ultimate Duo
+                                            [roundName] => NW-Final
+                                            [round] => NW-F
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Sophia SHIPWAY
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017187153
+                                                            [name] => Sophia SHIPWAY
+                                                            [utr] => 7
+[wtn_singles] => 28.31
+[utrDec] => 7.3
+[nationalRank] => 215
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-1 6-3
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => F-SINGLES-14-149c1c9d-20eb-41b4-83da-cf230e2f6bda
+                                            [positionOfPlay] => 1
+[positionOfPlayDisplay] => #1 Singles
+                                            [teamName] => Topspin Twins
+                                            [opponentTeamName] => Groslimond/Heine
+                                            [roundName] => N-Semifinals
+                                            [round] => N-SF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Lily GROSLIMOND
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017325568
+                                                            [name] => Lily GROSLIMOND
+                                                            [utr] => 8
+[wtn_singles] => 26.39
+[utrDec] => 7.77
+[nationalRank] => 69
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 5-7 6-4 [5-10]
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => F-SINGLES-14-149c1c9d-20eb-41b4-83da-cf230e2f6bda
+                                            [positionOfPlay] => 1
+[positionOfPlayDisplay] => #1 Singles
+                                            [teamName] => Topspin Twins
+                                            [opponentTeamName] => Smart A.S.
+                                            [roundName] => E-Quarterfinals
+                                            [round] => E-QF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Annalyn MCKEE
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018412577
+                                                            [name] => Annalyn MCKEE
+                                                            [utr] => 8
+[wtn_singles] => 26.59
+[utrDec] => 8.05
+[nationalRank] => 67
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-7(1) 6-3 [10-8]
+                                            [bonusPoints] => 45
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => F-SINGLES-14-149c1c9d-20eb-41b4-83da-cf230e2f6bda
+                                            [positionOfPlay] => 1
+[positionOfPlayDisplay] => #1 Singles
+                                            [teamName] => Topspin Twins
+                                            [opponentTeamName] => DyNumite
+                                            [roundName] => E-R16
+                                            [round] => E-R16
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Dylan COPENHAVER
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018617395
+                                                            [name] => Dylan COPENHAVER
+                                                            [utr] => 7
+[wtn_singles] => 28.87
+[utrDec] => 6.96
+[nationalRank] => 290
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-2 6-3
+                                            [bonusPoints] => 23
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [9] => Array
+                        (
+                            [eventId] => 958f1e78-d76f-4b6f-aa37-29c24ceaeb8b
+                            [tournamentId] => 5084E7DF-6A52-46B0-9F39-8EFD089380E0
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/lymeshoresracquetclubinc/Tournaments/overview/5084E7DF-6A52-46B0-9F39-8EFD089380E0
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/lymeshoresracquetclubinc/Tournaments/overview/5084E7DF-6A52-46B0-9F39-8EFD089380E0
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 3 Closed
+                            [name] => Lyme Shores BG 14s Doubles and Mixed
+                            [displayName] => Lyme Shores BG 14s Doubles and Mixed
+                            [division] => Mixed 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed in Consolation (Through R16)
+                            [startDate] => 2025-01-31
+                            [endDate] => 2025-02-02
+                            [isPosition] => false
+                            [eventPoints] => 135
+                            [listPoints] => 135
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => FIC-R16
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => 958f1e78-d76f-4b6f-aa37-29c24ceaeb8b
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Final
+                                            [round] => F
+                                            [playerName] => Alana BERRY
+                                            [partner] => Luca DE CALICE
+                                            [partnerUaid] => 2017359984
+                                            [opponentsName] => Olivia LIN / Michael LI
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018501488
+                                                            [name] => Olivia LIN
+                                                            [utr] => 9
+[wtn_singles] => 22.21
+[utrDec] => 9.36
+[nationalRank] => 2
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017319489
+                                                            [name] => Michael LI
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => 958f1e78-d76f-4b6f-aa37-29c24ceaeb8b
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Luca DE CALICE
+                                            [partnerUaid] => 2017359984
+                                            [opponentsName] => Kiera DELIMA / Tony XU
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018127464
+                                                            [name] => Kiera DELIMA
+                                                            [utr] => 8
+[wtn_singles] => 26.92
+[utrDec] => 7.76
+[nationalRank] => 62
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2018254282
+                                                            [name] => Tony XU
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-3
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => 958f1e78-d76f-4b6f-aa37-29c24ceaeb8b
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] => Luca DE CALICE
+                                            [partnerUaid] => 2017359984
+                                            [opponentsName] => Carter POST / Cate ANDREOLI
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018522311
+                                                            [name] => Carter POST
+                                                            [utr] =>
+[wtn_singles] =>
+[utrDec] =>
+[nationalRank] =>
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2010703769
+                                                            [name] => Cate ANDREOLI
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 8-0
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => 958f1e78-d76f-4b6f-aa37-29c24ceaeb8b
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Luca DE CALICE
+                                            [partnerUaid] => 2017359984
+                                            [opponentsName] =>
+                                            [opponents] => Array
+                                                (
+                                                )
+
+                                            [outcome] => W
+                                            [results] =>
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [10] => Array
+                        (
+                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                            [tournamentId] => 7D3A577B-58A0-4298-AA9B-9094238DFE9F
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/tennisfitnesscenterofrockyhillllc0/Tournaments/overview/7D3A577B-58A0-4298-AA9B-9094238DFE9F
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/tennisfitnesscenterofrockyhillllc0/Tournaments/overview/7D3A577B-58A0-4298-AA9B-9094238DFE9F
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 3 Closed
+                            [name] => Tennis & Fitness Center of Rocky Hill Winter Sectionals Boys 18s & Girls 14s
+                            [displayName] => Tennis & Fitness Center of Rocky Hill Winter Sectionals Boys 18s & Girls 14s
+                            [division] => Girls' 14 & under singles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Full Feed in Consolation (Through R16)
+                            [startDate] => 2025-01-17
+                            [endDate] => 2025-01-19
+                            [isPosition] => false
+                            [eventPoints] => 540
+                            [listPoints] => 586
+                            [bonusPoints] => 46
+                            [matchFormat] => Singles
+                            [pointsTable] => FIC-R16
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => PL-Final
+                                            [round] => P-F
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Charlotte BOYCE
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018302022
+                                                            [name] => Charlotte BOYCE
+                                                            [utr] => 7
+[wtn_singles] => 28.03
+[utrDec] => 7.32
+[nationalRank] => 120
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-3 6-4
+                                            [bonusPoints] => 23
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Semifinals
+                                            [round] => SF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Kiera DELIMA
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018127464
+                                                            [name] => Kiera DELIMA
+                                                            [utr] => 8
+[wtn_singles] => 26.92
+[utrDec] => 7.76
+[nationalRank] => 62
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 5-7 4-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => Quarterfinals
+                                            [round] => QF
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Heidi WANG
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018248737
+                                                            [name] => Heidi WANG
+                                                            [utr] => 8
+[wtn_singles] => 27.09
+[utrDec] => 7.62
+[nationalRank] => 102
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 3-6 7-5 6-2
+                                            [bonusPoints] => 23
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] => Lizzie WOODS
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018573741
+                                                            [name] => Lizzie WOODS
+                                                            [utr] => 6
+[wtn_singles] => 29.59
+[utrDec] => 6.46
+[nationalRank] =>
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-3 6-2
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [4] => Array
+                                        (
+                                            [eventId] => ae20e2dd-cbbd-4afd-86a8-96b6d6f516e1
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] =>
+                                            [partnerUaid] =>
+                                            [opponentsName] =>
+                                            [opponents] => Array
+                                                (
+                                                )
+
+                                            [outcome] => W
+                                            [results] =>
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                    [11] => Array
+                        (
+                            [eventId] => bb7bf700-6b62-4c2f-af05-cab822bb3f06
+                            [tournamentId] => FDA11748-E373-467F-B97A-96CDC315B628
+                            [tournamentUrl] => https://playtennis.usta.com/competitions/dnatennisfoundationofcentraltexas/Tournaments/overview/FDA11748-E373-467F-B97A-96CDC315B628
+                            [matchUrl] => #
+                            [url] => https://playtennis.usta.com/competitions/dnatennisfoundationofcentraltexas/Tournaments/overview/FDA11748-E373-467F-B97A-96CDC315B628
+                            [eventType] => TOURNAMENT
+                            [flightName] =>
+                            [level] => Level 1
+                            [name] => USTA National Winter Championships (BG12-14)
+                            [displayName] => USTA National Winter Championships (BG12-14)
+                            [division] => Girls' 14 & under doubles
+                            [section] => New England
+                            [district] => Eastern Massachusetts
+                            [drawType] => Single Elimination
+                            [startDate] => 2024-12-28
+                            [endDate] => 2025-01-03
+                            [isPosition] => false
+                            [eventPoints] => 112
+                            [listPoints] => 112
+                            [bonusPoints] => 0
+                            [matchFormat] => Doubles
+                            [pointsTable] => SE
+                            [pointsIncludedInRank] => 1
+                            [rounds] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [eventId] => bb7bf700-6b62-4c2f-af05-cab822bb3f06
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R16
+                                            [round] => R16
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Aria MENON / Emma ALVARADO REED
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2018118712
+                                                            [name] => Aria MENON
+                                                            [utr] => 8
+[wtn_singles] => 25.64
+[utrDec] => 7.94
+[nationalRank] =>
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017274683
+                                                            [name] => Emma ALVARADO REED
+                                                        )
+
+                                                )
+
+                                            [outcome] => L
+                                            [results] => 5-7 3-6
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [eventId] => bb7bf700-6b62-4c2f-af05-cab822bb3f06
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R32
+                                            [round] => R32
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Esha VALLABHANENI / Abigail HANEY
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017295312
+                                                            [name] => Esha VALLABHANENI
+                                                            [utr] => 6
+[wtn_singles] => 30.68
+[utrDec] => 5.67
+[nationalRank] => 485
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017207560
+                                                            [name] => Abigail HANEY
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 6-2 6-1
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [eventId] => bb7bf700-6b62-4c2f-af05-cab822bb3f06
+                                            [positionOfPlay] =>
+[positionOfPlayDisplay] =>
+                                            [teamName] =>
+                                            [opponentTeamName] =>
+                                            [roundName] => R64
+                                            [round] => R64
+                                            [playerName] => Alana BERRY
+                                            [partner] => Nadia POZNICK
+                                            [partnerUaid] => 2010925821
+                                            [opponentsName] => Masha SEMENOVA / Daniella SALES
+                                            [opponents] => Array
+                                                (
+                                                    [0] => Array
+                                                        (
+                                                            [uaid] => 2017270184
+                                                            [name] => Masha SEMENOVA
+                                                            [utr] => 9
+[wtn_singles] => 23.47
+[utrDec] => 8.7
+[nationalRank] =>
+                                                        )
+
+                                                    [1] => Array
+                                                        (
+                                                            [uaid] => 2017366026
+                                                            [name] => Daniella SALES
+                                                        )
+
+                                                )
+
+                                            [outcome] => W
+                                            [results] => 7-6(8) 6-4
+                                            [bonusPoints] => 0
+                                            [matchStatusCode] =>
+                                            [status] =>
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [pagination] => Array
+                (
+                    [currentPage] => 1
+                    [pageSize] => 15
+                    [totalPages] => 1
+                    [totalResults] => 12
+                )
+
+        )
+
+    [player_notes] => Array
+        (
+        )
+
+    [live_scores_stats] => Array
+        (
+            [records] => Array
+                (
+                )
+
+            [total_count] => 0
+            [player1_1_count] => 0
+            [player1_2_count] => 0
+            [player2_1_count] => 0
+            [player2_2_count] => 0
+        )
+
+    [usta_ranking_summary] => Array
+        (
+            [0] => Array
+                (
+                    [player_id] => 901912
+                    [player_st_id] => E08183DC-6D5E-4B7A-8F50-992D7B303D40
+                    [wtn_singles] => 26.2
+                    [wtn_doubles] => 30.09
+                    [usta_no] => 2017344697
+                    [player_first] => Alana
+                    [player_last] => Berry
+                    [player_age_group] => Girls' 14 Singles
+                    [player_city] => Cambridge
+                    [player_state] => MA
+                    [player_country] => USA
+                    [player_district] => Eastern Massachusett
+                    [player_section] => New England
+                    [district_rank] => 3
+                    [section_rank] => 3
+                    [national_rank] => 78
+                    [utrSingles] => 8
+                    [player_itf_ranking] => 0
+                    [player_trn_ranking] => 4
+                    [player_grad_year] => 0
+                    [utrSinglesDec] => 7.75
+                    [player_name] => Alana Berry
+                    [player_image] =>
+                    [player_image_status] => 0
+                    [player_national_pts] => 4346
+                )
+
+            [1] => Array
+                (
+                    [player_id] => 934585
+                    [player_st_id] => E08183DC-6D5E-4B7A-8F50-992D7B303D40
+                    [wtn_singles] => 26.2
+                    [wtn_doubles] => 30.09
+                    [usta_no] => 2017344697
+                    [player_first] => Alana
+                    [player_last] => Berry
+                    [player_age_group] => Girls' 16 Singles
+                    [player_city] => Cambridge
+                    [player_state] => MA
+                    [player_country] => USA
+                    [player_district] => Eastern Massachusett
+                    [player_section] => New England
+                    [district_rank] => 10
+                    [section_rank] => 15
+                    [national_rank] => 308
+                    [utrSingles] => 8
+                    [player_itf_ranking] => 0
+                    [player_trn_ranking] => 4
+                    [player_grad_year] => 0
+                    [utrSinglesDec] => 7.75
+                    [player_name] => Alana Berry
+                    [player_image] =>
+                    [player_image_status] => 0
+                    [player_national_pts] => 1945
+                )
+
+            [2] => Array
+                (
+                    [player_id] => 1129773
+                    [player_st_id] => E08183DC-6D5E-4B7A-8F50-992D7B303D40
+                    [wtn_singles] => 26.2
+                    [wtn_doubles] => 30.09
+                    [usta_no] => 2017344697
+                    [player_first] => Alana
+                    [player_last] => Berry
+                    [player_age_group] => Girls' 12 Singles
+                    [player_city] => Cambridge
+                    [player_state] => MA
+                    [player_country] => USA
+                    [player_district] => Eastern Massachusett
+                    [player_section] => New England
+                    [district_rank] => 0
+                    [section_rank] => 0
+                    [national_rank] => 0
+                    [utrSingles] => 8
+                    [player_itf_ranking] => 0
+                    [player_trn_ranking] => 4
+                    [player_grad_year] => 0
+                    [utrSinglesDec] => 7.75
+                    [player_name] =>
+                    [player_image] =>
+                    [player_image_status] => 0
+                    [player_national_pts] => 0
+                )
+
+            [3] => Array
+                (
+                    [player_id] => 1548388
+                    [player_st_id] => E08183DC-6D5E-4B7A-8F50-992D7B303D40
+                    [wtn_singles] => 26.2
+                    [wtn_doubles] => 30.09
+                    [usta_no] => 2017344697
+                    [player_first] => Alana
+                    [player_last] => Berry
+                    [player_age_group] => Girls' 18 Singles
+                    [player_city] => Cambridge
+                    [player_state] => MA
+                    [player_country] => USA
+                    [player_district] => Eastern Massachusett
+                    [player_section] => New England
+                    [district_rank] => 22
+                    [section_rank] => 48
+                    [national_rank] => 1210
+                    [utrSingles] => 8
+                    [player_itf_ranking] => 0
+                    [player_trn_ranking] => 4
+                    [player_grad_year] => 0
+                    [utrSinglesDec] => 7.75
+                    [player_name] =>
+                    [player_image] =>
+                    [player_image_status] => 0
+                    [player_national_pts] => 538
+                )
+
+        )
+
+)
