@@ -225,16 +225,35 @@ You will receive a JSON object containing:
 
 Please generate the report in clear, structured Markdown using the following 12-section template. **Be specific with numbers.**
 
-**CRITICAL FORMATTING RULE:** Whenever you reference a player's name (opponent or anyone mentioned in match history), ALWAYS include their UTR rating in parentheses immediately after their name. Format: `[Player Name] (UTR: XX.XX)`. This applies to ALL sections of the report, not just the Competition Level Analysis.
+**CRITICAL FORMATTING RULES:**
+
+1. **Player Names:** Whenever you reference a player's name (opponent or anyone mentioned in match history), ALWAYS include their UTR rating in parentheses immediately after their name. Format: `[Player Name] (UTR: XX.XX)`. This applies to ALL sections of the report.
+
+2. **USE MARKDOWN TABLES FOR ALL DATA-HEAVY CONTENT (MANDATORY):**
+   - **Match lists** (last 10 matches, upset losses, best wins, worst losses, common opponents) → Use tables with columns: Date | Opponent | UTR | Result | Score
+   - **Record breakdowns** (by round, by level, by surface, by UTR band) → Use tables with columns: Category | Wins | Losses | Win %
+   - **Tiebreak/clutch records** → Use tables with columns: Type | Record | Win %
+   - **Tournament activity** → Use tables with columns: Level | Events | Record
+   - **Vulnerability summaries** → Use tables with columns: Vulnerability | Tactical Application
+   
+   **DO NOT use bullet point lists for data that can be presented in a table.** Tables are easier to scan and compare. Reserve bullet points ONLY for narrative explanations and tactical advice paragraphs.
+
+   **Example - CORRECT (use this):**
+   | Date | Opponent | UTR | Result | Score |
+   |------|----------|-----|--------|-------|
+   | 10/27 | Cristobal PLASENCIA ROBLES | 11.46 | Loss | 3-6 2-6 |
+   | 10/13 | Ivan RYBAK | 11.38 | Win | 6-4 6-4 |
+
+   **Example - INCORRECT (avoid this):**
+   - Loss: vs Cristobal PLASENCIA ROBLES (UTR: 11.46) - 3-6 2-6 - 10/27
+   - Win: vs Ivan RYBAK (UTR: 11.38) - 6-4 6-4 - 10/13
 
 ```markdown
 # Scouting Report: [Opponent Name]
 
-> **UTR Rating:** [XX.XX] | **WTN:** [XX.X] | **National Rank:** [#XXX] | **Division:** [Age Group]
->
-> **Head-to-Head Record:** [Record] ([Context, e.g., "First Meeting" or "Tied"])
->
-> **Recent Performance:** [Form across the last 4 singles events, taking into account how recently those events occurred (e.g., "3 strong runs in the last 4 events over the past 6 weeks", "early exits in the last 4 tournaments spread over several months").]
+| UTR | WTN | National Rank | Division | H2H | Recent Form |
+|-----|-----|---------------|----------|-----|-------------|
+| [XX.XX] | [XX.X] | #[XXX] | [Age Group] | [Record or "First Meeting"] | [Brief 5-10 word summary, e.g., "Strong consolation runs, early main draw exits"] |
 
 ---
 
@@ -305,9 +324,20 @@ Please generate the report in clear, structured Markdown using the following 12-
 - **Recent Breakthroughs/Slumps:** [**USE `computed_metrics.momentum_summary.recent_breakthroughs` and `computed_metrics.momentum_summary.recent_slumps` if available.** Significant wins or Upset Losses (vs Lower UTR) within those last 10 singles matches, with UTR ratings. E.g., "Breakthrough win over Dhakshish ARYAN (UTR: 11.68)" or "Concerning current Upset Loss vs Boden WILLIS (UTR: 10.26)". Anchor all statements in current data.]
 
 ## 10. Weakness Identification
-- **Specific Current Vulnerabilities:** [Technical, tactical, physical, or mental gaps that can be exploited, always framed as **current** and supported by explicit match evidence.]
-- **Red Flags:** [Current patterns of withdrawals, retirements, repeated Upset Losses (vs Lower UTR), or consistent fades in deciding sets that indicate areas you can pressure.]
-- **Top 2–3 Primary Current Vulnerabilities:** [Summarize the 2–3 most important current vulnerabilities, each tied back to sections where evidence appears (e.g., "Current close-score vulnerability (see Sections 1 and 9)", "Current vulnerability vs lower-rated opponents when favored (see Section 2)").]
+
+### Specific Current Vulnerabilities
+[Technical, tactical, physical, or mental gaps that can be exploited, always framed as **current** and supported by explicit match evidence.]
+
+### Red Flags
+[Current patterns of withdrawals, retirements, repeated Upset Losses (vs Lower UTR), or consistent fades in deciding sets that indicate areas you can pressure. Present as a numbered list.]
+
+### Top 3 Primary Vulnerabilities
+
+| Rank | Vulnerability | Supporting Sections |
+|------|--------------|---------------------|
+| 1 | [Most critical vulnerability] | Sections X, Y |
+| 2 | [Second vulnerability] | Section Z |
+| 3 | [Third vulnerability] | Section W |
 
 ## 11. Psychological Profile
 - **Mental Durability:** [Current response to adversity (losing sets, tiebreaks, deciding sets). Focus on observable patterns like frequently losing deciding sets or struggling to rebound immediately after losses, not on mental-health diagnoses.]

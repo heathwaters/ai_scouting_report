@@ -1,0 +1,3378 @@
+
+============================================================
+PLAYER PROFILE
+============================================================
+Name: Max Freedman
+USTA No: 2010689753
+City: Boca Raton
+State: FL
+District: Region 6
+Section: Florida
+Age Group: Boys' 18 Singles
+UTR Singles: 11.42
+WTN Singles: 19.96
+WTN Doubles: 27.07
+National Rank: 150
+Section Rank: 20
+
+============================================================
+RANKING SNAPSHOT
+============================================================
+Uaid: 2010689753
+Source: CLUBSPARK
+CatalogId: JUNIOR_NULL_M_STANDING_Y18_UNDER_NULL_NULL_NULL
+RanklistId: 694bb3650b04ebd2d591316b
+PublishDate: 2025-12-24
+Rank: 150
+SectionRank: 20
+DistrictRank: 5
+SinglePoints: 2195
+DoublePoints: 380
+BonusPoints: 799
+TotalPoints: 3374
+PlayerType: junior
+EVENTS:
+  0:
+    EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+    TournamentId: 171434A8-3085-48EF-8881-972F53C23698
+    TournamentUrl: https://playtennis.usta.com/competitions/emiliosanchezacademyflorida/Tournaments/overview/171434A8-3085-48EF-8881-972F53C23698
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/emiliosanchezacademyflorida/Tournaments/overview/171434A8-3085-48EF-8881-972F53C23698
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 2
+    Name: Naples, FL
+    DisplayName: Naples, FL
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: Full Feed in Consolation (Through R16)
+    StartDate: 2025-10-11
+    EndDate: 2025-10-13
+    IsPosition: false
+    EventPoints: 363
+    ListPoints: 487
+    BonusPoints: 124
+    MatchFormat: Singles
+    PointsTable: FIC-R16
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Final
+        Round: C-F
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Dhakshish ARYAN
+        OPPONENTS:
+          0:
+            Uaid: 2018509136
+            Name: Dhakshish ARYAN
+            Utr: 12
+            Wtn singles: 19.38
+            UtrDec: 11.68
+            NationalRank: 216
+        Outcome: L
+        Results: 3-6 4-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Semifinals
+        Round: C-SF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Ivan RYBAK
+        OPPONENTS:
+          0:
+            Uaid: 2010951187
+            Name: Ivan RYBAK
+            Utr: 11
+            Wtn singles: 20.15
+            UtrDec: 11.44
+            NationalRank: 173
+        Outcome: W
+        Results: 6-4 6-4
+        BonusPoints: 45
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Quarterfinals
+        Round: C-QF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Boden WILLIS
+        OPPONENTS:
+          0:
+            Uaid: 2010823540
+            Name: Boden WILLIS
+            Utr: 10
+            Wtn singles: 22.39
+            UtrDec: 10.31
+            NationalRank: 
+        Outcome: W
+        Results: 6-3 6-1
+        BonusPoints: 11
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16
+        Round: C-R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Joaquin BLANCO
+        OPPONENTS:
+          0:
+            Uaid: 2010161468
+            Name: Joaquin BLANCO
+            Utr: 11
+            Wtn singles: 21.16
+            UtrDec: 11.07
+            NationalRank: 146
+        Outcome: W
+        Results: 6-3 6-2
+        BonusPoints: 68
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16-Q
+        Round: C-R16-Q
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Caleb BUCHANAN
+        OPPONENTS:
+          0:
+            Uaid: 2018627487
+            Name: Caleb BUCHANAN
+            Utr: 10
+            Wtn singles: 24.93
+            UtrDec: 9.7
+            NationalRank: 639
+        Outcome: W
+        Results: Wd [inj]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      5:
+        EventId: 67bf9f2b-54d5-475c-a6c6-e824d97def94
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R32
+        Round: R32
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: James WAKEFIELD
+        OPPONENTS:
+          0:
+            Uaid: 2010544685
+            Name: James WAKEFIELD
+            Utr: 11
+            Wtn singles: 19.79
+            UtrDec: 11.45
+            NationalRank: 137
+        Outcome: L
+        Results: 6-2 4-6 [9-11]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  1:
+    EventId: 42662dad-1785-46c5-ba78-595559c1bb3d
+    TournamentId: E1D4F33C-2867-4478-8900-92F759D212B3
+    TournamentUrl: https://playtennis.usta.com/competitions/sanlandopark0/Tournaments/overview/E1D4F33C-2867-4478-8900-92F759D212B3
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/sanlandopark0/Tournaments/overview/E1D4F33C-2867-4478-8900-92F759D212B3
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 3 Open
+    Name: Altamonte Springs, FL
+    DisplayName: Altamonte Springs, FL
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Single Elimination
+    StartDate: 2025-09-13
+    EndDate: 2025-09-15
+    IsPosition: false
+    EventPoints: 67
+    ListPoints: 67
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: SE
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 42662dad-1785-46c5-ba78-595559c1bb3d
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: PL-Final
+        Round: P-F
+        PlayerName: Max FREEDMAN
+        Partner: Abraham ROSETT
+        PartnerUaid: 2010689899
+        OpponentsName: Aiden PHOEBUS / Ivan RYBAK
+        OPPONENTS:
+          0:
+            Uaid: 2018852763
+            Name: Aiden PHOEBUS
+            Utr: 11
+            Wtn singles: 22.12
+            UtrDec: 10.65
+            NationalRank: 338
+          1:
+            Uaid: 2010951187
+            Name: Ivan RYBAK
+        Outcome: L
+        Results: 0-8
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 42662dad-1785-46c5-ba78-595559c1bb3d
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Semifinals
+        Round: SF
+        PlayerName: Max FREEDMAN
+        Partner: Abraham ROSETT
+        PartnerUaid: 2010689899
+        OpponentsName: Zachary SANCHEZ / Luke CONNER
+        OPPONENTS:
+          0:
+            Uaid: 2010767916
+            Name: Zachary SANCHEZ
+            Utr: 9
+            Wtn singles: 25.36
+            UtrDec: 9.21
+            NationalRank: 404
+          1:
+            Uaid: 2010715810
+            Name: Luke CONNER
+        Outcome: L
+        Results: 5-8
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 42662dad-1785-46c5-ba78-595559c1bb3d
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: Abraham ROSETT
+        PartnerUaid: 2010689899
+        OpponentsName: Ajinkya KARNATAKI / Ethan LEAIRD
+        OPPONENTS:
+          0:
+            Uaid: 2010678721
+            Name: Ajinkya KARNATAKI
+            Utr: 10
+            Wtn singles: 22.37
+            UtrDec: 10.4
+            NationalRank: 429
+          1:
+            Uaid: 2010099419
+            Name: Ethan LEAIRD
+        Outcome: W
+        Results: 8-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 42662dad-1785-46c5-ba78-595559c1bb3d
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: Abraham ROSETT
+        PartnerUaid: 2010689899
+        OpponentsName: 
+        OPPONENTS:
+        Outcome: W
+        Results: 
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  2:
+    EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+    TournamentId: 2053002A-77B8-40BF-84DE-7D722ADF2B8F
+    TournamentUrl: https://playtennis.usta.com/competitions/USTANatlcampus/Tournaments/overview/2053002A-77B8-40BF-84DE-7D722ADF2B8F
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/USTANatlcampus/Tournaments/overview/2053002A-77B8-40BF-84DE-7D722ADF2B8F
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 1
+    Name: USTA National Doubles Championships Presented by Drew Hassenbein Dream Big
+    DisplayName: USTA National Doubles Championships Presented by Drew Hassenbein Dream Big
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Compass Draw
+    StartDate: 2025-08-22
+    EndDate: 2025-08-24
+    IsPosition: false
+    EventPoints: 31
+    ListPoints: 31
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: COMP
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: S-Final
+        Round: S-F
+        PlayerName: Max FREEDMAN
+        Partner: Ajinkya KARNATAKI
+        PartnerUaid: 2010678721
+        OpponentsName: Alexander BRZOV / Jack REIS
+        OPPONENTS:
+          0:
+            Uaid: 2010635040
+            Name: Alexander BRZOV
+            Utr: 11
+            Wtn singles: 20.66
+            UtrDec: 11.28
+            NationalRank: 178
+          1:
+            Uaid: 2010454373
+            Name: Jack REIS
+        Outcome: L
+        Results: 6-4 3-6 [5-10]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: S-Semifinals
+        Round: S-SF
+        PlayerName: Max FREEDMAN
+        Partner: Ajinkya KARNATAKI
+        PartnerUaid: 2010678721
+        OpponentsName: Keigo KAMATA / Theeran SIVAKUMAR
+        OPPONENTS:
+          0:
+            Uaid: 2010729997
+            Name: Keigo KAMATA
+            Utr: 10
+            Wtn singles: 24.99
+            UtrDec: 9.77
+            NationalRank: 454
+          1:
+            Uaid: 2010845713
+            Name: Theeran SIVAKUMAR
+        Outcome: W
+        Results: 4-1 5-4(3)
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: S-Quarterfinals
+        Round: S-QF
+        PlayerName: Max FREEDMAN
+        Partner: Ajinkya KARNATAKI
+        PartnerUaid: 2010678721
+        OpponentsName: Roman STUKOV / Warren GUNNAR
+        OPPONENTS:
+          0:
+            Uaid: 2010940389
+            Name: Roman STUKOV
+            Utr: 9
+            Wtn singles: 26.64
+            UtrDec: 8.67
+            NationalRank: 732
+          1:
+            Uaid: 2017165664
+            Name: Warren GUNNAR
+        Outcome: W
+        Results: Wd [inj]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: W-R16
+        Round: W-R16
+        PlayerName: Max FREEDMAN
+        Partner: Ajinkya KARNATAKI
+        PartnerUaid: 2010678721
+        OpponentsName: Alexander WRIEDT / Thomas JANI
+        OPPONENTS:
+          0:
+            Uaid: 2010134318
+            Name: Alexander WRIEDT
+            Utr: 11
+            Wtn singles: 22.21
+            UtrDec: 10.54
+            NationalRank: 191
+          1:
+            Uaid: 2017186413
+            Name: Thomas JANI
+        Outcome: L
+        Results: 4-6 1-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 6a0061e5-633d-4718-9b78-8ac020d5547b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: E-R32
+        Round: E-R32
+        PlayerName: Max FREEDMAN
+        Partner: Ajinkya KARNATAKI
+        PartnerUaid: 2010678721
+        OpponentsName: Luke COLSON / Niko KLYACHKIN
+        OPPONENTS:
+          0:
+            Uaid: 2010544266
+            Name: Luke COLSON
+            Utr: 11
+            Wtn singles: 22
+            UtrDec: 10.6
+            NationalRank: 220
+          1:
+            Uaid: 2010376906
+            Name: Niko KLYACHKIN
+        Outcome: L
+        Results: 4-6 6-7(4)
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  3:
+    EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+    TournamentId: 7CD709D2-C67C-4537-9E6A-C59C7D757709
+    TournamentUrl: https://playtennis.usta.com/competitions/kalamazoocollege/Tournaments/overview/7CD709D2-C67C-4537-9E6A-C59C7D757709
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/kalamazoocollege/Tournaments/overview/7CD709D2-C67C-4537-9E6A-C59C7D757709
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 1
+    Name: USTA Boys' 16 & 18 National Championships
+    DisplayName: USTA Boys' 16 & 18 National Championships
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: Full Feed-in Consolation (Through QF)
+    StartDate: 2025-08-01
+    EndDate: 2025-08-10
+    IsPosition: false
+    EventPoints: 210
+    ListPoints: 424
+    BonusPoints: 214
+    MatchFormat: Singles
+    PointsTable: FIC-QF
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R32-Q
+        Round: C-R32-Q
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Rajat SHIRUR
+        OPPONENTS:
+          0:
+            Uaid: 2010653866
+            Name: Rajat SHIRUR
+            Utr: 13
+            Wtn singles: 15.75
+            UtrDec: 12.57
+            NationalRank: 145
+        Outcome: L
+        Results: 2-6 2-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16
+        Round: C-R64
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Calvin BAIERL
+        OPPONENTS:
+          0:
+            Uaid: 2010698163
+            Name: Calvin BAIERL
+            Utr: 13
+            Wtn singles: 11.04
+            UtrDec: 13.16
+            NationalRank: 611
+        Outcome: W
+        Results: Wo [inj]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16-Q
+        Round: C-R64-Q
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Connor COLE
+        OPPONENTS:
+          0:
+            Uaid: 2010489025
+            Name: Connor COLE
+            Utr: 11
+            Wtn singles: 20.32
+            UtrDec: 11.26
+            NationalRank: 
+        Outcome: W
+        Results: 3-6 6-4 [11-9]
+        BonusPoints: 45
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R128
+        Round: C-R128
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Ozzy West ODOM
+        OPPONENTS:
+          0:
+            Uaid: 2017367932
+            Name: Ozzy West ODOM
+            Utr: 8
+            Wtn singles: 27.39
+            UtrDec: 8.41
+            NationalRank: 780
+        Outcome: W
+        Results: 6-1 6-0
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R128
+        Round: R128
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Nischal SPURLING
+        OPPONENTS:
+          0:
+            Uaid: 2010304458
+            Name: Nischal SPURLING
+            Utr: 13
+            Wtn singles: 13.4
+            UtrDec: 12.53
+            NationalRank: 232
+        Outcome: L
+        Results: 1-6 3-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      5:
+        EventId: 40f6a671-a513-401a-a0bc-52c8766f0579
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R256
+        Round: R256
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Alex BORBIU
+        OPPONENTS:
+          0:
+            Uaid: 2010753893
+            Name: Alex BORBIU
+            Utr: 11
+            Wtn singles: 19.06
+            UtrDec: 11.4
+            NationalRank: 28
+        Outcome: W
+        Results: 6-2 5-7 6-1
+        BonusPoints: 169
+        MatchStatusCode: 
+        Status: 
+  4:
+    EventId: 61b92951-4fe7-4636-aa83-ae14c5491545
+    TournamentId: 292D16BF-E509-45DE-9E27-DB9CA63B7409
+    TournamentUrl: https://playtennis.usta.com/competitions/greatermidlandtenniscenter/Tournaments/overview/292D16BF-E509-45DE-9E27-DB9CA63B7409
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/greatermidlandtenniscenter/Tournaments/overview/292D16BF-E509-45DE-9E27-DB9CA63B7409
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 2
+    Name: Midland, MI
+    DisplayName: Midland, MI
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Single Elimination
+    StartDate: 2025-06-28
+    EndDate: 2025-06-30
+    IsPosition: false
+    EventPoints: 86
+    ListPoints: 86
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: SE
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 61b92951-4fe7-4636-aa83-ae14c5491545
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: Andrew VINCLER
+        PartnerUaid: 2010218667
+        OpponentsName: Stuart KONEZNY / Rudr MALAYYA
+        OPPONENTS:
+          0:
+            Uaid: 2010952892
+            Name: Stuart KONEZNY
+            Utr: 10
+            Wtn singles: 22.61
+            UtrDec: 10.33
+            NationalRank: 258
+          1:
+            Uaid: 2017087472
+            Name: Rudr MALAYYA
+        Outcome: L
+        Results: 8-9(3)
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 61b92951-4fe7-4636-aa83-ae14c5491545
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: Andrew VINCLER
+        PartnerUaid: 2010218667
+        OpponentsName: Nason LO / Shane HAND
+        OPPONENTS:
+          0:
+            Uaid: 2010901670
+            Name: Nason LO
+            Utr: 11
+            Wtn singles: 21.15
+            UtrDec: 10.82
+            NationalRank: 121
+          1:
+            Uaid: 2010697750
+            Name: Shane HAND
+        Outcome: W
+        Results: 9-7
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  5:
+    EventId: ff2d244e-a52a-4516-84e2-787a55758cc7
+    TournamentId: 17C5D73F-A41A-4575-B251-8005D9B2E0DC
+    TournamentUrl: https://playtennis.usta.com/competitions/USTA/Tournaments/overview/17C5D73F-A41A-4575-B251-8005D9B2E0DC
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/USTA/Tournaments/overview/17C5D73F-A41A-4575-B251-8005D9B2E0DC
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 3 Open
+    Name: Cincinnati ITF J30 
+    DisplayName: Cincinnati ITF J30 
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Single Elimination
+    StartDate: 2025-06-02
+    EndDate: 2025-06-08
+    IsPosition: false
+    EventPoints: 67
+    ListPoints: 67
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: SE
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: ff2d244e-a52a-4516-84e2-787a55758cc7
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Semifinals
+        Round: SF
+        PlayerName: Max FREEDMAN
+        Partner: Bassil TOUBAN
+        PartnerUaid: 2010381733
+        OpponentsName: Anthony DRY / Owen GUISTWITE
+        OPPONENTS:
+          0:
+            Uaid: 2010589236
+            Name: Anthony DRY
+            Utr: 12
+            Wtn singles: 19.38
+            UtrDec: 11.66
+            NationalRank: 87
+          1:
+            Uaid: 2010787907
+            Name: Owen GUISTWITE
+        Outcome: L
+        Results: 4-6 2-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: ff2d244e-a52a-4516-84e2-787a55758cc7
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: Bassil TOUBAN
+        PartnerUaid: 2010381733
+        OpponentsName: Colin MCPEEK / Griffin GOODE
+        OPPONENTS:
+          0:
+            Uaid: 2010642138
+            Name: Colin MCPEEK
+            Utr: 11
+            Wtn singles: 20.4
+            UtrDec: 11.31
+            NationalRank: 166
+          1:
+            Uaid: 2010762598
+            Name: Griffin GOODE
+        Outcome: W
+        Results: 4-6 6-2 [10-5]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: ff2d244e-a52a-4516-84e2-787a55758cc7
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: Bassil TOUBAN
+        PartnerUaid: 2010381733
+        OpponentsName: Anuj MATHUR / Elijah JOHNSON
+        OPPONENTS:
+          0:
+            Uaid: 2018371096
+            Name: Anuj MATHUR
+            Utr: 11
+            Wtn singles: 20.78
+            UtrDec: 10.88
+            NationalRank: 356
+          1:
+            Uaid: 2010334563
+            Name: Elijah JOHNSON
+        Outcome: W
+        Results: 6-1 5-7 [10-8]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  6:
+    EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+    TournamentId: 291A0F51-B2D1-4234-862C-F4859C5FC281
+    TournamentUrl: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/291A0F51-B2D1-4234-862C-F4859C5FC281
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/291A0F51-B2D1-4234-862C-F4859C5FC281
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 2
+    Name: Key Biscayne, FL
+    DisplayName: Key Biscayne, FL
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: Full Feed in Consolation (Through R16)
+    StartDate: 2025-05-17
+    EndDate: 2025-05-19
+    IsPosition: false
+    EventPoints: 363
+    ListPoints: 577
+    BonusPoints: 214
+    MatchFormat: Singles
+    PointsTable: FIC-R16
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Final
+        Round: C-F
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Rush SLIVJANOVSKI
+        OPPONENTS:
+          0:
+            Uaid: 2010724582
+            Name: Rush SLIVJANOVSKI
+            Utr: 11
+            Wtn singles: 20.55
+            UtrDec: 11.44
+            NationalRank: 274
+        Outcome: L
+        Results: Ret [ill]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Semifinals
+        Round: C-SF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Pierce SHAYA
+        OPPONENTS:
+          0:
+            Uaid: 2010590957
+            Name: Pierce SHAYA
+            Utr: 12
+            Wtn singles: 15.33
+            UtrDec: 11.84
+            NationalRank: 
+        Outcome: W
+        Results: 6-3 6-1
+        BonusPoints: 135
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Quarterfinals
+        Round: C-QF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Peter BERNS
+        OPPONENTS:
+          0:
+            Uaid: 2010830674
+            Name: Peter BERNS
+            Utr: 10
+            Wtn singles: 22.79
+            UtrDec: 10.45
+            NationalRank: 492
+        Outcome: W
+        Results: 6-3 6-2
+        BonusPoints: 11
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16
+        Round: C-R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Yoel SEREKEBERHAN
+        OPPONENTS:
+          0:
+            Uaid: 2010713454
+            Name: Yoel SEREKEBERHAN
+            Utr: 10
+            Wtn singles: 22.11
+            UtrDec: 10.34
+            NationalRank: 307
+        Outcome: W
+        Results: 6-2 6-2
+        BonusPoints: 45
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Avner WONG
+        OPPONENTS:
+          0:
+            Uaid: 2010494648
+            Name: Avner WONG
+            Utr: 12
+            Wtn singles: 16.51
+            UtrDec: 11.98
+            NationalRank: 51
+        Outcome: L
+        Results: 3-6 4-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      5:
+        EventId: 280a276a-089d-4bb7-b707-50604fefe62b
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R32
+        Round: R32
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Thomas JANI
+        OPPONENTS:
+          0:
+            Uaid: 2017186413
+            Name: Thomas JANI
+            Utr: 11
+            Wtn singles: 20.97
+            UtrDec: 10.53
+            NationalRank: 
+        Outcome: W
+        Results: 2-6 6-4 [10-2]
+        BonusPoints: 23
+        MatchStatusCode: 
+        Status: 
+  7:
+    EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+    TournamentId: 8CCB8AF1-18E9-4E7F-B536-486622BB467C
+    TournamentUrl: https://playtennis.usta.com/competitions/delraybeachtenniscenter/Tournaments/overview/8CCB8AF1-18E9-4E7F-B536-486622BB467C
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/delraybeachtenniscenter/Tournaments/overview/8CCB8AF1-18E9-4E7F-B536-486622BB467C
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 4 Open
+    Name: Delray Championships
+    DisplayName: Delray Championships
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: Full Feed in Consolation (Through R16)
+    StartDate: 2025-05-10
+    EndDate: 2025-05-13
+    IsPosition: false
+    EventPoints: 405
+    ListPoints: 427
+    BonusPoints: 22
+    MatchFormat: Singles
+    PointsTable: FIC-R16
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Final
+        Round: F
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Saahil GUPTE
+        OPPONENTS:
+          0:
+            Uaid: 2010179796
+            Name: Saahil GUPTE
+            Utr: 11
+            Wtn singles: 19.31
+            UtrDec: 11.46
+            NationalRank: 55
+        Outcome: L
+        Results: 2-6 3-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Semifinals
+        Round: SF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Bardo BUCKNELL
+        OPPONENTS:
+          0:
+            Uaid: 2010378651
+            Name: Bardo BUCKNELL
+            Utr: 11
+            Wtn singles: 20.24
+            UtrDec: 11.38
+            NationalRank: 242
+        Outcome: W
+        Results: Wo [pc]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: David GRIGORYAN
+        OPPONENTS:
+          0:
+            Uaid: 2010703677
+            Name: David GRIGORYAN
+            Utr: 11
+            Wtn singles: 20.73
+            UtrDec: 11.09
+            NationalRank: 223
+        Outcome: W
+        Results: 6-2 7-6(2)
+        BonusPoints: 11
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Maxim KAUFFMANN
+        OPPONENTS:
+          0:
+            Uaid: 2010411828
+            Name: Maxim KAUFFMANN
+            Utr: 11
+            Wtn singles: 21.44
+            UtrDec: 10.54
+            NationalRank: 742
+        Outcome: W
+        Results: 6-4 6-1
+        BonusPoints: 11
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R32
+        Round: R32
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Pratt YERGER
+        OPPONENTS:
+          0:
+            Uaid: 2010605278
+            Name: Pratt YERGER
+            Utr: 10
+            Wtn singles: 21.67
+            UtrDec: 10.42
+            NationalRank: 374
+        Outcome: W
+        Results: 6-2 0-6 [14-12]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      5:
+        EventId: 60d940a9-8b34-41e4-a940-7c84869ef465
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R64
+        Round: R64
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Ander MORGAN
+        OPPONENTS:
+          0:
+            Uaid: 2010477600
+            Name: Ander MORGAN
+            Utr: 10
+            Wtn singles: 25.77
+            UtrDec: 9.53
+            NationalRank: 983
+        Outcome: W
+        Results: 6-2 6-2
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  8:
+    EventId: 0b9223c8-81ec-4a49-a8f1-f655aa8e4549
+    TournamentId: 8EF923B9-380C-471E-8C56-296D70830211
+    TournamentUrl: https://playtennis.usta.com/competitions/asociacion-de-tenis-de-puerto-rico/Tournaments/overview/8EF923B9-380C-471E-8C56-296D70830211
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/asociacion-de-tenis-de-puerto-rico/Tournaments/overview/8EF923B9-380C-471E-8C56-296D70830211
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 4 Open
+    Name: Torneo Juvenil Nivel 4 #2 (Abierto) - 14 & 18 años o menos
+    DisplayName: Torneo Juvenil Nivel 4 #2 (Abierto) - 14 & 18 años o menos
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Single Elimination
+    StartDate: 2025-04-11
+    EndDate: 2025-04-13
+    IsPosition: false
+    EventPoints: 40
+    ListPoints: 40
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: SE
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 0b9223c8-81ec-4a49-a8f1-f655aa8e4549
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Semifinals
+        Round: SF
+        PlayerName: Max FREEDMAN
+        Partner: Francesco PADILLA
+        PartnerUaid: 2010599682
+        OpponentsName: Miguel QUINONES / Marco PEREZ
+        OPPONENTS:
+          0:
+            Uaid: 2010863646
+            Name: Miguel QUINONES
+            Utr: 9
+            Wtn singles: 27.12
+            UtrDec: 9.03
+            NationalRank: 329
+          1:
+            Uaid: 2017217757
+            Name: Marco PEREZ
+        Outcome: L
+        Results: Ret [ill]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 0b9223c8-81ec-4a49-a8f1-f655aa8e4549
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: Francesco PADILLA
+        PartnerUaid: 2010599682
+        OpponentsName: Julian PARNELL / Joseph PENNOCK
+        OPPONENTS:
+          0:
+            Uaid: 2010643685
+            Name: Julian PARNELL
+            Utr: 8
+            Wtn singles: 29.01
+            UtrDec: 7.92
+            NationalRank: 1732
+          1:
+            Uaid: 2010863093
+            Name: Joseph PENNOCK
+        Outcome: W
+        Results: 6-2
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 0b9223c8-81ec-4a49-a8f1-f655aa8e4549
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: Francesco PADILLA
+        PartnerUaid: 2010599682
+        OpponentsName: 
+        OPPONENTS:
+        Outcome: W
+        Results: 
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  9:
+    EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+    TournamentId: 8EF923B9-380C-471E-8C56-296D70830211
+    TournamentUrl: https://playtennis.usta.com/competitions/asociacion-de-tenis-de-puerto-rico/Tournaments/overview/8EF923B9-380C-471E-8C56-296D70830211
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/asociacion-de-tenis-de-puerto-rico/Tournaments/overview/8EF923B9-380C-471E-8C56-296D70830211
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 4 Open
+    Name: Torneo Juvenil Nivel 4 #2 (Abierto) - 14 & 18 años o menos
+    DisplayName: Torneo Juvenil Nivel 4 #2 (Abierto) - 14 & 18 años o menos
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: First Match Losers Consolation
+    StartDate: 2025-04-11
+    EndDate: 2025-04-13
+    IsPosition: false
+    EventPoints: 540
+    ListPoints: 540
+    BonusPoints: 0
+    MatchFormat: Singles
+    PointsTable: FMLC
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Final
+        Round: F
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Omar ABOSEADA
+        OPPONENTS:
+          0:
+            Uaid: 2010568094
+            Name: Omar ABOSEADA
+            Utr: 10
+            Wtn singles: 24.23
+            UtrDec: 9.83
+            NationalRank: 325
+        Outcome: W
+        Results: 6-1 6-4
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Semifinals
+        Round: SF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Max OLSON
+        OPPONENTS:
+          0:
+            Uaid: 2010741140
+            Name: Max OLSON
+            Utr: 10
+            Wtn singles: 24.84
+            UtrDec: 9.7
+            NationalRank: 479
+        Outcome: W
+        Results: 6-0 6-1
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Ricardo LOPEZ
+        OPPONENTS:
+          0:
+            Uaid: 2018909011
+            Name: Ricardo LOPEZ
+            Utr: 7
+            Wtn singles: 29.38
+            UtrDec: 7.27
+            NationalRank: 367
+        Outcome: W
+        Results: 6-1 6-1
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Daniel JACOBS
+        OPPONENTS:
+          0:
+            Uaid: 2010936393
+            Name: Daniel JACOBS
+            Utr: 8
+            Wtn singles: 28.92
+            UtrDec: 8.26
+            NationalRank: 1704
+        Outcome: W
+        Results: 6-0 6-0
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: c66941f6-8b4a-4c0b-95a6-31ed6e7fcb51
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R32
+        Round: R32
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Julian Andres BERMUDEZ SAURI
+        OPPONENTS:
+          0:
+            Uaid: 2017147586
+            Name: Julian Andres BERMUDEZ SAURI
+            Utr: 6
+            Wtn singles: 30.74
+            UtrDec: 6.19
+            NationalRank: 4775
+        Outcome: W
+        Results: 6-0 6-0
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+  10:
+    EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+    TournamentId: C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    TournamentUrl: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 2
+    Name: Key Biscayne, FL
+    DisplayName: Key Biscayne, FL
+    Division: Boys' 18 & under singles
+    Section: Florida
+    District: Region 6
+    DrawType: Full Feed in Consolation (Through R16)
+    StartDate: 2025-02-08
+    EndDate: 2025-02-10
+    IsPosition: false
+    EventPoints: 314
+    ListPoints: 539
+    BonusPoints: 225
+    MatchFormat: Singles
+    PointsTable: FIC-R16
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Semifinals
+        Round: C-SF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Joshua LAMM-BOCHAROV
+        OPPONENTS:
+          0:
+            Uaid: 2010551651
+            Name: Joshua LAMM-BOCHAROV
+            Utr: 12
+            Wtn singles: 15.64
+            UtrDec: 11.93
+            NationalRank: 
+        Outcome: L
+        Results: 1-6 0-6
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-Quarterfinals
+        Round: C-QF
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Nathan GERMINO
+        OPPONENTS:
+          0:
+            Uaid: 2010541170
+            Name: Nathan GERMINO
+            Utr: 11
+            Wtn singles: 18.36
+            UtrDec: 11.21
+            NationalRank: 143
+        Outcome: W
+        Results: 6-7(6) 6-3 [11-9]
+        BonusPoints: 169
+        MatchStatusCode: 
+        Status: 
+      2:
+        EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: C-R16
+        Round: C-R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Evan RIGSBY
+        OPPONENTS:
+          0:
+            Uaid: 2010490709
+            Name: Evan RIGSBY
+            Utr: 11
+            Wtn singles: 16.54
+            UtrDec: 11.34
+            NationalRank: 1143
+        Outcome: W
+        Results: 6-4 4-6 [11-9]
+        BonusPoints: 45
+        MatchStatusCode: 
+        Status: 
+      3:
+        EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Max PETTINGELL
+        OPPONENTS:
+          0:
+            Uaid: 2017084703
+            Name: Max PETTINGELL
+            Utr: 12
+            Wtn singles: 15.35
+            UtrDec: 11.63
+            NationalRank: 
+        Outcome: L
+        Results: Ret [inj]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      4:
+        EventId: 62dd966f-efe9-4f1c-a8ef-c9667a7c86b9
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R32
+        Round: R32
+        PlayerName: Max FREEDMAN
+        Partner: 
+        PartnerUaid: 
+        OpponentsName: Hamilton HUITT
+        OPPONENTS:
+          0:
+            Uaid: 2010244139
+            Name: Hamilton HUITT
+            Utr: 10
+            Wtn singles: 21.6
+            UtrDec: 10.45
+            NationalRank: 
+        Outcome: W
+        Results: 6-2 6-7(7) [10-6]
+        BonusPoints: 11
+        MatchStatusCode: 
+        Status: 
+  11:
+    EventId: dcf7d779-7d93-4354-9b88-1fe7f9222a52
+    TournamentId: C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    TournamentUrl: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    MatchUrl: #
+    Url: https://playtennis.usta.com/competitions/CrandonParkTennisCenter/Tournaments/overview/C5F25FEA-5376-4293-82AD-1EC2224CF6A6
+    EventType: TOURNAMENT
+    FlightName: 
+    Level: Level 2
+    Name: Key Biscayne, FL
+    DisplayName: Key Biscayne, FL
+    Division: Boys' 18 & under doubles
+    Section: Florida
+    District: Region 6
+    DrawType: Single Elimination
+    StartDate: 2025-02-08
+    EndDate: 2025-02-10
+    IsPosition: false
+    EventPoints: 86
+    ListPoints: 86
+    BonusPoints: 0
+    MatchFormat: Doubles
+    PointsTable: SE
+    PointsIncludedInRank: true
+    ROUNDS:
+      0:
+        EventId: dcf7d779-7d93-4354-9b88-1fe7f9222a52
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: Quarterfinals
+        Round: QF
+        PlayerName: Max FREEDMAN
+        Partner: Gabriel VALDES
+        PartnerUaid: 2010861972
+        OpponentsName: Nicholas PATRICK / Nolan BALTHAZOR
+        OPPONENTS:
+          0:
+            Uaid: 2010471675
+            Name: Nicholas PATRICK
+            Utr: 12
+            Wtn singles: 15.51
+            UtrDec: 12.04
+            NationalRank: 69
+          1:
+            Uaid: 2010471107
+            Name: Nolan BALTHAZOR
+        Outcome: L
+        Results: 3-8
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+      1:
+        EventId: dcf7d779-7d93-4354-9b88-1fe7f9222a52
+        PositionOfPlay: 
+        PositionOfPlayDisplay: 
+        TeamName: 
+        OpponentTeamName: 
+        RoundName: R16
+        Round: R16
+        PlayerName: Max FREEDMAN
+        Partner: Gabriel VALDES
+        PartnerUaid: 2010861972
+        OpponentsName: Jack MOUNTFORD / Omar RHAZALI
+        OPPONENTS:
+          0:
+            Uaid: 2003445108
+            Name: Jack MOUNTFORD
+            Utr: 12
+            Wtn singles: 18.49
+            UtrDec: 11.65
+            NationalRank: 79
+          1:
+            Uaid: 2010528500
+            Name: Omar RHAZALI
+        Outcome: W
+        Results: Ret [inj]
+        BonusPoints: 0
+        MatchStatusCode: 
+        Status: 
+PAGINATION:
+  CurrentPage: 1
+  PageSize: 15
+  TotalPages: 1
+  TotalResults: 12
+
+============================================================
+PERFORMANCE SUMMARY
+============================================================
+OVERALL:
+  Wins: 79
+  Losses: 41
+CLOSE_SCORE:
+  Wins: 20
+  Losses: 11
+
+============================================================
+COMPETITION SUMMARY (UTR & WTN)
+============================================================
+RECORD_VS_HIGHER_RATED:
+  Wins: 7
+  Losses: 15
+MATCHES_VS_HIGHER_RATED:
+  0:
+    Date: 2025-10-11
+    Round: C-F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Dhakshish ARYAN
+      Usta no: 2018509136
+      Utr: 11.68
+      Wtn: 19.38
+    Result: Loss
+    Score: 3-6 4-6
+  1:
+    Date: 2025-10-11
+    Round: C-SF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Ivan RYBAK
+      Usta no: 2010951187
+      Utr: 11.44
+      Wtn: 20.15
+    Result: Win
+    Score: 6-4 6-4
+  2:
+    Date: 2025-10-11
+    Round: R32
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: James WAKEFIELD
+      Usta no: 2010544685
+      Utr: 11.45
+      Wtn: 19.79
+    Result: Loss
+    Score: 6-2 4-6 [9-11]
+  3:
+    Date: 2025-08-01
+    Round: C-R32-Q
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Rajat SHIRUR
+      Usta no: 2010653866
+      Utr: 12.57
+      Wtn: 15.75
+    Result: Loss
+    Score: 2-6 2-6
+  4:
+    Date: 2025-08-01
+    Round: C-R64
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Calvin BAIERL
+      Usta no: 2010698163
+      Utr: 13.16
+      Wtn: 11.04
+    Result: Win
+    Score: Wo [inj]
+  5:
+    Date: 2025-08-01
+    Round: R128
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Nischal SPURLING
+      Usta no: 2010304458
+      Utr: 12.53
+      Wtn: 13.4
+    Result: Loss
+    Score: 1-6 3-6
+  6:
+    Date: 2025-06-02
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Anthony DRY
+      Usta no: 2010589236
+      Utr: 11.66
+      Wtn: 19.38
+    Result: Loss
+    Score: 4-6 2-6
+  7:
+    Date: 2025-05-17
+    Round: C-F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Rush SLIVJANOVSKI
+      Usta no: 2010724582
+      Utr: 11.44
+      Wtn: 20.55
+    Result: Loss
+    Score: Ret [ill]
+  8:
+    Date: 2025-05-17
+    Round: C-SF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Pierce SHAYA
+      Usta no: 2010590957
+      Utr: 11.84
+      Wtn: 15.33
+    Result: Win
+    Score: 6-3 6-1
+  9:
+    Date: 2025-05-17
+    Round: R16
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Avner WONG
+      Usta no: 2010494648
+      Utr: 11.98
+      Wtn: 16.51
+    Result: Loss
+    Score: 3-6 4-6
+  10:
+    Date: 2025-05-10
+    Round: F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Saahil GUPTE
+      Usta no: 2010179796
+      Utr: 11.46
+      Wtn: 19.31
+    Result: Loss
+    Score: 2-6 3-6
+  11:
+    Date: 2025-04-21
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Sean GROSMAN
+      Usta no: 2010774536
+      Utr: 12.04
+      Wtn: 18.61
+    Result: Loss
+    Score: 5-7 4-6
+  12:
+    Date: 2025-02-08
+    Round: C-SF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Joshua LAMM-BOCHAROV
+      Usta no: 2010551651
+      Utr: 11.93
+      Wtn: 15.64
+    Result: Loss
+    Score: 1-6 0-6
+  13:
+    Date: 2025-02-08
+    Round: R16
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Max PETTINGELL
+      Usta no: 2017084703
+      Utr: 11.63
+      Wtn: 15.35
+    Result: Loss
+    Score: Ret [inj]
+  14:
+    Date: 2025-02-08
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Nicholas PATRICK
+      Usta no: 2010471675
+      Utr: 12.04
+      Wtn: 15.51
+    Result: Loss
+    Score: 3-8
+  15:
+    Date: 2025-02-08
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Jack MOUNTFORD
+      Usta no: 2003445108
+      Utr: 11.65
+      Wtn: 18.49
+    Result: Win
+    Score: Ret [inj]
+  16:
+    Date: 2025-02-08
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Nicholas PATRICK
+      Usta no: 2010471675
+      Utr: 12.04
+      Wtn: 15.51
+    Result: Loss
+    Score: 3-8
+  17:
+    Date: 2025-02-08
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Omar RHAZALI
+      Usta no: 2010528500
+      Utr: 11.93
+      Wtn: 18.34
+    Result: Win
+    Score: Ret [inj]
+  18:
+    Date: 2025-01-18
+    Round: C-QF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Jackson HINDERBERGER
+      Usta no: 2010591917
+      Utr: 11.47
+      Wtn: 20.84
+    Result: Loss
+    Score: Wd [ill]
+  19:
+    Date: 2025-01-18
+    Round: R32
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Gabriel VALDES
+      Usta no: 2010861972
+      Utr: 11.49
+      Wtn: 20.03
+    Result: Loss
+    Score: 6-7(6) 5-7
+  20:
+    Date: 2025-01-18
+    Round: R64
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Noah BAYON
+      Usta no: 2010541812
+      Utr: 11.5
+      Wtn: 19.94
+    Result: Win
+    Score: 6-3 6-3
+  21:
+    Date: 2025-05-17
+    Round: C-SF
+    Level: 
+    OPPONENT:
+      Name: Pierce Shaya
+      Utr id: 3205675
+      Utr: 11.72
+      Wtn: null
+    Result: Win
+    Score: 6-3, 6-1
+RECORD_VS_12_PLUS:
+  Wins: 1
+  Losses: 5
+RECORD_VS_11_5_PLUS:
+  Wins: 6
+  Losses: 10
+UPSET_LOSSES:
+  0:
+    Date: 2025-09-13
+    Round: P-F
+    Level: Single Elimination
+    OPPONENT:
+      Name: Aiden PHOEBUS
+      Usta no: 2018852763
+      Utr: 10.65
+      Wtn: 22.12
+    Result: Loss
+    Score: 0-8
+    Utr diff: 0.77
+  1:
+    Date: 2025-09-13
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Luke CONNER
+      Usta no: 2010715810
+      Utr: 10.56
+      Wtn: 21.95
+    Result: Loss
+    Score: 5-8
+    Utr diff: 0.86
+  2:
+    Date: 2025-08-22
+    Round: W-R16
+    Level: Compass Draw
+    OPPONENT:
+      Name: Alexander WRIEDT
+      Usta no: 2010134318
+      Utr: 10.54
+      Wtn: 22.21
+    Result: Loss
+    Score: 4-6 1-6
+    Utr diff: 0.88
+  3:
+    Date: 2025-08-22
+    Round: E-R32
+    Level: Compass Draw
+    OPPONENT:
+      Name: Luke COLSON
+      Usta no: 2010544266
+      Utr: 10.6
+      Wtn: 22
+    Result: Loss
+    Score: 4-6 6-7(4)
+    Utr diff: 0.82
+  4:
+    Date: 2025-06-28
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Rudr MALAYYA
+      Usta no: 2017087472
+      Utr: 10.06
+      Wtn: 23.27
+    Result: Loss
+    Score: 8-9(3)
+    Utr diff: 1.36
+  5:
+    Date: 2025-04-11
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Miguel QUINONES
+      Usta no: 2010863646
+      Utr: 9.03
+      Wtn: 27.12
+    Result: Loss
+    Score: Ret [ill]
+    Utr diff: 2.39
+  6:
+    Date: 2025-06-08
+    Round: R2
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-3, 6-4
+    Utr diff: 0.41
+  7:
+    Date: 2025-06-07
+    Round: R16
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 5-7, 7-6, 1-0
+    Utr diff: 0.41
+  8:
+    Date: 2025-05-17
+    Round: R16
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-3, 6-4
+    Utr diff: 0.41
+  9:
+    Date: 2025-05-17
+    Round: C-F
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-1
+    Utr diff: 0.41
+  10:
+    Date: 2025-05-10
+    Round: F
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-2, 6-3
+    Utr diff: 0.41
+  11:
+    Date: 2025-04-30
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-4, 6-3
+    Utr diff: 0.41
+  12:
+    Date: 2025-04-26
+    Round: R2
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-4, 6-3
+    Utr diff: 0.41
+  13:
+    Date: 2025-03-24
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-0, 6-0
+    Utr diff: 0.41
+  14:
+    Date: 2025-03-20
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 8-6
+    Utr diff: 0.41
+  15:
+    Date: 2025-03-18
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 8-6
+    Utr diff: 0.41
+  16:
+    Date: 2025-03-08
+    Round: R1
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-2, 7-5
+    Utr diff: 0.41
+  17:
+    Date: 2025-02-08
+    Round: R16
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 7-6, 4-0
+    Utr diff: 0.41
+  18:
+    Date: 2025-02-08
+    Round: C-SF
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-1, 6-0
+    Utr diff: 0.41
+  19:
+    Date: 2025-02-05
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 8-5
+    Utr diff: 0.41
+  20:
+    Date: 2025-02-01
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-4, 6-2
+    Utr diff: 0.41
+  21:
+    Date: 2025-01-18
+    Round: R32
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 7-6, 7-5
+    Utr diff: 0.41
+  22:
+    Date: 2025-01-11
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 7-5, 6-0
+    Utr diff: 0.41
+  23:
+    Date: 2025-01-05
+    Round: Unknown
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 7-5, 6-2
+    Utr diff: 0.41
+  24:
+    Date: 2024-12-26
+    Round: R16
+    Level: 
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    Result: Loss
+    Score: 6-0, 6-3
+    Utr diff: 0.41
+Upset losses count: 25
+WORST_LOSSES_TOP2:
+  0:
+    Date: 2025-04-11
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Miguel QUINONES
+      Usta no: 2010863646
+      Utr: 9.03
+      Wtn: 27.12
+    Result: Loss
+    Score: Ret [ill]
+    Tournament name: Torneo Juvenil Nivel 4 #2  Abierto  - 14 & 18 aÃ±os o menos
+  1:
+    Date: 2025-06-28
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Rudr MALAYYA
+      Usta no: 2017087472
+      Utr: 10.06
+      Wtn: 23.27
+    Result: Loss
+    Score: 8-9(3)
+    Tournament name: Midland, MI
+RECORD_BY_ROUND:
+  C-F:
+    Wins: 0
+    Losses: 3
+  C-SF:
+    Wins: 3
+    Losses: 2
+  C-QF:
+    Wins: 5
+    Losses: 1
+  C-R16:
+    Wins: 6
+    Losses: 0
+  C-R16-Q:
+    Wins: 3
+    Losses: 0
+  R32:
+    Wins: 12
+    Losses: 3
+  P-F:
+    Wins: 0
+    Losses: 1
+  SF:
+    Wins: 4
+    Losses: 3
+  QF:
+    Wins: 8
+    Losses: 3
+  S-F:
+    Wins: 0
+    Losses: 1
+  S-SF:
+    Wins: 1
+    Losses: 0
+  S-QF:
+    Wins: 1
+    Losses: 0
+  W-R16:
+    Wins: 0
+    Losses: 1
+  E-R32:
+    Wins: 0
+    Losses: 1
+  C-R32-Q:
+    Wins: 0
+    Losses: 1
+  C-R64:
+    Wins: 1
+    Losses: 0
+  C-R64-Q:
+    Wins: 1
+    Losses: 0
+  C-R128:
+    Wins: 1
+    Losses: 0
+  R128:
+    Wins: 0
+    Losses: 1
+  R256:
+    Wins: 1
+    Losses: 0
+  R16:
+    Wins: 9
+    Losses: 7
+  F:
+    Wins: 2
+    Losses: 2
+  R64:
+    Wins: 5
+    Losses: 0
+  C-R32:
+    Wins: 2
+    Losses: 0
+  R2:
+    Wins: 0
+    Losses: 2
+  R1:
+    Wins: 2
+    Losses: 1
+  UNKNOWN:
+    Wins: 8
+    Losses: 8
+  1Q:
+    Wins: 2
+    Losses: 0
+  2Q:
+    Wins: 1
+    Losses: 0
+  3Q:
+    Wins: 1
+    Losses: 0
+Average utr in wins: 9.87
+Average utr in losses: 11.2
+RECORD_VS_HIGHER_RATED_UTR_BANDS:
+  BAND_0_TO_0.5:
+    Wins: 5
+    Losses: 8
+    Win pct: 0.3846
+    Sample size: 13
+    Low confidence: false
+    Utr range: 11.52-11.92
+  BAND_0.6_TO_1:
+    Wins: 1
+    Losses: 5
+    Win pct: 0.1667
+    Sample size: 6
+    Low confidence: false
+    Utr range: 12.02-12.42
+  BAND_1.1_TO_2:
+    Wins: 1
+    Losses: 2
+    Win pct: 0.3333
+    Sample size: 3
+    Low confidence: false
+    Utr range: 12.52-13.42
+  BAND_OVER_2:
+    Wins: 0
+    Losses: 0
+    Win pct: null
+    Sample size: 0
+    Low confidence: true
+    Utr range: 13.52+
+RECORD_VS_HIGHER_RATED_WTN:
+  Wins: 8
+  Losses: 12
+MATCHES_VS_HIGHER_RATED_WTN:
+  0:
+    Date: 2025-10-11
+    Round: C-F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Dhakshish ARYAN
+      Usta no: 2018509136
+      Utr: 11.68
+      Wtn: 19.38
+    Result: Loss
+    Score: 3-6 4-6
+  1:
+    Date: 2025-10-11
+    Round: R32
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: James WAKEFIELD
+      Usta no: 2010544685
+      Utr: 11.45
+      Wtn: 19.79
+    Result: Loss
+    Score: 6-2 4-6 [9-11]
+  2:
+    Date: 2025-08-01
+    Round: C-R32-Q
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Rajat SHIRUR
+      Usta no: 2010653866
+      Utr: 12.57
+      Wtn: 15.75
+    Result: Loss
+    Score: 2-6 2-6
+  3:
+    Date: 2025-08-01
+    Round: C-R64
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Calvin BAIERL
+      Usta no: 2010698163
+      Utr: 13.16
+      Wtn: 11.04
+    Result: Win
+    Score: Wo [inj]
+  4:
+    Date: 2025-08-01
+    Round: R128
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Nischal SPURLING
+      Usta no: 2010304458
+      Utr: 12.53
+      Wtn: 13.4
+    Result: Loss
+    Score: 1-6 3-6
+  5:
+    Date: 2025-08-01
+    Round: R256
+    Level: Full Feed-in Consolation (Through QF)
+    OPPONENT:
+      Name: Alex BORBIU
+      Usta no: 2010753893
+      Utr: 11.4
+      Wtn: 19.06
+    Result: Win
+    Score: 6-2 5-7 6-1
+  6:
+    Date: 2025-06-02
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Anthony DRY
+      Usta no: 2010589236
+      Utr: 11.66
+      Wtn: 19.38
+    Result: Loss
+    Score: 4-6 2-6
+  7:
+    Date: 2025-05-17
+    Round: C-SF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Pierce SHAYA
+      Usta no: 2010590957
+      Utr: 11.84
+      Wtn: 15.33
+    Result: Win
+    Score: 6-3 6-1
+  8:
+    Date: 2025-05-17
+    Round: R16
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Avner WONG
+      Usta no: 2010494648
+      Utr: 11.98
+      Wtn: 16.51
+    Result: Loss
+    Score: 3-6 4-6
+  9:
+    Date: 2025-05-10
+    Round: F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Saahil GUPTE
+      Usta no: 2010179796
+      Utr: 11.46
+      Wtn: 19.31
+    Result: Loss
+    Score: 2-6 3-6
+  10:
+    Date: 2025-04-21
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Sean GROSMAN
+      Usta no: 2010774536
+      Utr: 12.04
+      Wtn: 18.61
+    Result: Loss
+    Score: 5-7 4-6
+  11:
+    Date: 2025-02-08
+    Round: C-SF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Joshua LAMM-BOCHAROV
+      Usta no: 2010551651
+      Utr: 11.93
+      Wtn: 15.64
+    Result: Loss
+    Score: 1-6 0-6
+  12:
+    Date: 2025-02-08
+    Round: C-QF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Nathan GERMINO
+      Usta no: 2010541170
+      Utr: 11.21
+      Wtn: 18.36
+    Result: Win
+    Score: 6-7(6) 6-3 [11-9]
+  13:
+    Date: 2025-02-08
+    Round: C-R16
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Evan RIGSBY
+      Usta no: 2010490709
+      Utr: 11.34
+      Wtn: 16.54
+    Result: Win
+    Score: 6-4 4-6 [11-9]
+  14:
+    Date: 2025-02-08
+    Round: R16
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Max PETTINGELL
+      Usta no: 2017084703
+      Utr: 11.63
+      Wtn: 15.35
+    Result: Loss
+    Score: Ret [inj]
+  15:
+    Date: 2025-02-08
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Nicholas PATRICK
+      Usta no: 2010471675
+      Utr: 12.04
+      Wtn: 15.51
+    Result: Loss
+    Score: 3-8
+  16:
+    Date: 2025-02-08
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Jack MOUNTFORD
+      Usta no: 2003445108
+      Utr: 11.65
+      Wtn: 18.49
+    Result: Win
+    Score: Ret [inj]
+  17:
+    Date: 2025-02-08
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Nicholas PATRICK
+      Usta no: 2010471675
+      Utr: 12.04
+      Wtn: 15.51
+    Result: Loss
+    Score: 3-8
+  18:
+    Date: 2025-02-08
+    Round: R16
+    Level: Single Elimination
+    OPPONENT:
+      Name: Omar RHAZALI
+      Usta no: 2010528500
+      Utr: 11.93
+      Wtn: 18.34
+    Result: Win
+    Score: Ret [inj]
+  19:
+    Date: 2025-01-18
+    Round: R64
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Noah BAYON
+      Usta no: 2010541812
+      Utr: 11.5
+      Wtn: 19.94
+    Result: Win
+    Score: 6-3 6-3
+RECORD_VS_HIGHER_RATED_WTN_BANDS:
+  BAND_0_TO_2:
+    Wins: 5
+    Losses: 5
+    Win pct: 0.5
+    Sample size: 10
+    Low confidence: false
+    Wtn range: 18-19.5
+  BAND_2.1_TO_4:
+    Wins: 1
+    Losses: 1
+    Win pct: 0.5
+    Sample size: 2
+    Low confidence: true
+    Wtn range: 16-17.9
+  BAND_4.1_TO_6:
+    Wins: 1
+    Losses: 5
+    Win pct: 0.1667
+    Sample size: 6
+    Low confidence: false
+    Wtn range: 14-15.9
+  BAND_OVER_6:
+    Wins: 1
+    Losses: 1
+    Win pct: 0.5
+    Sample size: 2
+    Low confidence: true
+    Wtn range: <14
+UPSET_LOSSES_WTN:
+  0:
+    Date: 2025-09-13
+    Round: P-F
+    Level: Single Elimination
+    OPPONENT:
+      Name: Aiden PHOEBUS
+      Usta no: 2018852763
+      Utr: 10.65
+      Wtn: 22.12
+    Result: Loss
+    Score: 0-8
+    Wtn diff: 2.16
+  1:
+    Date: 2025-09-13
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Luke CONNER
+      Usta no: 2010715810
+      Utr: 10.56
+      Wtn: 21.95
+    Result: Loss
+    Score: 5-8
+    Wtn diff: 1.99
+  2:
+    Date: 2025-08-22
+    Round: S-F
+    Level: Compass Draw
+    OPPONENT:
+      Name: Alexander BRZOV
+      Usta no: 2010635040
+      Utr: 11.28
+      Wtn: 20.66
+    Result: Loss
+    Score: 6-4 3-6 [5-10]
+    Wtn diff: 0.7
+  3:
+    Date: 2025-08-22
+    Round: W-R16
+    Level: Compass Draw
+    OPPONENT:
+      Name: Alexander WRIEDT
+      Usta no: 2010134318
+      Utr: 10.54
+      Wtn: 22.21
+    Result: Loss
+    Score: 4-6 1-6
+    Wtn diff: 2.25
+  4:
+    Date: 2025-08-22
+    Round: E-R32
+    Level: Compass Draw
+    OPPONENT:
+      Name: Luke COLSON
+      Usta no: 2010544266
+      Utr: 10.6
+      Wtn: 22
+    Result: Loss
+    Score: 4-6 6-7(4)
+    Wtn diff: 2.04
+  5:
+    Date: 2025-06-28
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Rudr MALAYYA
+      Usta no: 2017087472
+      Utr: 10.06
+      Wtn: 23.27
+    Result: Loss
+    Score: 8-9(3)
+    Wtn diff: 3.31
+  6:
+    Date: 2025-05-17
+    Round: C-F
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Rush SLIVJANOVSKI
+      Usta no: 2010724582
+      Utr: 11.44
+      Wtn: 20.55
+    Result: Loss
+    Score: Ret [ill]
+    Wtn diff: 0.59
+  7:
+    Date: 2025-04-11
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Miguel QUINONES
+      Usta no: 2010863646
+      Utr: 9.03
+      Wtn: 27.12
+    Result: Loss
+    Score: Ret [ill]
+    Wtn diff: 7.16
+  8:
+    Date: 2025-01-18
+    Round: C-QF
+    Level: Full Feed in Consolation (Through R16)
+    OPPONENT:
+      Name: Jackson HINDERBERGER
+      Usta no: 2010591917
+      Utr: 11.47
+      Wtn: 20.84
+    Result: Loss
+    Score: Wd [ill]
+    Wtn diff: 0.88
+Upset losses wtn count: 9
+WORST_LOSSES_WTN_TOP2:
+  0:
+    Date: 2025-04-11
+    Round: SF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Miguel QUINONES
+      Usta no: 2010863646
+      Utr: 9.03
+      Wtn: 27.12
+    Result: Loss
+    Score: Ret [ill]
+    Tournament name: Torneo Juvenil Nivel 4 #2  Abierto  - 14 & 18 aÃ±os o menos
+  1:
+    Date: 2025-06-28
+    Round: QF
+    Level: Single Elimination
+    OPPONENT:
+      Name: Rudr MALAYYA
+      Usta no: 2017087472
+      Utr: 10.06
+      Wtn: 23.27
+    Result: Loss
+    Score: 8-9(3)
+    Tournament name: Midland, MI
+Average wtn in wins: 22.88
+Average wtn in losses: 19.31
+
+============================================================
+RATING SUMMARY
+============================================================
+Utr trend: up
+UTR_HISTORY:
+  0:
+    Date: 2025-12-15
+    Utr: 11.41
+    National rank: 149
+  1:
+    Date: 2025-11-15
+    Utr: 11.39
+    National rank: 154
+  2:
+    Date: 2025-10-15
+    Utr: 11.3
+    National rank: 167
+  3:
+    Date: 2025-09-15
+    Utr: 11.3
+    National rank: 171
+  4:
+    Date: 2025-08-15
+    Utr: 11.28
+    National rank: 171
+  5:
+    Date: 2025-07-15
+    Utr: 11.17
+    National rank: 0
+  6:
+    Date: 2025-06-15
+    Utr: 11.01
+    National rank: 0
+Current utr: 11.42
+Average opponent utr: 10.36
+Ranking trend: flat
+Wtn trend: up
+WTN_HISTORY:
+  0:
+    Date: 2025-12-15
+    Wtn: 19.96
+  1:
+    Date: 2025-11-15
+    Wtn: 19.92
+  2:
+    Date: 2025-10-15
+    Wtn: 20.09
+  3:
+    Date: 2025-09-15
+    Wtn: 19.98
+  4:
+    Date: 2025-08-15
+    Wtn: 20
+  5:
+    Date: 2025-07-15
+    Wtn: 20.64
+  6:
+    Date: 2025-06-15
+    Wtn: 20.75
+Current wtn: 19.96
+Average opponent wtn: 21.67
+
+============================================================
+SURFACE SUMMARY
+============================================================
+CLAY:
+  Wins: 16
+  Losses: 9
+  Win pct: 0.64
+HARD:
+  Wins: 27
+  Losses: 13
+  Win pct: 0.675
+UNKNOWN:
+  Wins: 36
+  Losses: 19
+  Win pct: 0.6545
+
+============================================================
+TEMPORAL SUMMARY
+============================================================
+ACTIVITY:
+  Matches last 30: 0
+  Matches last 60: 0
+  Matches last 90: 6
+  Avg days between matches: 4.8
+FATIGUE_PATTERN:
+  Wins: 70
+  Losses: 30
+RUST_PATTERN:
+  Wins: 1
+  Losses: 2
+
+============================================================
+MOMENTUM SUMMARY
+============================================================
+LAST10:
+  Wins: 5
+  Losses: 5
+  MATCHES:
+    0:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: Dhakshish ARYAN
+        Usta no: 2018509136
+        Utr: 11.68
+        Wtn: 19.38
+      Result: Loss
+      Score: 3-6 4-6
+      Level: Full Feed in Consolation (Through R16)
+      Round: C-F
+    1:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: Ivan RYBAK
+        Usta no: 2010951187
+        Utr: 11.44
+        Wtn: 20.15
+      Result: Win
+      Score: 6-4 6-4
+      Level: Full Feed in Consolation (Through R16)
+      Round: C-SF
+    2:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: Boden WILLIS
+        Usta no: 2010823540
+        Utr: 10.31
+        Wtn: 22.39
+      Result: Win
+      Score: 6-3 6-1
+      Level: Full Feed in Consolation (Through R16)
+      Round: C-QF
+    3:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: Joaquin BLANCO
+        Usta no: 2010161468
+        Utr: 11.07
+        Wtn: 21.16
+      Result: Win
+      Score: 6-3 6-2
+      Level: Full Feed in Consolation (Through R16)
+      Round: C-R16
+    4:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: Caleb BUCHANAN
+        Usta no: 2018627487
+        Utr: 9.7
+        Wtn: 24.93
+      Result: Win
+      Score: Wd [inj]
+      Level: Full Feed in Consolation (Through R16)
+      Round: C-R16-Q
+    5:
+      Date: 2025-10-11
+      OPPONENT:
+        Name: James WAKEFIELD
+        Usta no: 2010544685
+        Utr: 11.45
+        Wtn: 19.79
+      Result: Loss
+      Score: 6-2 4-6 [9-11]
+      Level: Full Feed in Consolation (Through R16)
+      Round: R32
+    6:
+      Date: 2025-09-13
+      OPPONENT:
+        Name: Aiden PHOEBUS
+        Usta no: 2018852763
+        Utr: 10.65
+        Wtn: 22.12
+      Result: Loss
+      Score: 0-8
+      Level: Single Elimination
+      Round: P-F
+    7:
+      Date: 2025-09-13
+      OPPONENT:
+        Name: Luke CONNER
+        Usta no: 2010715810
+        Utr: 10.56
+        Wtn: 21.95
+      Result: Loss
+      Score: 5-8
+      Level: Single Elimination
+      Round: SF
+    8:
+      Date: 2025-09-13
+      OPPONENT:
+        Name: Ajinkya KARNATAKI
+        Usta no: 2010678721
+        Utr: 10.4
+        Wtn: 22.37
+      Result: Win
+      Score: 8-6
+      Level: Single Elimination
+      Round: QF
+    9:
+      Date: 2025-08-22
+      OPPONENT:
+        Name: Alexander BRZOV
+        Usta no: 2010635040
+        Utr: 11.28
+        Wtn: 20.66
+      Result: Loss
+      Score: 6-4 3-6 [5-10]
+      Level: Compass Draw
+      Round: S-F
+LAST10_UPSET_LOSSES:
+  0:
+    Date: 2025-09-13
+    OPPONENT:
+      Name: Aiden PHOEBUS
+      Usta no: 2018852763
+      Utr: 10.65
+      Wtn: 22.12
+    Result: Loss
+    Score: 0-8
+    Level: Single Elimination
+    Round: P-F
+  1:
+    Date: 2025-09-13
+    OPPONENT:
+      Name: Luke CONNER
+      Usta no: 2010715810
+      Utr: 10.56
+      Wtn: 21.95
+    Result: Loss
+    Score: 5-8
+    Level: Single Elimination
+    Round: SF
+LAST10_UPSET_LOSSES_WTN:
+  0:
+    Date: 2025-09-13
+    OPPONENT:
+      Name: Aiden PHOEBUS
+      Usta no: 2018852763
+      Utr: 10.65
+      Wtn: 22.12
+    Result: Loss
+    Score: 0-8
+    Level: Single Elimination
+    Round: P-F
+  1:
+    Date: 2025-09-13
+    OPPONENT:
+      Name: Luke CONNER
+      Usta no: 2010715810
+      Utr: 10.56
+      Wtn: 21.95
+    Result: Loss
+    Score: 5-8
+    Level: Single Elimination
+    Round: SF
+  2:
+    Date: 2025-08-22
+    OPPONENT:
+      Name: Alexander BRZOV
+      Usta no: 2010635040
+      Utr: 11.28
+      Wtn: 20.66
+    Result: Loss
+    Score: 6-4 3-6 [5-10]
+    Level: Compass Draw
+    Round: S-F
+CURRENT_STREAK:
+  Type: losing
+  Count: 1
+
+============================================================
+STRATEGIC SUMMARY
+============================================================
+RECORD_BY_LEVEL:
+  FULL FEED IN CONSOLATION (THROUGH R16):
+    Wins: 20
+    Losses: 9
+  SINGLE ELIMINATION:
+    Wins: 8
+    Losses: 8
+  COMPASS DRAW:
+    Wins: 2
+    Losses: 3
+  FULL FEED-IN CONSOLATION (THROUGH QF):
+    Wins: 4
+    Losses: 2
+  FIRST MATCH LOSERS CONSOLATION:
+    Wins: 9
+    Losses: 0
+  UNKNOWN:
+    Wins: 36
+    Losses: 19
+Soft level not dominant: false
+High level struggle: false
+
+============================================================
+POINT DEFENSE STRESS
+============================================================
+Is under stress defending points: true
+Expiring tournaments count: 4
+EXPIRING_EVENTS:
+  0:
+    Name: L4 Open New Shrewsbury B/G 18 singles/doubles
+    Match date: 2024-12-26
+    Expiry date: 2025-12-26
+    Days to expiry: 1
+    Level: 
+    Pressure level: MODERATE
+    Result: Win
+  1:
+    Name: BATTLE OF BOCA-PRESENTED BY JASON ZAFIROS â $10,000 Purse + â Men\'s &  WOMEN\'S OPEN with Doubles + Mix - QUARTERFINALISTS RECEIVE ENTRY FEE BACK (64+ ENTRIES)  EARLY REGISTRATION RAFFLE - UTR Tournament JANUARY 4-6,2025
+    Match date: 2025-01-05
+    Expiry date: 2026-01-05
+    Days to expiry: 11
+    Level: 
+    Pressure level: MODERATE
+    Result: Loss
+  2:
+    Name: BATTLE OF BOCA-PRESENTED BY JASON  ZAFIROS â $10,000 Purse â Men\'s & Women\'s Open with Doubles + Mix - QUARTERFINALISTS RECEIVE ENTRY FEE BACK (64+ ENTRIES) EARLY REGISTRATION RAFFLE - UTR Tournament -JANUARY 11-13, 2005
+    Match date: 2025-01-11
+    Expiry date: 2026-01-11
+    Days to expiry: 17
+    Level: 
+    Pressure level: MODERATE
+    Result: Loss
+  3:
+    Name: Saddlebrook Winter L3 Closed
+    Match date: 2025-01-18
+    Expiry date: 2026-01-18
+    Days to expiry: 24
+    Level: Full Feed in Consolation (Through R16)
+    Pressure level: MODERATE
+    Result: Loss
+
+============================================================
+HEAD-TO-HEAD SUMMARY
+============================================================
+REPEATED_OPPONENTS:
+  0:
+    OPPONENT:
+      Name: Max Freedman
+      Utr id: 5193554
+      Utr: 11.01
+      Wtn: null
+    RECORD:
+      Wins: 0
+      Losses: 19
+    Total matches: 19
+    MATCHES:
+      0:
+        Date: 2025-06-08
+        Result: Loss
+        Score: 6-3, 6-4
+      1:
+        Date: 2025-06-07
+        Result: Loss
+        Score: 5-7, 7-6, 1-0
+      2:
+        Date: 2025-05-17
+        Result: Loss
+        Score: 6-3, 6-4
+      3:
+        Date: 2025-05-17
+        Result: Loss
+        Score: 6-1
+      4:
+        Date: 2025-05-10
+        Result: Loss
+        Score: 6-2, 6-3
+      5:
+        Date: 2025-04-30
+        Result: Loss
+        Score: 6-4, 6-3
+      6:
+        Date: 2025-04-26
+        Result: Loss
+        Score: 6-4, 6-3
+      7:
+        Date: 2025-03-24
+        Result: Loss
+        Score: 6-0, 6-0
+      8:
+        Date: 2025-03-20
+        Result: Loss
+        Score: 8-6
+      9:
+        Date: 2025-03-18
+        Result: Loss
+        Score: 8-6
+      10:
+        Date: 2025-03-08
+        Result: Loss
+        Score: 6-2, 7-5
+      11:
+        Date: 2025-02-08
+        Result: Loss
+        Score: 7-6, 4-0
+      12:
+        Date: 2025-02-08
+        Result: Loss
+        Score: 6-1, 6-0
+      13:
+        Date: 2025-02-05
+        Result: Loss
+        Score: 8-5
+      14:
+        Date: 2025-02-01
+        Result: Loss
+        Score: 6-4, 6-2
+      15:
+        Date: 2025-01-18
+        Result: Loss
+        Score: 7-6, 7-5
+      16:
+        Date: 2025-01-11
+        Result: Loss
+        Score: 7-5, 6-0
+      17:
+        Date: 2025-01-05
+        Result: Loss
+        Score: 7-5, 6-2
+      18:
+        Date: 2024-12-26
+        Result: Loss
+        Score: 6-0, 6-3
+  1:
+    OPPONENT:
+      Name: Caleb BUCHANAN
+      Usta no: 2018627487
+      Utr: 9.7
+      Wtn: 24.93
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-10-11
+        Result: Win
+        Score: Wd [inj]
+      1:
+        Date: 2025-01-18
+        Result: Win
+        Score: 4-1 5-3
+  2:
+    OPPONENT:
+      Name: Max OLSON
+      Usta no: 2010741140
+      Utr: 9.7
+      Wtn: 24.84
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-1
+      1:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-1
+  3:
+    OPPONENT:
+      Name: Ricardo LOPEZ
+      Usta no: 2018909011
+      Utr: 7.27
+      Wtn: 29.38
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-1 6-1
+      1:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-1 6-1
+  4:
+    OPPONENT:
+      Name: Daniel JACOBS
+      Usta no: 2010936393
+      Utr: 8.26
+      Wtn: 28.92
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-0
+      1:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-0
+  5:
+    OPPONENT:
+      Name: Julian Andres BERMUDEZ SAURI
+      Usta no: 2017147586
+      Utr: 6.19
+      Wtn: 30.74
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-0
+      1:
+        Date: 2025-04-11
+        Result: Win
+        Score: 6-0 6-0
+  6:
+    OPPONENT:
+      Name: Nicholas PATRICK
+      Usta no: 2010471675
+      Utr: 12.04
+      Wtn: 15.51
+    RECORD:
+      Wins: 0
+      Losses: 2
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-02-08
+        Result: Loss
+        Score: 3-8
+      1:
+        Date: 2025-02-08
+        Result: Loss
+        Score: 3-8
+  7:
+    OPPONENT:
+      Name: Andres Gerdel
+      Utr id: 4001800
+      Utr: 9.11
+      Wtn: null
+    RECORD:
+      Wins: 2
+      Losses: 0
+    Total matches: 2
+    MATCHES:
+      0:
+        Date: 2025-06-07
+        Result: Win
+        Score: 6-2, 6-3
+      1:
+        Date: 2025-03-22
+        Result: Win
+        Score: 6-1, 6-2
+COMMON_OPPONENTS:
+User style: null
+WEAK_VS_STYLES:
+
+============================================================
+VULNERABILITY FLAGS
+============================================================
+Upset vs lower: true
+Close score: false
+Surface: false
+Form slump: false
+Time based: true
