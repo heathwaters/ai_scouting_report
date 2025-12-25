@@ -176,11 +176,24 @@ Before generating the report, you MUST verify:
 
 **Analysis Framework (The "Lens" you must use):**
 
-**IMPORTANT: Understanding the Two Rating Systems**
-- **UTR (Universal Tennis Rating):** Scale 1-16, **higher = better player**
+**IMPORTANT: Understanding the Three Rating Systems**
+- **USTA National Ranking:** Scale #1-#2000+, **lower number = better player** (positional ranking, like golf ranking)
 - **WTN (World Tennis Number):** Scale 40-1, **lower = better player** (inverted scale, like golf handicap)
+- **UTR (Universal Tennis Rating):** Scale 1-16, **higher = better player**
 - **Conversion:** 2.5 WTN points ≈ 1.0 UTR point. Formula: WTN ≈ 39.18 - (UTR × 2.40)
-- **Equivalent Thresholds:**
+
+- **USTA National Ranking Thresholds:**
+  | USTA Rank | Level |
+  |-----------|-------|
+  | Top 10 | Elite National |
+  | Top 50 | Strong National |
+  | Top 100 | Competitive National |
+  | Top 200 | Solid National |
+  | Top 300 | Developing National |
+  | Top 400 | Emerging |
+  | Top 500 | Entry National |
+
+- **UTR/WTN Equivalent Thresholds:**
   | UTR | WTN | Level |
   |-----|-----|-------|
   | 12.0+ | <11 | Elite Junior |
@@ -189,7 +202,21 @@ Before generating the report, you MUST verify:
   | 10.0+ | <15 | Solid |
   | 8.0+ | <20 | Developing |
 
-1.  **Dual Rating Threshold Analysis (UTR & WTN - THE MOST CRITICAL METRICS):**
+1.  **Triple Rating Threshold Analysis (USTA, WTN & UTR - THE MOST CRITICAL METRICS):**
+
+    **USTA National Ranking Analysis (Remember: Lower Rank Number = Better):**
+    *   **Base USTA Rank:** The player's current national ranking (e.g., **#154**). Use this as the baseline.
+    *   **Performance vs Higher Ranked (USTA):** Record against opponents ranked **ABOVE** (lower number) the player's current rank.
+        *   *Specific Check:* How many current wins vs Top 50? vs Top 100? vs Top 200? If zero at a tier, state: "Current level ceiling: 0 wins vs Top 100 based on current data".
+    *   **Upset Losses (USTA):** Losses to opponents ranked at least **50 spots LOWER** (higher number = weaker) than the player's current rank. Flag these as a **current consistency vulnerability** when favored.
+    *   **Kill Zone (USTA):** Identify the ranking range where currently dominant (e.g., "Currently dominant vs #300+ ranked opponents").
+
+    **WTN Analysis (Remember: Lower WTN = Better):**
+    *   **Base WTN:** The player's current WTN (e.g., **19.96**). Use this as the baseline.
+    *   **Performance vs Higher Rated (WTN):** Record against opponents with WTN **BELOW** the player's current WTN (lower WTN = stronger opponent).
+        *   *Specific Check:* How many current wins vs <15 WTN? vs <12 WTN? If zero, state: "Current level ceiling: 0 wins vs sub-15 WTN based on current data".
+    *   **Upset Losses (WTN):** Losses to opponents whose WTN is at least **0.5 points higher** than the player's current WTN (higher WTN = weaker opponent). Flag these as a **current consistency vulnerability** when favored.
+    *   **Kill Zone (WTN):** Identify the WTN range where currently dominant (e.g., "Currently dominant vs 25+ WTN").
 
     **UTR Analysis:**
     *   **Base UTR:** The player's current UTR (e.g., **11.4**). Use this as the baseline.
@@ -197,28 +224,36 @@ Before generating the report, you MUST verify:
         *   *Specific Check:* How many current wins vs 12.0+ UTR? If zero, state: "Current level ceiling: 0 wins vs 12+ UTR based on current data".
     *   **Upset Losses (UTR):** Losses to opponents whose UTR is at least **0.2 points lower** than the player's current UTR. Flag these as a **current consistency vulnerability** when favored.
     *   **Kill Zone (UTR):** Identify the UTR range where currently dominant (e.g., "Currently dominant vs sub-10.5 UTR").
-    
-    **WTN Analysis (Parallel - Remember: Lower WTN = Better):**
-    *   **Base WTN:** The player's current WTN (e.g., **19.96**). Use this as the baseline.
-    *   **Performance vs Higher Rated (WTN):** Record against opponents with WTN **BELOW** the player's current WTN (lower WTN = stronger opponent).
-        *   *Specific Check:* How many current wins vs <15 WTN? vs <12 WTN? If zero, state: "Current level ceiling: 0 wins vs sub-15 WTN based on current data".
-    *   **Upset Losses (WTN):** Losses to opponents whose WTN is at least **0.5 points higher** than the player's current WTN (higher WTN = weaker opponent). Flag these as a **current consistency vulnerability** when favored.
-    *   **Kill Zone (WTN):** Identify the WTN range where currently dominant (e.g., "Currently dominant vs 25+ WTN").
-    
-    **ALGORITHM FOR FINDING WORST LOSSES - UTR (FOLLOW EXACTLY):**
+
+    **ALGORITHM FOR FINDING WORST LOSSES - USTA (FOLLOW EXACTLY):**
     1. Filter match_history for entries where `result === "Loss"`
-    2. Filter those losses for entries where `opponent.utr` exists and is a valid number
-    3. Sort the filtered losses by `opponent.utr` in ASCENDING order (lowest UTR first)
+    2. Filter those losses for entries where `opponent.national_rank` exists and is a valid number
+    3. Sort the filtered losses by `opponent.national_rank` in DESCENDING order (highest rank number = weakest opponent first)
     4. Take the first 2 entries from this sorted list
-    5. These are your "Worst Losses (UTR)" - losses to the LOWEST rated opponents by UTR
+    5. These are your "Worst Losses (USTA)" - losses to the LOWEST ranked (highest number) opponents
     6. Exclude any match where `result === "Walkover"`
-    
+
+    **ALGORITHM FOR FINDING BEST WINS - USTA (FOLLOW EXACTLY):**
+    1. Filter match_history for entries where `result === "Win"` AND has non-empty score
+    2. Filter for entries with valid `opponent.national_rank`
+    3. Sort by `opponent.national_rank` in ASCENDING order (lowest rank number = strongest opponent first)
+    4. Take first 2 entries
+    5. These are your "Best Wins (USTA)" - wins against the HIGHEST ranked (lowest number) opponents
+
     **ALGORITHM FOR FINDING WORST LOSSES - WTN (FOLLOW EXACTLY):**
     1. Filter match_history for entries where `result === "Loss"`
     2. Filter those losses for entries where `opponent.wtn` exists and is a valid number
     3. Sort the filtered losses by `opponent.wtn` in DESCENDING order (highest WTN first = weakest opponents)
     4. Take the first 2 entries from this sorted list
     5. These are your "Worst Losses (WTN)" - losses to the HIGHEST WTN (weakest) opponents
+    6. Exclude any match where `result === "Walkover"`
+
+    **ALGORITHM FOR FINDING WORST LOSSES - UTR (FOLLOW EXACTLY):**
+    1. Filter match_history for entries where `result === "Loss"`
+    2. Filter those losses for entries where `opponent.utr` exists and is a valid number
+    3. Sort the filtered losses by `opponent.utr` in ASCENDING order (lowest UTR first)
+    4. Take the first 2 entries from this sorted list
+    5. These are your "Worst Losses (UTR)" - losses to the LOWEST rated opponents by UTR
     6. Exclude any match where `result === "Walkover"`
 
 2.  **Point Defense & Stress Analysis:**
@@ -260,10 +295,10 @@ Please generate the report in clear, structured Markdown using the following 12-
 
 **CRITICAL FORMATTING RULES:**
 
-1. **Player Names:** Whenever you reference a player's name (opponent or anyone mentioned in match history), ALWAYS include BOTH their UTR and WTN ratings in parentheses immediately after their name. Format: `[Player Name] (UTR: XX.XX | WTN: XX.X)`. If only one rating is available, include whichever is available. This applies to ALL sections of the report.
+1. **Player Names:** Whenever you reference a player's name (opponent or anyone mentioned in match history), ALWAYS include their USTA National Rank, WTN, and UTR in parentheses immediately after their name. Format: `[Player Name] (USTA: #XXX | WTN: XX.X | UTR: XX.XX)`. If only some ratings are available, include whichever are available in that order. This applies to ALL sections of the report.
 
 2. **USE MARKDOWN TABLES FOR ALL DATA-HEAVY CONTENT (MANDATORY):**
-   - **Match lists** (last 10 matches, upset losses, best wins, worst losses, common opponents) → Use tables with columns: Date | Opponent | UTR | WTN | Result | Score
+   - **Match lists** (last 10 matches, upset losses, best wins, worst losses, common opponents) → Use tables with columns: Date | Opponent | USTA | WTN | UTR | Result | Score
    - **Record breakdowns** (by round, by level, by surface, by UTR/WTN band) → Use tables with columns: Category | Wins | Losses | Win %
    - **Tiebreak/clutch records** → Use tables with columns: Type | Record | Win %
    - **Tournament activity** → Use tables with columns: Level | Events | Record
@@ -272,21 +307,21 @@ Please generate the report in clear, structured Markdown using the following 12-
    **DO NOT use bullet point lists for data that can be presented in a table.** Tables are easier to scan and compare. Reserve bullet points ONLY for narrative explanations and tactical advice paragraphs.
 
    **Example - CORRECT (use this):**
-   | Date | Opponent | UTR | WTN | Result | Score |
-   |------|----------|-----|-----|--------|-------|
-   | 10/27 | Cristobal PLASENCIA ROBLES | 11.46 | 11.7 | Loss | 3-6 2-6 |
-   | 10/13 | Ivan RYBAK | 11.38 | 12.0 | Win | 6-4 6-4 |
+   | Date | Opponent | USTA | WTN | UTR | Result | Score |
+   |------|----------|------|-----|-----|--------|-------|
+   | 10/27 | Cristobal PLASENCIA ROBLES | #175 | 20.33 | 11.46 | Loss | 3-6 2-6 |
+   | 10/13 | Ivan RYBAK | #185 | 19.91 | 11.38 | Win | 6-4 6-4 |
 
    **Example - INCORRECT (avoid this):**
-   - Loss: vs Cristobal PLASENCIA ROBLES (UTR: 11.46 | WTN: 11.7) - 3-6 2-6 - 10/27
-   - Win: vs Ivan RYBAK (UTR: 11.38 | WTN: 12.0) - 6-4 6-4 - 10/13
+   - Loss: vs Cristobal PLASENCIA ROBLES (USTA: #175 | WTN: 20.33 | UTR: 11.46) - 3-6 2-6 - 10/27
+   - Win: vs Ivan RYBAK (USTA: #185 | WTN: 19.91 | UTR: 11.38) - 6-4 6-4 - 10/13
 
 ```markdown
 # Scouting Report: [Opponent Name]
 
-| UTR | WTN | National Rank | Division | H2H | Recent Form |
-|-----|-----|---------------|----------|-----|-------------|
-| [XX.XX] | [XX.X] | #[XXX] | [Age Group] | [Record or "First Meeting"] | [Brief 5-10 word summary, e.g., "Strong consolation runs, early main draw exits"] |
+| USTA National Rank | WTN | UTR | Division | H2H | Recent Form |
+|--------------------|-----|-----|----------|-----|-------------|
+| #[XXX] | [XX.X] | [XX.XX] | [Age Group] | [Record or "First Meeting"] | [Brief 5-10 word summary, e.g., "Strong consolation runs, early main draw exits"] |
 
 ---
 
@@ -295,61 +330,82 @@ Please generate the report in clear, structured Markdown using the following 12-
 - **Match Outcome Patterns:** [Do they blow people out or play close grinders? Do they currently tend to win or lose close-score matches? **Use `computed_metrics.performance_summary.close_score` if available.**]
 - **Tiebreak & Clutch Performance:** [**Use `computed_metrics.performance_summary.close_score` for win/loss in close-score situations.** Win rate in TBs and deciding sets, with special focus on **close-score situations** (tiebreaks, 7–5 sets, deciding sets). When describing weaknesses here, use constructive, growth-oriented language such as "the overall trend suggests a player who is currently struggling in close-score situations" rather than harsh or absolute phrases. When strengths are present, you can say, for example: "Current data suggests they typically show strong competitiveness in close-score matches, so you will need to be prepared to bring equal fight when matches are close. Mentally prepare to enjoy and love the battle."]
 
-## 2. Competition Level Analysis (UTR & WTN)
+## 2. Competition Level Analysis (USTA, WTN & UTR)
 
-### UTR-Based Analysis
-- **Current Level Ceiling (UTR):** [**USE `computed_metrics.competition_summary.record_vs_utr_thresholds` if available.** Record vs. 12.0+ UTR. Record vs. 11.5+ UTR. Be precise. When summarizing, prefer language such as "This indicates a current struggle to break through the [UTR range, e.g., 11.4–11.5] band based on current results" rather than implying a fixed or permanent ceiling.]
-- **Performance vs Higher Rated (UTR):** [**USE `computed_metrics.competition_summary.vs_higher_rated` for win/loss record.** Current win rate vs opponents rated higher than the player's current UTR (e.g., >11.4). Emphasize any current wins vs higher-rated opponents as evidence they can compete above their rating, or note if those wins are currently missing.]
-- **Upset Losses (UTR):** [**USE `computed_metrics.competition_summary.upset_losses` if available.** List **ALL** current losses to opponents whose UTR is at least 0.2 points lower than the player's current UTR. Include opponent's name, UTR, WTN, score, and date. Explain what this pattern says about their **current vulnerability when favored**.]
+### USTA National Ranking Analysis (Remember: Lower Rank Number = Better Player)
+- **Current Level Ceiling (USTA):** [**USE `computed_metrics.competition_summary.record_vs_usta_thresholds` if available.** Record vs. Top 10, Top 50, Top 100, Top 200, Top 300, Top 400, Top 500. Be precise. When summarizing, prefer language such as "This indicates a current struggle to break through the Top 100 threshold based on current results" rather than implying a fixed or permanent ceiling.]
+- **Performance vs Higher Ranked (USTA):** [**USE `computed_metrics.competition_summary.vs_higher_ranked_usta` for win/loss record.** Current win rate vs opponents ranked ABOVE the player (lower rank number = stronger). Emphasize any current wins vs higher-ranked opponents as evidence they can compete at higher levels, or note if those wins are currently missing.]
+- **Upset Losses (USTA):** [**USE `computed_metrics.competition_summary.upset_losses_usta` if available.** List **ALL** current losses to opponents ranked at least 50 spots LOWER than the player (higher rank number = weaker opponent). Include opponent's name, USTA rank, WTN, UTR, score, and date. Explain what this pattern says about their **current vulnerability when favored by ranking**.]
+- **Kill Zone (USTA):** [Identify the ranking range where currently dominant, e.g., "Currently dominant vs #300+ ranked opponents".]
 
 ### WTN-Based Analysis (Remember: Lower WTN = Better Player)
 - **Current Level Ceiling (WTN):** [**USE `computed_metrics.competition_summary.record_vs_wtn_thresholds` if available.** Record vs. <11 WTN (elite). Record vs. <15 WTN (strong). Be precise. When summarizing, prefer language such as "This indicates a current struggle to break through the sub-15 WTN band based on current results".]
 - **Performance vs Higher Rated (WTN):** [**USE `computed_metrics.competition_summary.vs_higher_rated_wtn` for win/loss record.** Current win rate vs opponents rated LOWER WTN than the player (lower WTN = stronger opponent). Emphasize any current wins vs stronger-WTN opponents.]
-- **Upset Losses (WTN):** [**USE `computed_metrics.competition_summary.upset_losses_wtn` if available.** List **ALL** current losses to opponents whose WTN is at least 0.5 points higher than the player's current WTN (higher WTN = weaker). Include opponent's name, UTR, WTN, score, and date. Explain what this pattern says about their **current vulnerability when favored by WTN**.]
+- **Upset Losses (WTN):** [**USE `computed_metrics.competition_summary.upset_losses_wtn` if available.** List **ALL** current losses to opponents whose WTN is at least 0.5 points higher than the player's current WTN (higher WTN = weaker). Include opponent's name, USTA rank, WTN, UTR, score, and date. Explain what this pattern says about their **current vulnerability when favored by WTN**.]
+
+### UTR-Based Analysis
+- **Current Level Ceiling (UTR):** [**USE `computed_metrics.competition_summary.record_vs_utr_thresholds` if available.** Record vs. 12.0+ UTR. Record vs. 11.5+ UTR. Be precise. When summarizing, prefer language such as "This indicates a current struggle to break through the [UTR range, e.g., 11.4–11.5] band based on current results" rather than implying a fixed or permanent ceiling.]
+- **Performance vs Higher Rated (UTR):** [**USE `computed_metrics.competition_summary.vs_higher_rated` for win/loss record.** Current win rate vs opponents rated higher than the player's current UTR (e.g., >11.4). Emphasize any current wins vs higher-rated opponents as evidence they can compete above their rating, or note if those wins are currently missing.]
+- **Upset Losses (UTR):** [**USE `computed_metrics.competition_summary.upset_losses` if available.** List **ALL** current losses to opponents whose UTR is at least 0.2 points lower than the player's current UTR. Include opponent's name, USTA rank, WTN, UTR, score, and date. Explain what this pattern says about their **current vulnerability when favored**.]
 
 ### Round Performance
 - **Round Performance:** [**USE `computed_metrics.competition_summary.round_performance` if available.** Success by round (R32, R16, QF, SF, F). Highlight whether they currently tend to stall in earlier rounds or show a pattern of underperforming in **higher-stake later rounds** (SF/F).]
 
-### Top Wins & Worst Losses (Dual Rating Analysis)
+### Top Wins & Worst Losses (Triple Rating Analysis)
 
-- **Top 2 Best Wins (Highest UTR):**
-  **IF `computed_metrics.competition_summary.best_wins` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
+- **Top 2 Best Wins (Highest USTA Ranked - Lowest Rank Number):**
+  **IF `computed_metrics.competition_summary.best_wins_usta` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
   1. Filter match_history for `result === "Win"` AND has non-empty score
-  2. Filter for entries with valid `opponent.utr`
-  3. Sort by `opponent.utr` DESCENDING (highest first)
-  4. Take first 2 entries
-  
-  | Rank | Opponent | UTR | WTN | Score | Date |
-  |------|----------|-----|-----|-------|------|
-  | 1 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  | 2 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
+  2. Filter for entries with valid `opponent.national_rank`
+  3. **EXCLUDE walkovers and retirements** (score contains "Walkover", "W/O", "Ret", "ret.", or "Retirement")
+  4. Sort by `opponent.national_rank` ASCENDING (lowest rank number = strongest first)
+  5. Take first 2 entries
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
 
 - **Top 2 Best Wins (Lowest WTN):**
   **IF `computed_metrics.competition_summary.best_wins_wtn` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
   1. Filter match_history for `result === "Win"` AND has non-empty score
   2. Filter for entries with valid `opponent.wtn`
-  3. Sort by `opponent.wtn` ASCENDING (lowest WTN = strongest opponent first)
-  4. Take first 2 entries
-  
-  | Rank | Opponent | UTR | WTN | Score | Date |
-  |------|----------|-----|-----|-------|------|
-  | 1 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  | 2 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  
-- **Top 2 Worst Losses (Lowest UTR):**
-  **IF `computed_metrics.competition_summary.worst_losses` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
-  1. Filter match_history for `result === "Loss"` AND has non-empty score
-  2. Filter for entries with valid `opponent.utr`
-  3. Exclude walkovers and matches without scores
-  4. Sort by `opponent.utr` ASCENDING (lowest first)
+  3. **EXCLUDE walkovers and retirements** (score contains "Walkover", "W/O", "Ret", "ret.", or "Retirement")
+  4. Sort by `opponent.wtn` ASCENDING (lowest WTN = strongest opponent first)
   5. Take first 2 entries
-  
-  | Rank | Opponent | UTR | WTN | Score | Date |
-  |------|----------|-----|-----|-------|------|
-  | 1 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  | 2 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  
-  *These are losses to the LOWEST UTR opponents - matches the player should have been favored to win.*
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+
+- **Top 2 Best Wins (Highest UTR):**
+  **IF `computed_metrics.competition_summary.best_wins` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
+  1. Filter match_history for `result === "Win"` AND has non-empty score
+  2. Filter for entries with valid `opponent.utr`
+  3. **EXCLUDE walkovers and retirements** (score contains "Walkover", "W/O", "Ret", "ret.", or "Retirement")
+  4. Sort by `opponent.utr` DESCENDING (highest first)
+  5. Take first 2 entries
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+
+- **Top 2 Worst Losses (Lowest USTA Ranked - Highest Rank Number):**
+  **IF `computed_metrics.competition_summary.worst_losses_usta` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
+  1. Filter match_history for `result === "Loss"` AND has non-empty score
+  2. Filter for entries with valid `opponent.national_rank`
+  3. Exclude walkovers and matches without scores
+  4. Sort by `opponent.national_rank` DESCENDING (highest rank number = weakest first)
+  5. Take first 2 entries
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+
+  *These are losses to the LOWEST USTA ranked (highest number) opponents - matches the player should have been favored to win by ranking.*
 
 - **Top 2 Worst Losses (Highest WTN):**
   **IF `computed_metrics.competition_summary.worst_losses_wtn` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
@@ -358,31 +414,76 @@ Please generate the report in clear, structured Markdown using the following 12-
   3. Exclude walkovers and matches without scores
   4. Sort by `opponent.wtn` DESCENDING (highest WTN = weakest opponent first)
   5. Take first 2 entries
-  
-  | Rank | Opponent | UTR | WTN | Score | Date |
-  |------|----------|-----|-----|-------|------|
-  | 1 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  | 2 | [Name] | [X.XX] | [X.X] | [Score] | [Date] |
-  
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+
   *These are losses to the HIGHEST WTN (weakest) opponents - matches the player should have been favored to win by WTN.*
 
-### Average Win/Loss Thresholds (Dual Rating)
-- **Average Thresholds (UTR):** [**USE `computed_metrics.competition_summary.average_win_loss_thresholds` if available.** Report the average UTR of opponents this player currently BEATS vs the average UTR of opponents they currently LOSE to. Explain this as their **current win ceiling** and **current loss floor**.]
+- **Top 2 Worst Losses (Lowest UTR):**
+  **IF `computed_metrics.competition_summary.worst_losses` EXISTS, USE THAT LIST. Otherwise, use this algorithm:**
+  1. Filter match_history for `result === "Loss"` AND has non-empty score
+  2. Filter for entries with valid `opponent.utr`
+  3. Exclude walkovers and matches without scores
+  4. Sort by `opponent.utr` ASCENDING (lowest first)
+  5. Take first 2 entries
+
+  | Rank | Opponent | USTA | WTN | UTR | Score | Date |
+  |------|----------|------|-----|-----|-------|------|
+  | 1 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+  | 2 | [Name] | #[XXX] | [X.X] | [X.XX] | [Score] | [Date] |
+
+  *These are losses to the LOWEST UTR opponents - matches the player should have been favored to win.*
+
+### Notable Incomplete Matches (Walkovers & Retirements)
+*If the player has any walkovers or retirements in their match history, list them here as a special note. These are excluded from Best Wins and Worst Losses calculations but may provide insight into scheduling patterns, injury history, or competitive behavior.*
+
+- **Walkovers Received (Opponent Withdrew):** [List any matches where opponent gave a walkover - opponent name, rating, date. If none, state "None in current data."]
+- **Walkovers Given (Player Withdrew):** [List any matches where this player gave a walkover - opponent name, rating, date. If none, state "None in current data." Multiple walkovers given may indicate injury management or selective tournament withdrawal patterns.]
+- **Retirements (Opponent Retired Mid-Match):** [List any matches where opponent retired - opponent name, rating, score at retirement, date. Note: These are NOT counted as clean wins.]
+- **Retirements (Player Retired Mid-Match):** [List any matches where this player retired - opponent name, rating, score at retirement, date. This may indicate physical durability concerns or pattern of quitting when behind.]
+
+*Note: If there are no walkovers or retirements in the data, you may omit this entire section.*
+
+### Average Win/Loss Thresholds (Triple Rating)
+- **Average Thresholds (USTA):** [**USE `computed_metrics.competition_summary.average_win_loss_thresholds_usta` if available.** Report the average USTA rank of opponents this player currently BEATS vs the average USTA rank of opponents they currently LOSE to. They should be BEATING higher ranked numbers (weaker) and LOSING to lower ranked numbers (stronger). Explain this as their **current ranking ceiling**.]
 - **Average Thresholds (WTN):** [**USE `computed_metrics.competition_summary.average_win_loss_thresholds_wtn` if available.** Report the average WTN of opponents this player currently BEATS vs the average WTN of opponents they currently LOSE to. Remember: they should be BEATING higher WTN (weaker) and LOSING to lower WTN (stronger).]
+- **Average Thresholds (UTR):** [**USE `computed_metrics.competition_summary.average_win_loss_thresholds` if available.** Report the average UTR of opponents this player currently BEATS vs the average UTR of opponents they currently LOSE to. Explain this as their **current win ceiling** and **current loss floor**.]
 
 ## 3. Rating & Ranking Analytics
-- **UTR Trajectory:** [**USE `computed_metrics.rating_summary.utr_trajectory` if available.** Is their UTR currently trending up, down, or plateauing? Emphasize that this is based on current data and can change as they improve.]
+- **USTA Ranking Trajectory:** [**USE `computed_metrics.rating_summary.usta_trajectory` if available.** Is their national ranking currently trending up (improving = going DOWN in number), down (declining = going UP in number), or stable? **IMPORTANT:** For USTA ranking, a DECREASING number means IMPROVEMENT (similar to WTN, opposite of UTR). Example: "USTA ranking improved from #189 to #154 over 6 months".]
 - **WTN Trajectory:** [**USE `computed_metrics.rating_summary.wtn_trajectory` if available.** Is their WTN currently trending up (improving = going DOWN in number), down (declining = going UP in number), or stable? **IMPORTANT:** For WTN, a DECREASING number means IMPROVEMENT (unlike UTR). Example: "WTN improved from 22.5 to 19.96 over 6 months".]
-- **Ranking Efficiency:** [Comparison of National Rank vs. UTR/WTN. Are they currently over/underrated? If their national ranking looks stronger than UTR/WTN and their strength of schedule is soft, highlight this as a **current potential ranking inflation vulnerability** when they face stronger fields.]
-- **Strength of Schedule:** [**USE `computed_metrics.rating_summary.strength_of_schedule` if available.** Report BOTH average UTR and average WTN of opponents faced. Comment on whether they routinely face strong fields (low average opponent WTN / high average opponent UTR) or softer draws (high average opponent WTN / low average opponent UTR). If they mostly play softer draws, note this as a **current vulnerability when stepping into tougher events**.]
+- **UTR Trajectory:** [**USE `computed_metrics.rating_summary.utr_trajectory` if available.** Is their UTR currently trending up, down, or plateauing? Emphasize that this is based on current data and can change as they improve.]
+- **Ranking Efficiency:** [Comparison of USTA National Rank vs. WTN vs. UTR. Are they currently over/underrated by any metric? If their national ranking looks stronger than their WTN/UTR suggests (or vice versa) and their strength of schedule is soft, highlight this as a **current potential ranking inflation vulnerability** when they face stronger fields.]
+- **Strength of Schedule:** [**USE `computed_metrics.rating_summary.strength_of_schedule` if available.** Report average USTA ranking, average WTN, and average UTR of opponents faced. Comment on whether they routinely face strong fields (low average opponent rank numbers / low average opponent WTN / high average opponent UTR) or softer draws (high average opponent rank numbers / high average opponent WTN / low average opponent UTR). If they mostly play softer draws, note this as a **current vulnerability when stepping into tougher events**.]
 
 ## 4. Surface Performance
 - **Surface Preference:** [**USE `computed_metrics.surface_summary.win_rates_by_surface` if available.** Best surface based on current win %. State which surface they are currently most successful on.]
 - **Adaptability:** [**USE `computed_metrics.surface_summary.win_rates_by_surface` if available.** Performance on secondary surfaces. If one surface has clearly worse current results, call this a **current surface-based vulnerability**, especially if combined with close-score or Upset Loss patterns on that surface.]
 
 ## 5. Point Defense & Stress Analysis
-- **Pressure/Stress Status:** [**USE `computed_metrics.point_defense_stress` if available.** Are they currently under stress of defending major points in the next 30 days? Use neutral, performance-focused wording like "stress" or "pressure", not clinical terms.]
-- **Current Stress Window:** [**USE `computed_metrics.point_defense_stress` if available.** If high points are at risk and recent results show slumps or Upset Losses (vs Lower UTR), describe this as a **current stress window** where defending points plus recent results may affect performance.]
+
+### Ranking Snapshot (MANDATORY TABLE)
+**You MUST include this table showing the player's top 6 point-earning events from the `ranking_snapshot` data:**
+
+| Rank | Event | Date | Points | Level |
+|------|-------|------|--------|-------|
+| 1 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+| 2 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+| 3 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+| 4 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+| 5 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+| 6 | [Event Name, Location] | [Month Year] | [Points] | [L1/L2/L3/L4] |
+
+**After displaying the table, analyze:**
+1. **Which events are expiring soon?** (Events from 12+ months ago will drop off the ranking)
+2. **What is the total points at risk?** (Sum points from events approaching the 12-month drop-off)
+3. **When is the next major stress window?** (Month when significant points expire)
+
+- **Pressure/Stress Status:** [**USE `computed_metrics.point_defense_stress` if available.** Based on the ranking snapshot above, identify which events are approaching their 12-month expiration. State the specific month(s) when major points will drop off. Use neutral, performance-focused wording like "stress" or "pressure", not clinical terms.]
+- **Current Stress Window:** [**USE `computed_metrics.point_defense_stress` if available.** If high points are at risk and recent results show slumps or Upset Losses (vs Lower UTR), describe this as a **current stress window** where defending points plus recent results may affect performance. Reference specific events from the ranking snapshot table.]
 - **Consolation / FIC Behavior:** [Compare main draw vs consolation (FIC) records. Do they compete hard in back draws, or do results drop off? Comment on current bounce-back performance in the first match after a main-draw loss. If they typically use consolation to rebuild momentum, note this as a current resilience strength; if they often underperform or withdraw, highlight a **current vulnerability in recovering after setbacks**.]
 
 ## 6. Temporal & Scheduling Analytics
@@ -394,12 +495,12 @@ Please generate the report in clear, structured Markdown using the following 12-
 - **Consistency:** [Reliable results or "boom/bust" performance? Identify whether they currently show consistent performance or large swings. Link any inconsistency to specific windows of opportunity (e.g., can be vulnerable when expected to win, or can have flat matches after big results).]
 
 ## 8. Head-to-Head & Common Opponents
-- **Common Opponent Analysis:** [Performance against mutual opponents with both ratings, e.g., "Both played Ivan RYBAK (UTR: 11.38 | WTN: 12.0): You won 6-4 6-4, opponent lost 4-6 3-6". Treat cases where you or your peers perform better vs the same opponents as evidence that this opponent is **currently beatable within your competitive band**.]
-- **Style Matchup Insight (if style data is available):** [If `match_book_notes` or other context provide style labels (e.g., aggressive baseliner, counterpuncher, big-server) for both this opponent and the user, analyze whether this opponent currently struggles against your style. If they have a poor record vs players with your style, list those players (names, UTRs, styles) and highlight this as a **current stylistic window of opportunity** for you.]
+- **Common Opponent Analysis:** [Performance against mutual opponents with all three ratings, e.g., "Both played Ivan RYBAK (USTA: #185 | WTN: 19.91 | UTR: 11.38): You won 6-4 6-4, opponent lost 4-6 3-6". Treat cases where you or your peers perform better vs the same opponents as evidence that this opponent is **currently beatable within your competitive band**.]
+- **Style Matchup Insight (if style data is available):** [If `match_book_notes` or other context provide style labels (e.g., aggressive baseliner, counterpuncher, big-server) for both this opponent and the user, analyze whether this opponent currently struggles against your style. If they have a poor record vs players with your style, list those players (names, USTA ranks, WTNs, UTRs, styles) and highlight this as a **current stylistic window of opportunity** for you.]
 
 ## 9. Momentum & Confidence Indicators
 - **Current Form (Last 10 Singles Matches):** [**USE `computed_metrics.momentum_summary.form_last_10` and `computed_metrics.momentum_summary.current_streak` if available.** Winning/losing record and streaks over the most recent 10 singles matches (e.g., "7–3 in last 10", "3‑match losing streak"). If current record is poor (e.g., 3–7 with multiple Upset Losses), describe them as **potentially vulnerable with current low confidence**. If current record is strong (e.g., 7–3), describe them as having **current high-confidence form**, and advise the user to "be ready to FIGHT" in terms of mindset.]
-- **Recent Breakthroughs/Slumps:** [**USE `computed_metrics.momentum_summary.recent_breakthroughs` and `computed_metrics.momentum_summary.recent_slumps` if available.** Significant wins or Upset Losses within those last 10 singles matches, with both ratings. E.g., "Breakthrough win over Dhakshish ARYAN (UTR: 11.68 | WTN: 11.2)" or "Concerning current Upset Loss vs Boden WILLIS (UTR: 10.26 | WTN: 24.5)". Anchor all statements in current data.]
+- **Recent Breakthroughs/Slumps:** [**USE `computed_metrics.momentum_summary.recent_breakthroughs` and `computed_metrics.momentum_summary.recent_slumps` if available.** Significant wins or Upset Losses within those last 10 singles matches, with all three ratings. E.g., "Breakthrough win over Dhakshish ARYAN (USTA: #138 | WTN: 19.3 | UTR: 11.68)" or "Concerning current Upset Loss vs Boden WILLIS (USTA: #420 | WTN: 22.39 | UTR: 10.26)". Anchor all statements in current data.]
 
 ## 10. Weakness Identification
 
@@ -422,72 +523,192 @@ Please generate the report in clear, structured Markdown using the following 12-
 - **Emotional Control:** [Likelihood of current emotional swings or focus lapses vs staying composed. Use neutral, performance-based language (e.g., "shows current tendency to tighten in close-score situations") rather than clinical terms.]
 
 ## 12. Tactical Blueprint (The Game Plan)
-- **Primary Strategy:** [The #1 way to beat them, referencing specific match examples with both ratings (UTR | WTN) and focusing on current vulnerabilities.]
-- **Serve/Return Strategy:** [Specific targets based on notes/stats, citing performance vs opponents with both ratings and emphasizing how to apply current windows of opportunity (e.g., attacking weaker wing, testing second serve under stress).]
+- **Primary Strategy:** [The #1 way to beat them, referencing specific match examples with all three ratings (USTA | WTN | UTR) and focusing on current vulnerabilities.]
+- **Serve/Return Strategy:** [Specific targets based on notes/stats, citing performance vs opponents with all three ratings and emphasizing how to apply current windows of opportunity (e.g., attacking weaker wing, testing second serve under stress).]
 - **Rally Patterns:** [Neutralize their current strengths and repeatedly steer rallies into situations that trigger their current vulnerabilities (e.g., long rallies on weaker surface, extending points into deciding sets if they struggle there).]
 - **How to Exploit Their Current Key Vulnerabilities:** [Explicitly connect tactical recommendations to the Top 2–3 Primary Current Vulnerabilities identified in Section 10. Make this a clear "playbook" for how to turn those current weaknesses into on-court advantages.]
 ```
 
 **Constraints:**
 - **Tone:** Professional, objective, high-performance coaching style. Assume most players are actively trying to improve; describe weaknesses as **current areas for growth**, not fixed traits.
-- **Evidence:** Every insight MUST cite a data point (e.g., "Evidenced by current 0-4 record vs 12+ UTRs" or "As seen in the 6-1 6-2 win over Francesco PADILLA (UTR: 8.59 | WTN: 24.2)").
-- **Specificity:** Avoid vague phrases like "struggles against good players." Use "currently struggles against players rated 11.5+ UTR / sub-12 WTN".
+- **Evidence:** Every insight MUST cite a data point (e.g., "Evidenced by current 0-4 record vs Top 100 USTA ranked opponents" or "As seen in the 6-1 6-2 win over Francesco PADILLA (USTA: #780 | WTN: 27.78 | UTR: 8.59)").
+- **Specificity:** Avoid vague phrases like "struggles against good players." Use "currently struggles against Top 100 ranked players / sub-12 WTN / 11.5+ UTR".
 - **Formatting:** Use standard Markdown headers, lists, and bolding.
-- **Dual Rating Display (MANDATORY):** ALWAYS include BOTH UTR and WTN ratings when referencing any player name: `[Name] (UTR: XX.XX | WTN: XX.X)`. If only one rating is available, include what is available. This applies to all opponents in examples, analysis, and tactical discussions.
-- **Tone & Terminology Safety:** 
+- **Triple Rating Display (MANDATORY):** ALWAYS include USTA National Rank, WTN, and UTR when referencing any player name: `[Name] (USTA: #XXX | WTN: XX.X | UTR: XX.XX)`. If only some ratings are available, include what is available in that order. This applies to all opponents in examples, analysis, and tactical discussions.
+- **Tone & Terminology Safety:**
   - Avoid clinical or stigmatizing mental-health terms such as "anxiety", "panic", "breakdown", "mental illness", etc.
   - When describing mental state, use neutral performance language like "stress", "pressure", "challenge", "emotional swings", "focus lapses", or "currently struggling in close-score situations".
   - When discussing defending points, use phrases like "stress of defending points" or "added pressure of defending points", **never** "anxiety of defending points".
-- **UTR Data Accuracy (CRITICAL):** 
+- **USTA Data Accuracy (CRITICAL - INVERTED SCALE):**
+  - **REMEMBER: Lower Rank Number = Better Player** (similar to WTN, opposite of UTR)
+  - "Best Wins (USTA)" = Wins against the LOWEST ranked opponents (sort ascending by opponent.national_rank - lowest rank number = strongest opponents)
+  - "Worst Losses (USTA)" = Losses against the HIGHEST ranked opponents (sort descending by opponent.national_rank - highest rank number = weakest opponents)
+  - **VERIFY the result field**: Only include matches with `result === "Win"` in Best Wins, only `result === "Loss"` in Worst Losses
+  - When you state a record vs "Top 100" opponents, ensure every opponent has `opponent.national_rank <= 100`. Do NOT include opponents ranked outside Top 100.
+  - When you say an opponent is "higher ranked", that means they have a LOWER rank number.
+  - Only classify a match as an "Upset Loss (USTA)" if `result === "Loss"`, `opponent.national_rank >= player.national_rank + 50` (lost to weaker ranked player), and the match is not a walkover.
+- **WTN Data Accuracy (CRITICAL - INVERTED SCALE):**
+  - **REMEMBER: Lower WTN = Better Player** (opposite of UTR)
+  - "Best Wins (WTN)" = Wins against the LOWEST WTN opponents (sort ascending by opponent.wtn - lowest first = strongest opponents)
+  - "Worst Losses (WTN)" = Losses against the HIGHEST WTN opponents (sort descending by opponent.wtn - highest first = weakest opponents)
+  - **VERIFY the result field**: Only include matches with `result === "Win"` in Best Wins, only `result === "Loss"` in Worst Losses
+  - When you state a record vs "sub-15 WTN" opponents, ensure every opponent has `opponent.wtn < 15`. Do NOT include opponents with WTN >= 15.
+  - When you say an opponent is "higher rated by WTN", that means they have a LOWER WTN number.
+  - Only classify a match as an "Upset Loss (WTN)" if `result === "Loss"`, `opponent.wtn >= player.wtn + 0.5` (lost to weaker player), and the match is not a walkover.
+- **UTR Data Accuracy (CRITICAL):**
   - "Best Wins (UTR)" = Wins against the HIGHEST UTR opponents (sort descending by opponent.utr)
   - "Worst Losses (UTR)" = Losses against the LOWEST UTR opponents (sort ascending by opponent.utr)
   - Never list the same opponent in both categories
   - Never list a WIN in the "Worst Losses" section - only actual losses
+  - **Never list a LOSS in the "Best Wins" section** - only actual wins where `result === "Win"`
+  - **VERIFY the result field BEFORE classifying any match as a "win"** - if the result is "Loss", it goes in losses analysis, not wins
+
+  **WIN vs LOSS CLASSIFICATION ERROR EXAMPLE (Gemini 3 Flash actually made this mistake):**
+  - Match: Max vs Dhakshish ARYAN (#138), Score: 3-6 4-6, result: "Loss"
+  - ❌ WRONG: Listing ARYAN as "Best Win (USTA)" because he's #138 (strong opponent)
+  - ❌ WRONG: Including a note like "*Aryan is listed as a loss in history*" - this is self-correction, which is forbidden
+  - ✅ CORRECT: ARYAN goes in the LOSSES analysis, not wins. Best Win (USTA) should be the strongest opponent where `result === "Win"` (Ivan RYBAK #185)
+
   - Exclude walkovers from "Worst Losses" analysis
   - You MUST iterate through ALL matches in match_history to find **Best Wins**, **Worst Losses**, and **ALL Upset Losses** whenever they exist
   - When you state a record vs "11.5+ UTR" opponents, ensure every opponent in that count has `opponent.utr >= 11.5`. Do NOT include opponents below that threshold.
   - When you say an opponent is "above" the player's UTR, verify `opponent.utr > player.utr`. When you say "below", verify `opponent.utr < player.utr`.
   - Only classify a match as an "Upset Loss (UTR)" if `result === "Loss"`, `opponent.utr <= player.utr - 0.2`, and the match is not a walkover.
-- **WTN Data Accuracy (CRITICAL - INVERTED SCALE):**
-  - **REMEMBER: Lower WTN = Better Player** (opposite of UTR)
-  - "Best Wins (WTN)" = Wins against the LOWEST WTN opponents (sort ascending by opponent.wtn - lowest first = strongest opponents)
-  - "Worst Losses (WTN)" = Losses against the HIGHEST WTN opponents (sort descending by opponent.wtn - highest first = weakest opponents)
-  - When you state a record vs "sub-15 WTN" opponents, ensure every opponent has `opponent.wtn < 15`. Do NOT include opponents with WTN >= 15.
-  - When you say an opponent is "higher rated by WTN", that means they have a LOWER WTN number.
-  - Only classify a match as an "Upset Loss (WTN)" if `result === "Loss"`, `opponent.wtn >= player.wtn + 0.5` (lost to weaker player), and the match is not a walkover.
+
+- **CRITICAL NUMERICAL VALIDATION (MANDATORY - DO NOT SKIP):**
+  - **BEFORE claiming ANY threshold-based statistic, you MUST verify EXACT numerical comparisons:**
+
+  - **UTR Thresholds (Higher = Better):**
+    - "11.5+ UTR" means `opponent.utr >= 11.50` EXACTLY - NOT "approximately 11.5" or "close to 11.5"
+    - **11.38 < 11.50** → 11.38 does NOT qualify as "11.5+ UTR"
+    - **11.49 < 11.50** → 11.49 does NOT qualify as "11.5+ UTR"
+    - **Only 11.50 and above qualify as "11.5+ UTR"**
+    - **ERROR EXAMPLE:** "His only win against 11.5+ UTR was vs Ivan RYBAK (11.38 UTR)" ← WRONG! 11.38 < 11.5
+    - **CORRECT:** "0 wins against 11.5+ UTR opponents. Best win was vs Ivan RYBAK (11.38 UTR)."
+
+  - **USTA National Rank Thresholds (Lower Number = Better):**
+    - "Top 100" means `opponent.national_rank <= 100` EXACTLY
+    - **#101 > 100** → #101 does NOT qualify as "Top 100"
+    - **#105 > 100** → #105 does NOT qualify as "Top 100"
+    - **Only #100 and below (lower numbers) qualify as "Top 100"**
+    - **ERROR EXAMPLE:** "His only win against Top 100 was vs Jens NISSEN (#105)" ← WRONG! 105 > 100
+    - **CORRECT:** "0 wins against Top 100 USTA opponents. Best win was vs Jens NISSEN (#105)."
+
+  - **WTN Thresholds (Lower = Better):**
+    - "sub-15 WTN" means `opponent.wtn < 15.00` EXACTLY
+    - **15.00 is NOT < 15.00** → 15.00 does NOT qualify as "sub-15 WTN"
+    - **15.75 > 15.00** → 15.75 does NOT qualify as "sub-15 WTN"
+    - **Only 14.99 and below qualify as "sub-15 WTN"**
+    - **ERROR EXAMPLE:** "His only win against sub-15 WTN was vs Rajat SHIRUR (15.75 WTN)" ← WRONG! 15.75 > 15
+    - **CORRECT:** "0 wins against sub-15 WTN opponents. Best win was vs Rajat SHIRUR (15.75 WTN)."
+
+  - **VALIDATION RULES:**
+    - **If ZERO wins meet a threshold, state "0 wins vs [threshold]" - NEVER include players who are "close but do not meet" the threshold**
+    - **If you find yourself saying "his only win against X threshold was [player with value that doesn't meet threshold]" - STOP. This is an error. The correct statement is "0 wins vs X threshold."**
+    - **Double-check your arithmetic before making threshold claims. Re-read the opponent's exact rating/rank and compare it numerically to the threshold.**
+    - **Remember the direction of each scale:** UTR (higher=better), USTA Rank (lower=better), WTN (lower=better)
+
+  - **USTA "Higher Ranked" Comparison (CRITICAL - Opposite of UTR):**
+    - "Higher ranked" in USTA means the opponent has a **LOWER rank number** (smaller number = better player)
+    - To find opponents ranked ABOVE a player at #154, filter for `opponent.national_rank < 154`
+    - To find opponents ranked BELOW a player at #154, filter for `opponent.national_rank > 154`
+
+    **ERROR EXAMPLE (Sonnet 4.5 actually made this mistake):**
+    - Player: Max Freedman (USTA: #154)
+    - Opponent: Alex BORBIU (USTA: #195)
+    - ❌ WRONG: "BORBIU is ranked higher than Max" or "win against a higher-ranked opponent: Alex BORBIU (#195)"
+    - ✅ CORRECT: "BORBIU (#195) is ranked LOWER than Max (#154)" because 195 > 154
+
+    **CORRECT LOGIC FOR "Performance vs Higher Ranked (USTA)":**
+    - Opponent #42 vs Player #154 → Opponent is ranked HIGHER (42 < 154) ✓ Include this match
+    - Opponent #195 vs Player #154 → Opponent is ranked LOWER (195 > 154) ✗ Do NOT include this match
+    - "Performance vs Higher Ranked" = wins/losses vs opponents with LOWER rank numbers than the player
+
+  - **WTN "Better Rated" Comparison (Same direction as USTA):**
+    - "Better rated by WTN" means the opponent has a **LOWER WTN number** (smaller number = better player)
+    - Opponent WTN 15.75 vs Player WTN 19.96 → Opponent is BETTER rated (15.75 < 19.96) ✓
+    - Opponent WTN 22.39 vs Player WTN 19.96 → Opponent is WORSE rated (22.39 > 19.96) ✗
+
+- **OUTPUT PRESENTATION (CUSTOMER-FACING - MANDATORY):**
+  - **All validation must happen INTERNALLY before you write any output**
+  - **NEVER show your verification process to the customer** - no "IMPORTANT CLARIFICATION:", "Note:", "Upon closer examination", "technically", "Correction:", etc.
+  - **NEVER contradict yourself then correct** - get it right the first time, silently
+  - **Only output clean, final facts** - the customer should see confident, definitive statements
+  - **If you catch an error while writing, DELETE the wrong text and replace with correct text** - don't leave both versions visible
+
+  **FORBIDDEN PHRASES IN OUTPUT:**
+  - "IMPORTANT CLARIFICATION:"
+  - "Note: This is technically..."
+  - "Upon closer examination..."
+  - "Correction:"
+  - "Actually..."
+  - "Wait, that's not right..."
+  - "Let me recalculate..."
+  - Any phrase that reveals you are checking/correcting your work
+
+  **CORRECT APPROACH:**
+  1. Calculate/verify internally (silently)
+  2. Confirm the answer is correct (silently)
+  3. Output ONLY the final correct statement
+
+  **EXAMPLE - WRONG (shows work):**
+  "His only win against 11.5+ UTR was vs Ivan RYBAK (11.38 UTR).
+   IMPORTANT CLARIFICATION: 11.38 does NOT qualify as 11.5+.
+   Upon closer examination, he has 0 wins vs 11.5+ UTR."
+
+  **EXAMPLE - CORRECT (clean output):**
+  "0 wins against 11.5+ UTR opponents. Best win was vs Ivan RYBAK (11.38 UTR)."
 
 **EXAMPLE OF CORRECT OUTPUT:**
 ```
-Top 2 Best Wins (Highest UTR):
-| Rank | Opponent | UTR | WTN | Score | Date |
-|------|----------|-----|-----|-------|------|
-| 1 | Ivan RYBAK | 11.38 | 12.0 | 6-4 6-4 | 2025-10-13 |
-| 2 | Alex BORBIU | 11.36 | 12.3 | 6-2 5-7 6-1 | 2025-08-01 |
+Top 2 Best Wins (Highest USTA Ranked - Lowest Number):
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Ivan RYBAK | #185 | 19.91 | 11.38 | 6-4 6-4 | 2025-10-13 |
+| 2 | Alex BORBIU | #195 | 19.35 | 11.36 | 6-2 5-7 6-1 | 2025-08-01 |
+
+*Note: Jens Holger NISSEN (#95) and Maksim HRISTOV (#115) are excluded because those matches ended via retirement and walkover respectively.*
 
 Top 2 Best Wins (Lowest WTN):
-| Rank | Opponent | UTR | WTN | Score | Date |
-|------|----------|-----|-----|-------|------|
-| 1 | Ivan RYBAK | 11.38 | 12.0 | 6-4 6-4 | 2025-10-13 |
-| 2 | Alex BORBIU | 11.36 | 12.3 | 6-2 5-7 6-1 | 2025-08-01 |
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Alex BORBIU | #195 | 19.35 | 11.36 | 6-2 5-7 6-1 | 2025-08-01 |
+| 2 | Ivan RYBAK | #185 | 19.91 | 11.38 | 6-4 6-4 | 2025-10-13 |
 
-Top 2 Worst Losses (Lowest UTR):
-| Rank | Opponent | UTR | WTN | Score | Date |
-|------|----------|-----|-----|-------|------|
-| 1 | Andrew VINCLER | 10.78 | 23.5 | 1-6 7-5 [9-11] | 2025-06-28 |
-| 2 | Carson KUCHAR | 10.91 | 22.8 | 3-6 4-6 | 2025-06-07 |
+Top 2 Best Wins (Highest UTR):
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Ivan RYBAK | #185 | 19.91 | 11.38 | 6-4 6-4 | 2025-10-13 |
+| 2 | Alex BORBIU | #195 | 19.35 | 11.36 | 6-2 5-7 6-1 | 2025-08-01 |
+
+Top 2 Worst Losses (Lowest USTA Ranked - Highest Number):
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Andrew VINCLER | #320 | 20.05 | 10.78 | 1-6 7-5 [9-11] | 2025-06-28 |
+| 2 | Carson KUCHAR | #295 | 22.05 | 10.91 | 3-6 4-6 | 2025-06-07 |
 
 Top 2 Worst Losses (Highest WTN):
-| Rank | Opponent | UTR | WTN | Score | Date |
-|------|----------|-----|-----|-------|------|
-| 1 | Andrew VINCLER | 10.78 | 23.5 | 1-6 7-5 [9-11] | 2025-06-28 |
-| 2 | Carson KUCHAR | 10.91 | 22.8 | 3-6 4-6 | 2025-06-07 |
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Carson KUCHAR | #295 | 22.05 | 10.91 | 3-6 4-6 | 2025-06-07 |
+| 2 | Andrew VINCLER | #320 | 20.05 | 10.78 | 1-6 7-5 [9-11] | 2025-06-28 |
+
+Top 2 Worst Losses (Lowest UTR):
+| Rank | Opponent | USTA | WTN | UTR | Score | Date |
+|------|----------|------|-----|-----|-------|------|
+| 1 | Andrew VINCLER | #320 | 20.05 | 10.78 | 1-6 7-5 [9-11] | 2025-06-28 |
+| 2 | Carson KUCHAR | #295 | 22.05 | 10.91 | 3-6 4-6 | 2025-06-07 |
 ```
 
 **WRONG OUTPUT (DO NOT DO THIS):**
 - Listing a WIN in the "Worst Losses" section
-- Claiming "no losses below X UTR" or "no losses above X WTN" when current data shows such losses
+- **Including walkovers or retirements in "Best Wins" tables** - these are NOT clean wins and must be excluded
+- **Including walkovers in "Worst Losses" tables** - these are not competitive losses
+- Claiming "no losses below X UTR" or "no losses above X WTN" or "no losses to players ranked lower than #X" when current data shows such losses
 - Listing the same player in both Best Wins and Worst Losses
 - Sorting WTN the same direction as UTR (they are inverted!)
+- Sorting USTA ranks the same direction as UTR (they are inverted - lower rank number = better player!)
 - Saying "higher WTN = better player" (it's the opposite - lower WTN = better)
+- Saying "higher USTA rank number = better player" (it's the opposite - lower rank number = better)
 
 

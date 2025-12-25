@@ -3,115 +3,944 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Scouting Report Test</title>
+    <title>AI Scouting Report</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --danger: #ef4444;
-            --success: #22c55e;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
+            --rpt_purple: #4A2C6A;
+            --rpt_purple_light: #6B4D8A;
+            --rpt_purple_faint: #F3EFF8;
+            --rpt_salmon: #FA8072;
+            --rpt_salmon_light: #FFE4E1;
+            --rpt_teal: #20B2AA;
+            --rpt_teal_light: #E0F7F6;
+            --rpt_blue: #1E3A5F;
+            --rpt_blue_light: #2D5A8A;
+            --rpt_grey: #F7F8FA;
+            --rpt_grey_mid: #E5E7EB;
+            --rpt_grey_dark: #9CA3AF;
+            --rpt_text: #1F2937;
+            --rpt_text_light: #6B7280;
+            --rpt_white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 1rem;
             line-height: 1.6;
-            color: var(--text);
-            background-color: var(--bg);
-            margin: 0;
-            padding: 20px;
+            color: var(--rpt_text);
+            background: var(--rpt_grey);
+            padding: 1rem;
+            min-height: 100vh;
         }
 
-        .container {
-            max-width: 900px;
+        .rpt_wrapper {
+            max-width: 100%;
             margin: 0 auto;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
-        .header {
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
+        .rpt_sidebar {
+            display: none;
         }
 
-        .meta {
+        .rpt_mobile_toc {
+            background: var(--rpt_white);
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .rpt_mobile_toc_toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.875rem 1rem;
+            background: var(--rpt_white);
+            border: none;
+            font-family: inherit;
             font-size: 0.875rem;
-            color: var(--text-light);
-            background: #f1f5f9;
-            padding: 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-top: 10px;
+            font-weight: 600;
+            color: var(--rpt_purple);
+            cursor: pointer;
+            min-height: 2.75rem;
         }
 
-        /* Markdown Content Styles */
-        h1 { color: var(--primary); font-size: 2.25rem; margin-bottom: 1rem; }
-        h2 { color: var(--secondary); font-size: 1.5rem; margin-top: 2rem; border-left: 4px solid var(--primary); padding-left: 12px; }
-        h3 { color: var(--text); font-size: 1.25rem; margin-top: 1.5rem; }
-        
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        
-        strong { color: var(--secondary); font-weight: 700; }
-        
-        blockquote {
-            border-left: 4px solid var(--secondary);
-            background: #eff6ff;
-            padding: 16px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
+        .rpt_mobile_toc_toggle:active {
+            background: var(--rpt_grey);
         }
 
-        code {
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.9em;
-        }
-
-        pre {
-            background: #1e293b;
-            color: #f8fafc;
-            padding: 16px;
-            border-radius: 8px;
-            overflow-x: auto;
-        }
-
-        hr { border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0; }
-
-        /* Specific Scouting Report Highlights */
-        /* Highlight words like "CRITICAL", "HIGH", "FRAGILE" if they appear */
-        
-        .badge {
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 12px;
+        .rpt_mobile_toc_arrow {
             font-size: 0.75rem;
+            transition: transform 0.2s ease;
+        }
+
+        .rpt_mobile_toc.rpt_open .rpt_mobile_toc_arrow {
+            transform: rotate(180deg);
+        }
+
+        .rpt_mobile_toc_list {
+            display: none;
+            list-style: none;
+            padding: 0 1rem 1rem 1rem;
+            margin: 0;
+            border-top: 1px solid var(--rpt_grey_mid);
+        }
+
+        .rpt_mobile_toc.rpt_open .rpt_mobile_toc_list {
+            display: block;
+        }
+
+        .rpt_mobile_toc_item {
+            margin: 0;
+        }
+
+        .rpt_mobile_toc_link {
+            display: block;
+            padding: 0.625rem 0;
+            font-size: 0.875rem;
+            color: var(--rpt_text_light);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rpt_grey);
+            min-height: 2.75rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .rpt_mobile_toc_item:last-child .rpt_mobile_toc_link {
+            border-bottom: none;
+        }
+
+        .rpt_mobile_toc_link:active {
+            color: var(--rpt_purple);
+        }
+
+        .rpt_main {
+            min-width: 0;
+        }
+
+        .rpt_header {
+            background: linear-gradient(135deg, var(--rpt_purple) 0%, var(--rpt_blue) 100%);
+            color: var(--rpt_white);
+            padding: 1.25rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.75rem;
+            box-shadow: 0 2px 8px rgba(30,58,95,0.2);
+        }
+
+        .rpt_header_title {
+            font-size: 1.125rem;
             font-weight: 700;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+
+        .rpt_meta {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+            font-size: 0.875rem;
+            opacity: 0.9;
+        }
+
+        .rpt_meta_label {
+            opacity: 0.7;
+            margin-right: 0.25rem;
+        }
+
+        .rpt_content {
+            background: var(--rpt_white);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .rpt_content h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--rpt_purple);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+            line-height: 1.3;
+        }
+
+        .rpt_content h1 + br {
+            display: none;
+        }
+
+        .rpt_content h1 + br + table {
+            margin-top: 0.5rem;
+        }
+
+        .rpt_content h1 + table,
+        .rpt_content h1 + br + table {
+            background: var(--rpt_purple_faint);
+            border-radius: 0.375rem;
+            overflow: hidden;
+        }
+
+        .rpt_content h1 + table thead,
+        .rpt_content h1 + br + table thead {
+            display: none;
+        }
+
+        .rpt_content h1 + table tbody tr,
+        .rpt_content h1 + br + table tbody tr {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0.5rem;
+            gap: 0.5rem;
+        }
+
+        .rpt_content h1 + table td,
+        .rpt_content h1 + br + table td {
+            font-weight: 600;
+            color: var(--rpt_purple);
+            text-align: left;
+            padding: 0.25rem 0.5rem;
+            border-bottom: none;
+            background: var(--rpt_white);
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            flex: 1 1 auto;
+            min-width: 45%;
+        }
+
+        .rpt_content h1 + table td:last-child,
+        .rpt_content h1 + br + table td:last-child {
+            flex: 1 1 100%;
+        }
+
+        .rpt_content h1 + table td::before,
+        .rpt_content h1 + br + table td::before {
+            content: attr(data-label);
+            display: block;
+            font-size: 0.625rem;
+            font-weight: 700;
+            color: var(--rpt_grey_dark);
             text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.125rem;
+        }
+
+        .rpt_content h2 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--rpt_white);
+            background: var(--rpt_blue);
+            margin: 0.75rem -1rem 1rem -1rem;
+            padding: 0.75rem 1rem;
+            scroll-margin-top: 0.5rem;
+        }
+
+        .rpt_content h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--rpt_purple);
+            margin: 1.25rem 0 0.5rem 0;
+            padding-left: 0.5rem;
+            border-left: 3px solid var(--rpt_salmon);
+        }
+
+        .rpt_content h3 + br {
+            display: none;
+        }
+
+        .rpt_content p {
+            margin-bottom: 0.875rem;
+            font-size: 0.9375rem;
+        }
+
+        .rpt_content ul {
+            list-style: none;
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+
+        .rpt_content ul li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+            font-size: 0.9375rem;
+        }
+
+        .rpt_content ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5em;
+            width: 5px;
+            height: 5px;
+            background: var(--rpt_teal);
+            border-radius: 50%;
+        }
+
+        .rpt_content ul li strong:first-child {
+            color: var(--rpt_blue);
+            font-weight: 700;
+        }
+
+        .rpt_content ul li.rpt_has_table::before {
+            display: none;
+        }
+
+        .rpt_content ul li.rpt_has_table {
+            padding-left: 0;
+        }
+
+        .rpt_table_title {
+            display: inline-block;
+            border-left: 3px solid var(--rpt_salmon);
+            padding-left: 0.5rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .rpt_content ol {
+            margin: 0.375rem 0;
+            padding-left: 1.25rem;
+            font-size: 0.9375rem;
+        }
+
+        .rpt_content ol li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.25rem;
+            line-height: 1.5;
+        }
+
+        .rpt_content ol li::marker {
+            color: var(--rpt_purple);
+            font-weight: 600;
+        }
+
+        .rpt_content strong {
+            color: var(--rpt_blue);
+            font-weight: 600;
+        }
+
+        .rpt_content em {
+            color: var(--rpt_purple_light);
+        }
+
+        .rpt_content blockquote {
+            background: var(--rpt_grey);
+            border-left: 3px solid var(--rpt_salmon);
+            border-radius: 0 0.375rem 0.375rem 0;
+            padding: 0.5rem 0.75rem;
+            margin: 0.5rem 0;
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+
+        .rpt_content blockquote br {
+            display: none;
+        }
+
+        .rpt_content blockquote strong {
+            color: var(--rpt_purple);
+            margin-right: 0.125rem;
+        }
+
+        .rpt_content blockquote:empty {
+            display: none;
+        }
+
+        .rpt_content hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, var(--rpt_salmon) 0%, var(--rpt_teal) 50%, var(--rpt_purple) 100%);
+            margin: 1.5rem 0;
+            border-radius: 1px;
+        }
+
+        .rpt_content code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.8125rem;
+            background: var(--rpt_grey);
+            color: var(--rpt_purple);
+            padding: 0.125rem 0.25rem;
+            border-radius: 0.25rem;
+            word-break: break-word;
+        }
+
+        .rpt_content pre {
+            background: var(--rpt_blue);
+            color: var(--rpt_grey);
+            padding: 0.875rem;
+            border-radius: 0.375rem;
+            overflow-x: auto;
+            margin: 0.75rem 0;
+            font-size: 0.8125rem;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .rpt_content pre code {
+            background: transparent;
+            color: inherit;
+            padding: 0;
+        }
+
+        .rpt_content a {
+            color: var(--rpt_teal);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .rpt_content a:hover,
+        .rpt_content a:active {
+            text-decoration: underline;
+        }
+
+        .rpt_content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.25rem 0 1rem 0;
+            font-size: 0.8125rem;
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .rpt_content h3 + br + table,
+        .rpt_content ul + table,
+        .rpt_content li + table {
+            margin-top: 0.25rem;
+        }
+
+        .rpt_content th {
+            background: var(--rpt_purple);
+            color: var(--rpt_white);
+            font-weight: 600;
+            text-align: left;
+            padding: 0.5rem 0.625rem;
+            white-space: nowrap;
+        }
+
+        .rpt_content td {
+            padding: 0.5rem 0.625rem;
+            border-bottom: 1px solid var(--rpt_grey_mid);
+        }
+
+        .rpt_content tr:nth-child(even) {
+            background: var(--rpt_grey);
+        }
+
+        .rpt_footer {
+            text-align: center;
+            padding: 1rem 0.5rem;
+            color: var(--rpt_grey_dark);
+            font-size: 0.75rem;
+        }
+
+        @media (min-width: 375px) {
+            body {
+                padding: 1rem;
+            }
+
+            .rpt_header {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .rpt_header_title {
+                font-size: 1.25rem;
+            }
+
+            .rpt_meta {
+                flex-direction: row;
+                gap: 1.5rem;
+                font-size: 0.875rem;
+            }
+
+            .rpt_content {
+                padding: 1.25rem;
+            }
+
+            .rpt_content h1 {
+                font-size: 1.375rem;
+            }
+
+            .rpt_content h2 {
+                font-size: 1rem;
+                margin-left: -1.25rem;
+                margin-right: -1.25rem;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+
+            .rpt_content h3 {
+                font-size: 1rem;
+            }
+
+            .rpt_content p,
+            .rpt_content ul li,
+            .rpt_content ol li,
+            .rpt_content blockquote {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                padding: 1.5rem;
+            }
+
+            .rpt_header {
+                padding: 1.75rem 2rem;
+                border-radius: 0.625rem;
+                margin-bottom: 1rem;
+            }
+
+            .rpt_header_title {
+                font-size: 1.375rem;
+            }
+
+            .rpt_content {
+                padding: 1.75rem;
+                border-radius: 0.625rem;
+            }
+
+            .rpt_content h1 {
+                font-size: 1.5rem;
+            }
+
+            .rpt_content h2 {
+                font-size: 1.0625rem;
+                margin: 1rem -1.75rem 1.25rem -1.75rem;
+                padding: 0.875rem 1.75rem;
+            }
+
+            .rpt_content h3 {
+                margin: 1.5rem 0 0.625rem 0;
+            }
+
+            .rpt_content h1 + table thead,
+            .rpt_content h1 + br + table thead {
+                display: table-header-group;
+            }
+
+            .rpt_content h1 + table tbody tr,
+            .rpt_content h1 + br + table tbody tr {
+                display: table-row;
+                padding: 0;
+                gap: 0;
+            }
+
+            .rpt_content h1 + table th,
+            .rpt_content h1 + br + table th {
+                background: var(--rpt_purple);
+                font-size: 0.6875rem;
+                text-transform: uppercase;
+                letter-spacing: 0.03em;
+                padding: 0.5rem 0.75rem;
+                color: var(--rpt_white);
+            }
+
+            .rpt_content h1 + table td,
+            .rpt_content h1 + br + table td {
+                display: table-cell;
+                text-align: center;
+                padding: 0.625rem 0.75rem;
+                background: transparent;
+                min-width: auto;
+                flex: none;
+            }
+
+            .rpt_content h1 + table td::before,
+            .rpt_content h1 + br + table td::before {
+                display: none;
+            }
+
+            .rpt_content table {
+                display: table;
+                font-size: 0.875rem;
+            }
+
+            .rpt_content th,
+            .rpt_content td {
+                padding: 0.625rem 0.875rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                padding: 2rem;
+            }
+
+            .rpt_wrapper {
+                max-width: 1100px;
+                display: grid;
+                grid-template-columns: 220px 1fr;
+                gap: 1.5rem;
+                align-items: start;
+            }
+
+            .rpt_mobile_toc {
+                display: none;
+            }
+
+            .rpt_sidebar {
+                display: block;
+                position: sticky;
+                top: 2rem;
+                background: var(--rpt_white);
+                border-radius: 0.625rem;
+                padding: 1.25rem;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            }
+
+            .rpt_toc_title {
+                font-size: 0.6875rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--rpt_grey_dark);
+                margin-bottom: 0.875rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid var(--rpt_grey_mid);
+            }
+
+            .rpt_toc_list {
+                list-style: none;
+            }
+
+            .rpt_toc_item {
+                margin-bottom: 0.375rem;
+            }
+
+            .rpt_toc_link {
+                display: block;
+                font-size: 0.8125rem;
+                color: var(--rpt_text_light);
+                text-decoration: none;
+                padding: 0.3125rem 0.625rem;
+                border-radius: 0.25rem;
+                border-left: 2px solid transparent;
+                transition: all 0.2s ease;
+                min-height: 2.75rem;
+                display: flex;
+                align-items: center;
+            }
+
+            .rpt_toc_link:hover,
+            .rpt_toc_link.rpt_toc_active {
+                color: var(--rpt_purple);
+                background: var(--rpt_purple_faint);
+                border-left-color: var(--rpt_purple);
+            }
+
+            .rpt_toc_link.rpt_toc_active {
+                font-weight: 600;
+            }
+
+            .rpt_header {
+                padding: 2rem 2.5rem;
+                border-radius: 0.75rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 4px 12px rgba(30,58,95,0.25);
+            }
+
+            .rpt_header_title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .rpt_meta {
+                gap: 2rem;
+            }
+
+            .rpt_content {
+                padding: 2.5rem;
+                border-radius: 0.75rem;
+            }
+
+            .rpt_content h1 {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .rpt_content h2 {
+                font-size: 1.125rem;
+                margin: 1.25rem -2.5rem 1.5rem -2.5rem;
+                padding: 1rem 2.5rem;
+                scroll-margin-top: 1rem;
+            }
+
+            .rpt_content h3 {
+                font-size: 1rem;
+                margin: 1.75rem 0 0.75rem 0;
+            }
+
+            .rpt_content ul li {
+                padding-left: 0.875rem;
+                margin-bottom: 0.75rem;
+            }
+
+            .rpt_content ol li {
+                padding-left: 0.5rem;
+            }
+
+            .rpt_content blockquote {
+                border-left-width: 4px;
+                padding: 0.625rem 1rem;
+                margin: 0.75rem 0;
+                font-size: 0.875rem;
+            }
+
+            .rpt_content hr {
+                height: 3px;
+                margin: 2.5rem 0;
+            }
+
+            .rpt_content code {
+                font-size: 0.875em;
+                padding: 0.125rem 0.375rem;
+            }
+
+            .rpt_content pre {
+                padding: 1.25rem;
+                border-radius: 0.5rem;
+                margin: 1rem 0;
+                font-size: 0.875rem;
+            }
+
+            .rpt_content table {
+                margin: 1.5rem 0;
+                font-size: 0.9375rem;
+            }
+
+            .rpt_content th {
+                padding: 0.75rem 1rem;
+            }
+
+            .rpt_content th:first-child {
+                border-radius: 0.375rem 0 0 0;
+            }
+
+            .rpt_content th:last-child {
+                border-radius: 0 0.375rem 0 0;
+            }
+
+            .rpt_content td {
+                padding: 0.75rem 1rem;
+            }
+
+            .rpt_content tr:last-child td:first-child {
+                border-radius: 0 0 0 0.375rem;
+            }
+
+            .rpt_content tr:last-child td:last-child {
+                border-radius: 0 0 0.375rem 0;
+            }
+
+            .rpt_footer {
+                padding: 1.5rem;
+                font-size: 0.8125rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .rpt_wrapper {
+                display: block;
+            }
+
+            .rpt_sidebar {
+                display: none;
+            }
+
+            .rpt_header {
+                border-radius: 0;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .rpt_content {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .rpt_content h2 {
+                break-after: avoid;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>AI Scouting Report Analysis</h1>
-            <div class="meta">
-                <strong>Model:</strong> {{MODEL_NAME}} <br>
-                <strong>Date:</strong> {{TIMESTAMP}}
+    <div class="rpt_wrapper">
+        <aside class="rpt_sidebar">
+            <div class="rpt_toc_title">Contents</div>
+            <nav>
+                <ul class="rpt_toc_list">
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-1">1. Performance Analytics</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-2">2. Competition Level</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-3">3. Rating & Ranking</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-4">4. Surface Performance</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-5">5. Point Defense & Stress</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-6">6. Temporal & Scheduling</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-7">7. Strategic Patterns</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-8">8. Head-to-Head</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-9">9. Momentum & Confidence</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-10">10. Weakness Identification</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-11">11. Psychological Profile</a></li>
+                    <li class="rpt_toc_item"><a class="rpt_toc_link" href="#section-12">12. Tactical Blueprint</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="rpt_main">
+            <div class="rpt_mobile_toc">
+                <button class="rpt_mobile_toc_toggle" type="button">
+                    <span>Contents</span>
+                    <span class="rpt_mobile_toc_arrow">▼</span>
+                </button>
+                <ul class="rpt_mobile_toc_list">
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-1">1. Performance Analytics</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-2">2. Competition Level</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-3">3. Rating & Ranking</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-4">4. Surface Performance</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-5">5. Point Defense & Stress</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-6">6. Temporal & Scheduling</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-7">7. Strategic Patterns</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-8">8. Head-to-Head</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-9">9. Momentum & Confidence</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-10">10. Weakness Identification</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-11">11. Psychological Profile</a></li>
+                    <li class="rpt_mobile_toc_item"><a class="rpt_mobile_toc_link" href="#section-12">12. Tactical Blueprint</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="content">
-            {{CONTENT}}
-        </div>
+            <header class="rpt_header">
+                <h1 class="rpt_header_title">AI Scouting Report Analysis</h1>
+                <div class="rpt_meta">
+                    <span><span class="rpt_meta_label">Generated:</span>{{TIMESTAMP}}</span>
+                </div>
+            </header>
+            <article class="rpt_content">
+                {{CONTENT}}
+            </article>
+            <footer class="rpt_footer">
+                Match Tennis AI
+            </footer>
+        </main>
     </div>
+
+    <script>
+        const ScoutingReport = (function() {
+            function addSectionIds() {
+                var headers = document.querySelectorAll('.rpt_content h2');
+                headers.forEach(function(h, i) {
+                    h.id = 'section-' + (i + 1);
+                });
+            }
+
+            function highlightCurrentSection() {
+                var links = document.querySelectorAll('.rpt_toc_link');
+                var headers = document.querySelectorAll('.rpt_content h2');
+                
+                window.addEventListener('scroll', function() {
+                    var current = '';
+                    headers.forEach(function(h) {
+                        var top = h.getBoundingClientRect().top;
+                        if (top < 150) {
+                            current = h.id;
+                        }
+                    });
+                    
+                    links.forEach(function(link) {
+                        link.classList.remove('rpt_toc_active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('rpt_toc_active');
+                        }
+                    });
+                });
+            }
+
+            function initMobileToc() {
+                var toggle = document.querySelector('.rpt_mobile_toc_toggle');
+                var toc = document.querySelector('.rpt_mobile_toc');
+                var links = document.querySelectorAll('.rpt_mobile_toc_link');
+
+                if (toggle && toc) {
+                    toggle.addEventListener('click', function() {
+                        toc.classList.toggle('rpt_open');
+                    });
+
+                    links.forEach(function(link) {
+                        link.addEventListener('click', function() {
+                            toc.classList.remove('rpt_open');
+                        });
+                    });
+                }
+            }
+
+            function markTableTitles() {
+                var tables = document.querySelectorAll('.rpt_content table');
+                tables.forEach(function(table) {
+                    var prev = table.previousSibling;
+                    while (prev && (prev.nodeType === 3 || (prev.tagName && prev.tagName === 'BR'))) {
+                        prev = prev.previousSibling;
+                    }
+                    if (prev && prev.tagName === 'UL') {
+                        var lastLi = prev.querySelector('li:last-child');
+                        if (lastLi) {
+                            lastLi.classList.add('rpt_has_table');
+                            var strong = lastLi.querySelector('strong:first-child');
+                            if (strong) {
+                                strong.classList.add('rpt_table_title');
+                            }
+                        }
+                    }
+                    if (prev && prev.tagName === 'STRONG') {
+                        prev.classList.add('rpt_table_title');
+                    }
+                });
+            }
+
+            function addSummaryTableLabels() {
+                var h1 = document.querySelector('.rpt_content h1');
+                if (!h1) return;
+                var table = h1.nextElementSibling;
+                while (table && table.tagName === 'BR') {
+                    table = table.nextElementSibling;
+                }
+                if (!table || table.tagName !== 'TABLE') return;
+                var headers = table.querySelectorAll('thead th');
+                var cells = table.querySelectorAll('tbody td');
+                headers.forEach(function(th, i) {
+                    if (cells[i]) {
+                        cells[i].setAttribute('data-label', th.textContent);
+                    }
+                });
+            }
+
+            return {
+                init: function() {
+                    addSectionIds();
+                    highlightCurrentSection();
+                    initMobileToc();
+                    markTableTitles();
+                    addSummaryTableLabels();
+                }
+            };
+        })();
+
+        ScoutingReport.init();
+    </script>
 </body>
 </html>
-
