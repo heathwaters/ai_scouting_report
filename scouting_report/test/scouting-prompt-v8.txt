@@ -504,19 +504,61 @@ Please generate the report in clear, structured Markdown using the following 12-
 
 ## 10. Weakness Identification
 
-### Specific Current Vulnerabilities
-[Technical, tactical, physical, or mental gaps that can be exploited, always framed as **current** and supported by explicit match evidence.]
+### Pattern-Based Vulnerabilities (from Match History)
+[Technical, tactical, physical, or mental gaps that can be exploited, always framed as **current** and supported by explicit match evidence from `match_history`. Include:
+- Record in deciding sets (3rd set or tiebreaks)
+- Performance vs specific opponent tiers (Top 100, sub-20 WTN, 11.5+ UTR)
+- Patterns of fading late in matches or tournaments]
 
 ### Red Flags
-[Current patterns of withdrawals, retirements, repeated Upset Losses (by UTR or WTN), or consistent fades in deciding sets that indicate areas you can pressure. Present as a numbered list.]
+[Current patterns of withdrawals, retirements, repeated Upset Losses (by UTR or WTN), or consistent fades in deciding sets. Present as a numbered list.]
+
+### 10A. Stroke-Level Vulnerability Analysis (if `match_stats` available)
+**If `match_stats` data exists, analyze by stroke category:**
+
+| Stroke Category | Winners | Errors | Error Ratio | Vulnerability? |
+|-----------------|---------|--------|-------------|----------------|
+| **Serve** | Aces: X | DFs: Y | DF/Ace ratio | [Yes/No + detail] |
+| **Return (FH)** | X | Y | E/W ratio | [Yes/No + detail] |
+| **Return (BH)** | X | Y | E/W ratio | [Yes/No + detail] |
+| **Groundstroke (FH)** | X | Y | E/W ratio | [Yes/No + detail] |
+| **Groundstroke (BH)** | X | Y | E/W ratio | [Yes/No + detail] |
+| **Net Game** | X | Y | E/W ratio | [Yes/No + detail] |
+
+**Key Pattern Detection Rules:**
+- If BH errors ≥ 2× FH errors → **Backhand is a current vulnerability**
+- If DF/Ace ratio > 1.0 → **Second serve is a current vulnerability under pressure**
+- If net errors > net winners → **Net approach is a current vulnerability**
+- If break points saved < 50% → **Serving under pressure is a current vulnerability**
+
+**Quantitative Insight:** [1-2 sentences summarizing the most exploitable weakness from the stats]
+
+**If `match_stats` is not available:** "Match-level statistics are not available for this opponent. Consider tracking stats in future matches to build this intelligence."
+
+### 10B. Qualitative Vulnerability Analysis (if `match_book_notes` available)
+**If player observation notes exist in `match_book` or `match_book_notes`, analyze for:**
+- Playing style tendencies (aggressive, defensive, all-court)
+- Technical observations noted by coaches/scouts
+- Behavioral patterns under pressure
+- Known preferences or weaknesses mentioned
+
+**Qualitative Insight:** [1-2 sentences summarizing exploitable patterns from notes]
+
+**If notes are not available:** "No player observation notes are available. Consider adding notes from future matches or practice sessions to enhance tactical intelligence."
+
+### Corroboration Analysis (when both 10A and 10B exist)
+**If both quantitative stats AND qualitative notes exist:**
+- **Stats + Notes Align:** [High-confidence vulnerability - e.g., "Stats show BH error ratio 2.3:1, notes confirm 'tends to break down on backhand under pressure' → HIGH-CONFIDENCE: Target the backhand"]
+- **Stats Reveal Hidden Pattern:** [e.g., "Notes focus on big serve, but stats show DF/Ace ratio of 1.5 → OPPORTUNITY: Apply return pressure to expose second-serve weakness"]
+- **Contradiction to Investigate:** [e.g., "Notes say 'great volleyer' but net errors exceed winners → TACTICAL: Test the net game early"]
 
 ### Top 3 Primary Vulnerabilities
 
-| Rank | Vulnerability | Supporting Sections |
-|------|--------------|---------------------|
-| 1 | [Most critical vulnerability] | Sections X, Y |
-| 2 | [Second vulnerability] | Section Z |
-| 3 | [Third vulnerability] | Section W |
+| Rank | Vulnerability | Source | Confidence |
+|------|--------------|--------|------------|
+| 1 | [Most critical vulnerability] | [10A/10B/Both/Pattern] | [High/Medium] |
+| 2 | [Second vulnerability] | [Source] | [Confidence] |
+| 3 | [Third vulnerability] | [Source] | [Confidence] |
 
 ## 11. Psychological Profile
 - **Mental Durability:** [Current response to adversity (losing sets, tiebreaks, deciding sets). Focus on observable patterns like frequently losing deciding sets or struggling to rebound immediately after losses, not on mental-health diagnoses.]
